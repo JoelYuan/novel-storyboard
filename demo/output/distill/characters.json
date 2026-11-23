@@ -1,0 +1,711 @@
+[
+  {
+    "name": "叶小钗",
+    "aliases": [
+      "小钗",
+      "钗儿",
+      "钓客"
+    ],
+    "identity": "剑客",
+    "marker": "刀疤脸、背后刀剑、长袍",
+    "first": "R0003",
+    "segments": [
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E10",
+      "E11",
+      "E12",
+      "E14",
+      "E15",
+      "E16"
+    ],
+    "count": 12
+  },
+  {
+    "name": "唐龙剑云",
+    "aliases": [
+      "教皇",
+      "剑云",
+      "本皇",
+      "唐皇教人",
+      "本爷"
+    ],
+    "identity": "唐皇教教主",
+    "marker": "二十出头青年",
+    "first": "R0055",
+    "segments": [
+      "E01",
+      "E03",
+      "E04",
+      "E05",
+      "E09",
+      "E10",
+      "E11",
+      "E12",
+      "E13",
+      "E14",
+      "E15"
+    ],
+    "count": 11
+  },
+  {
+    "name": "业途灵",
+    "aliases": [
+      "业仔",
+      "干动",
+      "业大侠",
+      "大仔",
+      "壮士"
+    ],
+    "identity": "江湖人",
+    "marker": "斗笠、劈腿打拳",
+    "first": "R0005",
+    "segments": [
+      "E01",
+      "E02",
+      "E03",
+      "E07",
+      "E09",
+      "E10",
+      "E11",
+      "E12",
+      "E14",
+      "E15"
+    ],
+    "count": 10
+  },
+  {
+    "name": "秦假仙",
+    "aliases": [
+      "大仔",
+      "本大仙",
+      "老秦",
+      "秦假先",
+      "经理人"
+    ],
+    "identity": "江湖人",
+    "marker": "斗笠、钓竿",
+    "first": "R0005",
+    "segments": [
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E10",
+      "E11",
+      "E12",
+      "E15"
+    ],
+    "count": 10
+  },
+  {
+    "name": "半部禅",
+    "aliases": [
+      "贫僧",
+      "大师",
+      "前辈",
+      "慧明"
+    ],
+    "identity": "僧人",
+    "marker": "僧袍",
+    "first": "R0239",
+    "segments": [
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E08",
+      "E11",
+      "E12",
+      "E14",
+      "E15"
+    ],
+    "count": 9
+  },
+  {
+    "name": "命随刀",
+    "aliases": [
+      "壮汉",
+      "刀郎",
+      "蒙面刀郎"
+    ],
+    "identity": "劫匪",
+    "marker": "背后一口刀、满嘴胡须",
+    "first": "R0041",
+    "segments": [
+      "E01",
+      "E03",
+      "E07",
+      "E09",
+      "E11",
+      "E12",
+      "E13",
+      "E14",
+      "E16"
+    ],
+    "count": 9
+  },
+  {
+    "name": "情海过客",
+    "aliases": [
+      "过客",
+      "晚辈"
+    ],
+    "identity": "侠客",
+    "marker": "扇子",
+    "first": "R0211",
+    "segments": [
+      "E03",
+      "E04",
+      "E07",
+      "E08",
+      "E09",
+      "E10",
+      "E12",
+      "E13",
+      "E14"
+    ],
+    "count": 9
+  },
+  {
+    "name": "宇文冰心",
+    "aliases": [
+      "女子",
+      "小姐",
+      "宇文姑娘",
+      "冰心"
+    ],
+    "identity": "宇文知日之女",
+    "marker": "无",
+    "first": "R0159",
+    "segments": [
+      "E02",
+      "E04",
+      "E05",
+      "E06",
+      "E10",
+      "E11",
+      "E12",
+      "E15"
+    ],
+    "count": 8
+  },
+  {
+    "name": "病兰花",
+    "aliases": [
+      "兰花",
+      "兰花姑娘",
+      "小姐"
+    ],
+    "identity": "旁观者",
+    "marker": "无",
+    "first": "R0195",
+    "segments": [
+      "E02",
+      "E03",
+      "E07",
+      "E08",
+      "E09",
+      "E10",
+      "E13",
+      "E14"
+    ],
+    "count": 8
+  },
+  {
+    "name": "宇文弓",
+    "aliases": [
+      "弓伯",
+      "老奴",
+      "老管家",
+      "老伯"
+    ],
+    "identity": "护卫",
+    "marker": "无",
+    "first": "R0338",
+    "segments": [
+      "E04",
+      "E05",
+      "E06",
+      "E08",
+      "E11",
+      "E12",
+      "E15"
+    ],
+    "count": 7
+  },
+  {
+    "name": "花藏刀",
+    "aliases": [],
+    "identity": "杀手",
+    "marker": "刀、一足",
+    "first": "R0117",
+    "segments": [
+      "E02",
+      "E03",
+      "E04",
+      "E06",
+      "E13",
+      "E14",
+      "E15"
+    ],
+    "count": 7
+  },
+  {
+    "name": "惊虹留恨",
+    "aliases": [
+      "收银取命"
+    ],
+    "identity": "神秘人",
+    "marker": "无",
+    "first": "R0265",
+    "segments": [
+      "E03",
+      "E11",
+      "E12",
+      "E13",
+      "E15",
+      "E16"
+    ],
+    "count": 6
+  },
+  {
+    "name": "竹藏剑",
+    "aliases": [],
+    "identity": "杀手",
+    "marker": "剑",
+    "first": "R0127",
+    "segments": [
+      "E02",
+      "E03",
+      "E06",
+      "E13",
+      "E14",
+      "E15"
+    ],
+    "count": 6
+  },
+  {
+    "name": "金角战牛",
+    "aliases": [
+      "新门主"
+    ],
+    "identity": "异兽",
+    "marker": "金角、万斤震天戢",
+    "first": "R0263",
+    "segments": [
+      "E03",
+      "E04",
+      "E12",
+      "E13",
+      "E14",
+      "E15"
+    ],
+    "count": 6
+  },
+  {
+    "name": "蟠龙邪尊",
+    "aliases": [
+      "邪尊",
+      "本邪尊"
+    ],
+    "identity": "巫石教教主",
+    "marker": "殿内主座、怒拍桌案",
+    "first": "R0366",
+    "segments": [
+      "E06",
+      "E11",
+      "E13",
+      "E14"
+    ],
+    "count": 4
+  },
+  {
+    "name": "地灵手",
+    "aliases": [
+      "前辈"
+    ],
+    "identity": "隐士",
+    "marker": "老人、白发",
+    "first": "R0386",
+    "segments": [
+      "E07",
+      "E09",
+      "E11"
+    ],
+    "count": 3
+  },
+  {
+    "name": "天荒",
+    "aliases": [
+      "天荒尊者"
+    ],
+    "identity": "唐皇教护法",
+    "marker": "红色扫帚头",
+    "first": "R0061",
+    "segments": [
+      "E01",
+      "E07",
+      "E10"
+    ],
+    "count": 3
+  },
+  {
+    "name": "宇文知日",
+    "aliases": [
+      "老者",
+      "老爷"
+    ],
+    "identity": "被追杀者",
+    "marker": "背后宝剑、短命相",
+    "first": "R0105",
+    "segments": [
+      "E02",
+      "E04",
+      "E07"
+    ],
+    "count": 3
+  },
+  {
+    "name": "玉天矶",
+    "aliases": [
+      "风尘骄子",
+      "亚父"
+    ],
+    "identity": "唐皇教顾问",
+    "marker": "白袍、垫肩大",
+    "first": "R0581",
+    "segments": [
+      "E13",
+      "E14",
+      "E15"
+    ],
+    "count": 3
+  },
+  {
+    "name": "一页书",
+    "aliases": [],
+    "identity": "神秘高手",
+    "marker": "光球、背影",
+    "first": "R0320",
+    "segments": [
+      "E04",
+      "E06"
+    ],
+    "count": 2
+  },
+  {
+    "name": "十方灵动",
+    "aliases": [],
+    "identity": "剑",
+    "marker": "剑",
+    "first": "R0507",
+    "segments": [
+      "E12",
+      "E14"
+    ],
+    "count": 2
+  },
+  {
+    "name": "护卫",
+    "aliases": [],
+    "identity": "轿前护卫",
+    "marker": "手握长剑",
+    "first": "R0089",
+    "segments": [
+      "E01",
+      "E02"
+    ],
+    "count": 2
+  },
+  {
+    "name": "蒙面人",
+    "aliases": [
+      "来客"
+    ],
+    "identity": "中间人",
+    "marker": "蒙面",
+    "first": "R0480",
+    "segments": [
+      "E11",
+      "E15"
+    ],
+    "count": 2
+  },
+  {
+    "name": "下属",
+    "aliases": [],
+    "identity": "唐皇教",
+    "marker": "躬身",
+    "first": "R0356",
+    "segments": [
+      "E05"
+    ],
+    "count": 1
+  },
+  {
+    "name": "兰花",
+    "aliases": [],
+    "identity": "病人",
+    "marker": "药罐",
+    "first": "R0511",
+    "segments": [
+      "E12"
+    ],
+    "count": 1
+  },
+  {
+    "name": "唐皇教众",
+    "aliases": [
+      "众人"
+    ],
+    "identity": "唐皇教手下",
+    "marker": "火把、刀",
+    "first": "R0440",
+    "segments": [
+      "E10"
+    ],
+    "count": 1
+  },
+  {
+    "name": "地老",
+    "aliases": [],
+    "identity": "杀手",
+    "marker": "服饰",
+    "first": "R0400",
+    "segments": [
+      "E07"
+    ],
+    "count": 1
+  },
+  {
+    "name": "宇文天",
+    "aliases": [
+      "宇文前辈",
+      "老爷"
+    ],
+    "identity": "已故",
+    "marker": "无",
+    "first": "R0414",
+    "segments": [
+      "E08"
+    ],
+    "count": 1
+  },
+  {
+    "name": "宇文姑娘",
+    "aliases": [],
+    "identity": "宇文山庄成员",
+    "marker": "粉红色衣服",
+    "first": "R0418",
+    "segments": [
+      "E09"
+    ],
+    "count": 1
+  },
+  {
+    "name": "家丁",
+    "aliases": [],
+    "identity": "宇文山庄随从",
+    "marker": "无",
+    "first": "R0181",
+    "segments": [
+      "E02"
+    ],
+    "count": 1
+  },
+  {
+    "name": "护箱人",
+    "aliases": [
+      "护标之人"
+    ],
+    "identity": "护卫",
+    "marker": "无",
+    "first": "R0039",
+    "segments": [
+      "E01"
+    ],
+    "count": 1
+  },
+  {
+    "name": "挂日刀",
+    "aliases": [],
+    "identity": "神器",
+    "marker": "无",
+    "first": "R0637",
+    "segments": [
+      "E14"
+    ],
+    "count": 1
+  },
+  {
+    "name": "无天畹主",
+    "aliases": [
+      "无天碗主",
+      "前辈"
+    ],
+    "identity": "无天畹主人",
+    "marker": "从花草堆中冒出",
+    "first": "R0527",
+    "segments": [
+      "E13"
+    ],
+    "count": 1
+  },
+  {
+    "name": "无天碗主",
+    "aliases": [],
+    "identity": "教主",
+    "marker": "无",
+    "first": "R0627",
+    "segments": [
+      "E14"
+    ],
+    "count": 1
+  },
+  {
+    "name": "春风",
+    "aliases": [],
+    "identity": "护卫",
+    "marker": "服饰",
+    "first": "R0400",
+    "segments": [
+      "E07"
+    ],
+    "count": 1
+  },
+  {
+    "name": "残废老人",
+    "aliases": [],
+    "identity": "隐士",
+    "marker": "残废",
+    "first": "R0711",
+    "segments": [
+      "E14"
+    ],
+    "count": 1
+  },
+  {
+    "name": "流萤剑",
+    "aliases": [],
+    "identity": "神器",
+    "marker": "无",
+    "first": "R0637",
+    "segments": [
+      "E14"
+    ],
+    "count": 1
+  },
+  {
+    "name": "白衣女子",
+    "aliases": [
+      "神秘姑娘",
+      "野女人"
+    ],
+    "identity": "神秘高手",
+    "marker": "白衣、披衫",
+    "first": "R0340",
+    "segments": [
+      "E04"
+    ],
+    "count": 1
+  },
+  {
+    "name": "百字央",
+    "aliases": [],
+    "identity": "药草提供者",
+    "marker": "无",
+    "first": "R0527",
+    "segments": [
+      "E13"
+    ],
+    "count": 1
+  },
+  {
+    "name": "盘悟手扎",
+    "aliases": [],
+    "identity": "物品",
+    "marker": "手扎",
+    "first": "R0509",
+    "segments": [
+      "E12"
+    ],
+    "count": 1
+  },
+  {
+    "name": "秋雨",
+    "aliases": [],
+    "identity": "护卫",
+    "marker": "服饰",
+    "first": "R0400",
+    "segments": [
+      "E07"
+    ],
+    "count": 1
+  },
+  {
+    "name": "素还真",
+    "aliases": [
+      "素某"
+    ],
+    "identity": "智者",
+    "marker": "望天、观星",
+    "first": "R0366",
+    "segments": [
+      "E06"
+    ],
+    "count": 1
+  },
+  {
+    "name": "红衣人",
+    "aliases": [
+      "宇文冰心"
+    ],
+    "identity": "神秘人",
+    "marker": "红衣",
+    "first": "R0519",
+    "segments": [
+      "E12"
+    ],
+    "count": 1
+  },
+  {
+    "name": "覆面人",
+    "aliases": [],
+    "identity": "神秘人",
+    "marker": "面具、黑衣",
+    "first": "R0384",
+    "segments": [
+      "E07"
+    ],
+    "count": 1
+  },
+  {
+    "name": "邪刀血不沾",
+    "aliases": [],
+    "identity": "刀",
+    "marker": "邪光",
+    "first": "R0525",
+    "segments": [
+      "E12"
+    ],
+    "count": 1
+  },
+  {
+    "name": "黑衣人",
+    "aliases": [],
+    "identity": "神秘人",
+    "marker": "黑衣",
+    "first": "R0519",
+    "segments": [
+      "E12"
+    ],
+    "count": 1
+  }
+]

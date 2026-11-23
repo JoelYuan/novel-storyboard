@@ -1,0 +1,3603 @@
+{
+  "id": "e9d0e5e3-d173-4a09-a5e0-a6d974d9e9b9",
+  "revision": 1,
+  "last_node_id": 1199,
+  "last_link_id": 768,
+  "nodes": [
+    {
+      "id": 60,
+      "type": "AICG3D_H3FinalSequenceUpscale",
+      "pos": [
+        570,
+        -30
+      ],
+      "size": [
+        370,
+        390
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "最后一段",
+          "name": "final_segment",
+          "type": "*",
+          "link": 768
+        }
+      ],
+      "outputs": [
+        {
+          "label": "成片视频",
+          "name": "video",
+          "type": "VIDEO",
+          "links": [
+            711
+          ]
+        },
+        {
+          "label": "保存路径",
+          "name": "saved_file",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "label": "接缝报告",
+          "name": "seam_report",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "label": "高清处理报告",
+          "name": "upscale_report",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AICG3D_H3FinalSequenceUpscale",
+        "cnr_id": "aicg3d-h3-suite",
+        "aicg3d_h3_final_sequence_manual_draw": true
+      },
+      "widgets_values": [
+        "video/MiniMax_H3_Final_HD",
+        false,
+        "none",
+        false,
+        "minimax_h3_latent_upscaler_3d_fp16_V2.safetensors",
+        "按倍数放大",
+        1.5,
+        1920,
+        1088,
+        "GPU（CUDA）",
+        "FP16 半精度",
+        "er_sde",
+        "beta",
+        4,
+        0.3,
+        888888,
+        "fixed",
+        "关",
+        512,
+        512,
+        128,
+        32,
+        "关闭（仅 H3 二采）",
+        "自动选择",
+        1,
+        5,
+        2,
+        "LAB 色彩",
+        "超高质量",
+        "GPU（CUDA）",
+        0,
+        "CPU",
+        true,
+        true,
+        362,
+        24,
+        "关",
+        1,
+        "卸载模型",
+        true,
+        "relayvsr_x2_lightx2v_int8_convrot.safetensors",
+        "relayvsr_flash_vae_x2_fp32.safetensors",
+        0.5,
+        true,
+        false,
+        "",
+        0,
+        "",
+        "",
+        ""
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "video/MiniMax_H3_Final_HD",
+        "second_pass": false,
+        "refiner_lora": "none",
+        "show_advanced_settings": false,
+        "latent_upscale_model": "minimax_h3_latent_upscaler_3d_fp16_V2.safetensors",
+        "upscale_mode": "按倍数放大",
+        "upscale_scale": 1.5,
+        "target_width": 1920,
+        "target_height": 1088,
+        "upscale_device": "GPU（CUDA）",
+        "upscale_precision": "FP16 半精度",
+        "sampler_name": "er_sde",
+        "scheduler": "beta",
+        "steps": 4,
+        "second_pass_denoise": 0.3,
+        "second_pass_seed": 888888,
+        "control_after_generate": "fixed",
+        "tiled_sampling": "关",
+        "tile_width": 512,
+        "tile_height": 512,
+        "tile_overlap": 128,
+        "tile_fade": 32,
+        "repair_engine": "关闭（仅 H3 二采）",
+        "repair_model": "自动选择",
+        "repair_scale": 1,
+        "repair_batch_size": 5,
+        "repair_temporal_overlap": 2,
+        "repair_color_correction": "LAB 色彩",
+        "repair_quality": "超高质量",
+        "repair_device": "GPU（CUDA）",
+        "repair_blocks_to_swap": 0,
+        "repair_offload_device": "CPU",
+        "repair_vae_tiling": true,
+        "lock_source_exposure": true,
+        "max_window_frames": 362,
+        "window_overlap_frames": 24,
+        "sample_preview": "关",
+        "preview_interval": 1,
+        "cleanup_after_run": "卸载模型",
+        "relay_vsr_enabled": true,
+        "relay_vsr_model": "relayvsr_x2_lightx2v_int8_convrot.safetensors",
+        "relay_vsr_vae": "relayvsr_flash_vae_x2_fp32.safetensors",
+        "relay_vsr_detail": 0.5,
+        "relay_lock_source_exposure": true,
+        "cache_only": false,
+        "cache_scope": "",
+        "cache_segment_count": 0,
+        "cache_segment_indices": "",
+        "cache_segment_nodes": "",
+        "cache_chain_key": ""
+      }
+    },
+    {
+      "id": 106,
+      "type": "AICG3D_H3Loader",
+      "pos": [
+        -3850,
+        -30
+      ],
+      "size": [
+        360,
+        692.2919927790632
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "FL2VA 模型",
+          "name": "fl2va_model",
+          "type": "COMBO",
+          "widget": {
+            "name": "fl2va_model"
+          },
+          "link": null
+        },
+        {
+          "label": "REF2VA 模型",
+          "name": "ref2va_model",
+          "type": "COMBO",
+          "widget": {
+            "name": "ref2va_model"
+          },
+          "link": null
+        },
+        {
+          "label": "文本编码器",
+          "name": "text_encoder",
+          "type": "COMBO",
+          "widget": {
+            "name": "text_encoder"
+          },
+          "link": null
+        },
+        {
+          "label": "视频 VAE",
+          "name": "video_vae",
+          "type": "COMBO",
+          "widget": {
+            "name": "video_vae"
+          },
+          "link": null
+        },
+        {
+          "label": "音频 VAE",
+          "name": "audio_vae",
+          "type": "COMBO",
+          "widget": {
+            "name": "audio_vae"
+          },
+          "link": null
+        },
+        {
+          "label": "非 H3 权重处理",
+          "name": "non_h3_policy",
+          "type": "COMBO",
+          "widget": {
+            "name": "non_h3_policy"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "h3_bundle",
+          "type": "MINIMAX_H3_BUNDLE",
+          "links": [
+            399
+          ]
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            649
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AICG3D_H3Loader",
+        "aicg3d_lora_state": {
+          "1": {
+            "selected": "minimax\\pika_h3_flex_ref2va_v1_bf16.safetensors",
+            "enabled": true
+          },
+          "2": {
+            "selected": "minimax\\dmad_minimax_h3_8step_full_critic_comfyui.safetensors",
+            "enabled": false
+          },
+          "3": {
+            "selected": "minimax\\minimax_h3_turbo_v4_step600_ema_DasiwaREF2VAHybridV1_0_curveproj1025_compat_v001.safetensors",
+            "enabled": false
+          },
+          "4": {
+            "selected": "minimax\\Motion_Repair运动连续性.safetensors",
+            "enabled": false
+          },
+          "5": {
+            "selected": "minimax\\Motion_Repair_V2.safetensors",
+            "enabled": false
+          },
+          "6": {},
+          "7": {},
+          "8": {},
+          "9": {}
+        }
+      },
+      "widgets_values": [
+        "minimax_h3_fl2va_dit_16g.safetensors",
+        "minimax_h3_ref2va_dit_16g.safetensors",
+        "qwen3vl_32b_minimax_h3_nvfp4.safetensors",
+        "minimax_h3_video_vae_fp16.safetensors",
+        "minimax_h3_audio_vae_fp32.safetensors",
+        "none",
+        1,
+        "none",
+        0.5,
+        "none",
+        3,
+        "none",
+        0.3,
+        "自动回落",
+        "none",
+        0.3,
+        "none",
+        1,
+        "none",
+        1,
+        "none",
+        1,
+        "none",
+        1,
+        "自动（Sage 优先）"
+      ],
+      "widgets_values_named": {
+        "fl2va_model": "minimax_h3_fl2va_dit_16g.safetensors",
+        "ref2va_model": "minimax_h3_ref2va_dit_16g.safetensors",
+        "text_encoder": "qwen3vl_32b_minimax_h3_nvfp4.safetensors",
+        "video_vae": "minimax_h3_video_vae_fp16.safetensors",
+        "audio_vae": "minimax_h3_audio_vae_fp32.safetensors",
+        "lora_1": "none",
+        "lora_1_strength": 1,
+        "lora_2": "none",
+        "lora_2_strength": 0.5,
+        "lora_3": "none",
+        "lora_3_strength": 3,
+        "lora_4": "none",
+        "lora_4_strength": 0.3,
+        "non_h3_policy": "自动回落",
+        "lora_5": "none",
+        "lora_5_strength": 0.3,
+        "lora_6": "none",
+        "lora_6_strength": 1,
+        "lora_7": "none",
+        "lora_7_strength": 1,
+        "lora_8": "none",
+        "lora_8_strength": 1,
+        "lora_9": "none",
+        "lora_9_strength": 1,
+        "注意力加速(Sage)": "自动（Sage 优先）"
+      }
+    },
+    {
+      "id": 212,
+      "type": "AICG3D_H3SequenceGlobal",
+      "pos": [
+        -3220,
+        -30
+      ],
+      "size": [
+        260,
+        690
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "H3 模型组合",
+          "name": "h3_bundle",
+          "type": "MINIMAX_H3_BUNDLE",
+          "link": 399
+        },
+        {
+          "name": "model",
+          "shape": 7,
+          "type": "MODEL",
+          "link": 650
+        },
+        {
+          "label": "外部采样器",
+          "name": "sampler",
+          "shape": 7,
+          "type": "SAMPLER",
+          "link": null
+        },
+        {
+          "label": "外部调度器（Sigmas）",
+          "name": "sigmas",
+          "shape": 7,
+          "type": "SIGMAS",
+          "link": 762
+        }
+      ],
+      "outputs": [
+        {
+          "label": "全局设置",
+          "name": "sequence_config",
+          "type": "MINIMAX_H3_SEQUENCE_CONFIG",
+          "links": [
+            455
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AICG3D_H3SequenceGlobal",
+        "minimax_h3_virtual_media_links": []
+      },
+      "widgets_values": [
+        "360P",
+        "16:9",
+        24,
+        39,
+        "尾帧续写（latent）",
+        "match",
+        "er_sde",
+        "beta",
+        6,
+        1,
+        "释放缓存",
+        "开",
+        1,
+        false,
+        "生成音频",
+        "自动（按显卡）",
+        "跨段曝光锁定",
+        true,
+        "",
+        "合成后提示删除"
+      ],
+      "widgets_values_named": {
+        "resolution": "360P",
+        "aspect_ratio": "16:9",
+        "fps": 24,
+        "handoff_frames": 39,
+        "handoff_mode": "尾帧续写（latent）",
+        "ref_image_size": "match",
+        "sampler_name": "er_sde",
+        "scheduler": "beta",
+        "steps": 6,
+        "denoise": 1,
+        "vram_policy": "释放缓存",
+        "sample_preview": "开",
+        "preview_interval": 1,
+        "prompt_optimizer_settings": false,
+        "audio_mode": "生成音频",
+        "vram_tier": "自动（按显卡）",
+        "exposure_lock": "跨段曝光锁定",
+        "keep_full": true,
+        "segment_output_directory": "",
+        "segment_cleanup_policy": "合成后提示删除"
+      }
+    },
+    {
+      "id": 248,
+      "type": "AICG3D_H3SequenceSegment",
+      "pos": [
+        -2170,
+        -30
+      ],
+      "size": [
+        430,
+        800
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "全局设置",
+          "name": "sequence_config",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_CONFIG",
+          "link": 455
+        },
+        {
+          "label": "上一分段",
+          "name": "previous_segment",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "link": null
+        },
+        {
+          "label": "voice_cast",
+          "name": "voice_cast",
+          "shape": 7,
+          "type": "AICG3D_CHARACTER_VOICE_CAST",
+          "link": 596
+        },
+        {
+          "label": "AICG3D",
+          "name": "media",
+          "shape": 7,
+          "type": "*",
+          "link": 581
+        },
+        {
+          "label": "引导图片",
+          "name": "guide_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "引导音频",
+          "name": "guide_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "视频段落",
+          "name": "segment",
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "links": [
+            599
+          ]
+        }
+      ],
+      "title": "视频段落 1",
+      "properties": {
+        "Node name for S&R": "AICG3D_H3SequenceSegment",
+        "minimax_h3_inline_media_state": "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "minimax_h3_inline_media_owned": false,
+        "minimax_h3_inline_media_inherited": true,
+        "minimax_h3_virtual_media_links": [],
+        "minimax_h3_prompt_view_mode": "structured",
+        "minimax_h3_prompt_reference_doc": {
+          "version": 1,
+          "text": "integrated_multimodal_description: [Shot 1] 16:9，东方古风写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物金线经纬清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，雨夜灯市的背景虚化成暖黄光斑与水雾。发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。摄影机自街南端极缓慢向前推近（五秒内推进幅度极小，不改变构图重心），机位高度略低于眼平5°，全程不切镜、不旋转、不改变构图重心。构图：街景纵深，S1 在画面中央偏左（四分之三侧脸），S4 在画面中央偏右贴身随行，S2 在画面右缘石栏后侧身半入画，三人同一层，纵<Picture 1>深约八米。角色S1对应<Picture 2>：年轻成年男性，剑眉、薄唇、下颌线利落，深墨青底金缠枝纹劲装、深红内衬、高马尾配银灰枝状金属发冠，左手握直刀（刀身窄、刀背厚实）；角色S2对应<Picture 3>：年轻成年女性，杏眼、眉峰细、唇色淡，红白花冠配垂珠金流苏、赤金与玉坠耳饰、红白渐变半透纱衣外罩、红底金纹内衬，右手持软剑（剑身细窄可弯）；角色S4对应<Picture 5>：成年男性，圆脸、双颊饱满、鼻宽，粗麻短褂配皮肩带、短发蓬松，双手抱金木镖箱；道具金木镖箱对应<Picture 6>：铜角包边、铜锁、箱身尺寸不变。主光为画面左前方的暖橙灯笼光（约3200K），街北口落一层冷蓝夜色补光，鼻梁与下颌边缘有细窄高光，背景压暗，曝光跨段锁定。本段画面只有 S1、S2、S4 三人（S3 尚未入画），不得出现任何其他人物的面部、身体或背影。画面里没有第四个任何人。画面无字幕、无文字、无水印。\n0.0～2.0秒：夜雨，青石板反光流动，暖橙灯笼连排明灭，灯市底噪与人群低语在画面边缘铺开；S1 左手按刀、右肩护着 S4 怀中的金木镖箱，步伐稳定，呼吸轻，高马尾发梢被穿堂风带起后滞后半拍落回。\n2.0～3.6秒：(S4) says: <d>[Chinese]轻点，这箱子比咱们命贵。</d> 他的语态：气声压着，气息不稳，略带宽厚鼻音，带喜感；说话时双手把镖箱抱得更紧，额前碎发随重音轻抖，镖箱铜锁在灯影里反光一次。\n3.6～5.0秒：东巷口石栏后 S2 侧身入画，右手在袖中按住软剑，视线落到 S1 身上；S1 停步，肩膀压低。(S1) says: <d>[Chinese]前面巷口有人。</d> 他的语态：低沉、简短、气息沉稳；说时头部不转，只有下唇小幅起落。灯笼在雨里晃一次，曝光不变。段尾交接锚点：S1 停在石栏前三步、左手按刀，S4 双手抱箱在胸前，S2 立在石栏后、右手在袖中按住软剑、视线指向 S1，摄影机停在推近末端，机位高度未变。\n\noverall_soundscape: 灯市底噪与人群低语在画面边缘铺开、雨打灯棚布幔、灯笼纸响、人群脚步在湿石板上移动、镖箱铜锁轻碰一次。\nnon_diegetic_music: 低音弦乐长音打底，加入稀疏梆子点，音量与情绪克制，跨段持续不停。",
+          "parts": [
+            {
+              "type": "text",
+              "text": "integrated_multimodal_description: [Shot 1] 16:9，东方古风写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物金线经纬清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，雨夜灯市的背景虚化成暖黄光斑与水雾。发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。摄影机自街南端极缓慢向前推近（五秒内推进幅度极小，不改变构图重心），机位高度略低于眼平5°，全程不切镜、不旋转、不改变构图重心。构图：街景纵深，S1 在画面中央偏左（四分之三侧脸），S4 在画面中央偏右贴身随行，S2 在画面右缘石栏后侧身半入画，三人同一层，纵"
+            },
+            {
+              "type": "mention",
+              "token": "@图片1",
+              "tag": "<Picture 1>",
+              "label": "图片1",
+              "fullLabel": "image1.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 1,
+              "mediaIndex": 1,
+              "sourceId": 248,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image1.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "深约八米。角色S1对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片2",
+              "tag": "<Picture 2>",
+              "label": "图片2",
+              "fullLabel": "image2.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 2,
+              "mediaIndex": 2,
+              "sourceId": 248,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image2.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "：年轻成年男性，剑眉、薄唇、下颌线利落，深墨青底金缠枝纹劲装、深红内衬、高马尾配银灰枝状金属发冠，左手握直刀（刀身窄、刀背厚实）；角色S2对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片3",
+              "tag": "<Picture 3>",
+              "label": "图片3",
+              "fullLabel": "image3.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 3,
+              "mediaIndex": 3,
+              "sourceId": 248,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image3.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "：年轻成年女性，杏眼、眉峰细、唇色淡，红白花冠配垂珠金流苏、赤金与玉坠耳饰、红白渐变半透纱衣外罩、红底金纹内衬，右手持软剑（剑身细窄可弯）；角色S4对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片5",
+              "tag": "<Picture 5>",
+              "label": "图片5",
+              "fullLabel": "image5.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 5,
+              "mediaIndex": 5,
+              "sourceId": 248,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image5.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "：成年男性，圆脸、双颊饱满、鼻宽，粗麻短褂配皮肩带、短发蓬松，双手抱金木镖箱；道具金木镖箱对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片6",
+              "tag": "<Picture 6>",
+              "label": "图片6",
+              "fullLabel": "image6.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 6,
+              "mediaIndex": 6,
+              "sourceId": 248,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image6.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "：铜角包边、铜锁、箱身尺寸不变。主光为画面左前方的暖橙灯笼光（约3200K），街北口落一层冷蓝夜色补光，鼻梁与下颌边缘有细窄高光，背景压暗，曝光跨段锁定。本段画面只有 S1、S2、S4 三人（S3 尚未入画），不得出现任何其他人物的面部、身体或背影。画面里没有第四个任何人。画面无字幕、无文字、无水印。\n0.0～2.0秒：夜雨，青石板反光流动，暖橙灯笼连排明灭，灯市底噪与人群低语在画面边缘铺开；S1 左手按刀、右肩护着 S4 怀中的金木镖箱，步伐稳定，呼吸轻，高马尾发梢被穿堂风带起后滞后半拍落回。\n2.0～3.6秒：(S4) says: "
+            },
+            {
+              "type": "dialogue",
+              "text": "[Chinese]轻点，这箱子比咱们命贵。"
+            },
+            {
+              "type": "text",
+              "text": " 他的语态：气声压着，气息不稳，略带宽厚鼻音，带喜感；说话时双手把镖箱抱得更紧，额前碎发随重音轻抖，镖箱铜锁在灯影里反光一次。\n3.6～5.0秒：东巷口石栏后 S2 侧身入画，右手在袖中按住软剑，视线落到 S1 身上；S1 停步，肩膀压低。(S1) says: "
+            },
+            {
+              "type": "dialogue",
+              "text": "[Chinese]前面巷口有人。"
+            },
+            {
+              "type": "text",
+              "text": " 他的语态：低沉、简短、气息沉稳；说时头部不转，只有下唇小幅起落。灯笼在雨里晃一次，曝光不变。段尾交接锚点：S1 停在石栏前三步、左手按刀，S4 双手抱箱在胸前，S2 立在石栏后、右手在袖中按住软剑、视线指向 S1，摄影机停在推近末端，机位高度未变。\n\noverall_soundscape: 灯市底噪与人群低语在画面边缘铺开、雨打灯棚布幔、灯笼纸响、人群脚步在湿石板上移动、镖箱铜锁轻碰一次。\nnon_diegetic_music: 低音弦乐长音打底，加入稀疏梆子点，音量与情绪克制，跨段持续不停。"
+            }
+          ]
+        }
+      },
+      "widgets_values": [
+        "integrated_multimodal_description: [Shot 1] 16:9，东方古风写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物金线经纬清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，雨夜灯市的背景虚化成暖黄光斑与水雾。发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。摄影机自街南端极缓慢向前推近（五秒内推进幅度极小，不改变构图重心），机位高度略低于眼平5°，全程不切镜、不旋转、不改变构图重心。构图：街景纵深，S1 在画面中央偏左（四分之三侧脸），S4 在画面中央偏右贴身随行，S2 在画面右缘石栏后侧身半入画，三人同一层，纵<Picture 1>深约八米。角色S1对应<Picture 2>：年轻成年男性，剑眉、薄唇、下颌线利落，深墨青底金缠枝纹劲装、深红内衬、高马尾配银灰枝状金属发冠，左手握直刀（刀身窄、刀背厚实）；角色S2对应<Picture 3>：年轻成年女性，杏眼、眉峰细、唇色淡，红白花冠配垂珠金流苏、赤金与玉坠耳饰、红白渐变半透纱衣外罩、红底金纹内衬，右手持软剑（剑身细窄可弯）；角色S4对应<Picture 5>：成年男性，圆脸、双颊饱满、鼻宽，粗麻短褂配皮肩带、短发蓬松，双手抱金木镖箱；道具金木镖箱对应<Picture 6>：铜角包边、铜锁、箱身尺寸不变。主光为画面左前方的暖橙灯笼光（约3200K），街北口落一层冷蓝夜色补光，鼻梁与下颌边缘有细窄高光，背景压暗，曝光跨段锁定。本段画面只有 S1、S2、S4 三人（S3 尚未入画），不得出现任何其他人物的面部、身体或背影。画面里没有第四个任何人。画面无字幕、无文字、无水印。\n0.0～2.0秒：夜雨，青石板反光流动，暖橙灯笼连排明灭，灯市底噪与人群低语在画面边缘铺开；S1 左手按刀、右肩护着 S4 怀中的金木镖箱，步伐稳定，呼吸轻，高马尾发梢被穿堂风带起后滞后半拍落回。\n2.0～3.6秒：(S4) says: <d>[Chinese]轻点，这箱子比咱们命贵。</d> 他的语态：气声压着，气息不稳，略带宽厚鼻音，带喜感；说话时双手把镖箱抱得更紧，额前碎发随重音轻抖，镖箱铜锁在灯影里反光一次。\n3.6～5.0秒：东巷口石栏后 S2 侧身入画，右手在袖中按住软剑，视线落到 S1 身上；S1 停步，肩膀压低。(S1) says: <d>[Chinese]前面巷口有人。</d> 他的语态：低沉、简短、气息沉稳；说时头部不转，只有下唇小幅起落。灯笼在雨里晃一次，曝光不变。段尾交接锚点：S1 停在石栏前三步、左手按刀，S4 双手抱箱在胸前，S2 立在石栏后、右手在袖中按住软剑、视线指向 S1，摄影机停在推近末端，机位高度未变。\n\noverall_soundscape: 灯市底噪与人群低语在画面边缘铺开、雨打灯棚布幔、灯笼纸响、人群脚步在湿石板上移动、镖箱铜锁轻碰一次。\nnon_diegetic_music: 低音弦乐长音打底，加入稀疏梆子点，音量与情绪克制，跨段持续不停。",
+        5,
+        7711001,
+        "fixed",
+        0,
+        "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "",
+        false,
+        "",
+        "",
+        0,
+        0
+      ],
+      "widgets_values_named": {
+        "prompt": "integrated_multimodal_description: [Shot 1] 16:9，东方古风写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物金线经纬清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，雨夜灯市的背景虚化成暖黄光斑与水雾。发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。摄影机自街南端极缓慢向前推近（五秒内推进幅度极小，不改变构图重心），机位高度略低于眼平5°，全程不切镜、不旋转、不改变构图重心。构图：街景纵深，S1 在画面中央偏左（四分之三侧脸），S4 在画面中央偏右贴身随行，S2 在画面右缘石栏后侧身半入画，三人同一层，纵<Picture 1>深约八米。角色S1对应<Picture 2>：年轻成年男性，剑眉、薄唇、下颌线利落，深墨青底金缠枝纹劲装、深红内衬、高马尾配银灰枝状金属发冠，左手握直刀（刀身窄、刀背厚实）；角色S2对应<Picture 3>：年轻成年女性，杏眼、眉峰细、唇色淡，红白花冠配垂珠金流苏、赤金与玉坠耳饰、红白渐变半透纱衣外罩、红底金纹内衬，右手持软剑（剑身细窄可弯）；角色S4对应<Picture 5>：成年男性，圆脸、双颊饱满、鼻宽，粗麻短褂配皮肩带、短发蓬松，双手抱金木镖箱；道具金木镖箱对应<Picture 6>：铜角包边、铜锁、箱身尺寸不变。主光为画面左前方的暖橙灯笼光（约3200K），街北口落一层冷蓝夜色补光，鼻梁与下颌边缘有细窄高光，背景压暗，曝光跨段锁定。本段画面只有 S1、S2、S4 三人（S3 尚未入画），不得出现任何其他人物的面部、身体或背影。画面里没有第四个任何人。画面无字幕、无文字、无水印。\n0.0～2.0秒：夜雨，青石板反光流动，暖橙灯笼连排明灭，灯市底噪与人群低语在画面边缘铺开；S1 左手按刀、右肩护着 S4 怀中的金木镖箱，步伐稳定，呼吸轻，高马尾发梢被穿堂风带起后滞后半拍落回。\n2.0～3.6秒：(S4) says: <d>[Chinese]轻点，这箱子比咱们命贵。</d> 他的语态：气声压着，气息不稳，略带宽厚鼻音，带喜感；说话时双手把镖箱抱得更紧，额前碎发随重音轻抖，镖箱铜锁在灯影里反光一次。\n3.6～5.0秒：东巷口石栏后 S2 侧身入画，右手在袖中按住软剑，视线落到 S1 身上；S1 停步，肩膀压低。(S1) says: <d>[Chinese]前面巷口有人。</d> 他的语态：低沉、简短、气息沉稳；说时头部不转，只有下唇小幅起落。灯笼在雨里晃一次，曝光不变。段尾交接锚点：S1 停在石栏前三步、左手按刀，S4 双手抱箱在胸前，S2 立在石栏后、右手在袖中按住软剑、视线指向 S1，摄影机停在推近末端，机位高度未变。\n\noverall_soundscape: 灯市底噪与人群低语在画面边缘铺开、雨打灯棚布幔、灯笼纸响、人群脚步在湿石板上移动、镖箱铜锁轻碰一次。\nnon_diegetic_music: 低音弦乐长音打底，加入稀疏梆子点，音量与情绪克制，跨段持续不停。",
+        "seconds": 5,
+        "seed": 7711001,
+        "control_after_generate": "fixed",
+        "guide_frame_idx": 0,
+        "inline_media_state": "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "sequence_scope": "",
+        "draw_previous_from_cache": false,
+        "draw_previous_scope": "",
+        "draw_previous_chain_key": "",
+        "draw_previous_node_id": 0,
+        "draw_previous_index": 0
+      }
+    },
+    {
+      "id": 285,
+      "type": "AICG3D_H3CharacterVoiceLibrary",
+      "pos": [
+        -2920,
+        -30
+      ],
+      "size": [
+        320,
+        610
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "角色音色",
+          "name": "voice_cast",
+          "type": "AICG3D_CHARACTER_VOICE_CAST",
+          "links": [
+            596
+          ]
+        },
+        {
+          "label": "报告",
+          "name": "report_json",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "minimax_h3_character_voice_state": "{\"version\":1,\"roles\":[{\"id\":\"girl\",\"name\":\"女主角\",\"description\":\"年轻成年女性声音，清亮柔和，音色细腻稳定，古风对白自然，情绪克制而清楚。\",\"language\":\"Chinese\",\"age\":\"young_adult\",\"gender\":\"female\",\"pitch\":\"medium\",\"pace\":\"natural\",\"seat\":1,\"mode\":\"reference\",\"reference\":\"\",\"reference_start\":0,\"reference_duration\":8,\"rights_confirmed\":false,\"picture_index\":2},{\"id\":\"boy\",\"name\":\"男主角\",\"description\":\"年轻成年男性声音，低稳温厚，咬字清楚，语气沉着有力量，情绪推进自然。\",\"language\":\"Chinese\",\"age\":\"young_adult\",\"gender\":\"male\",\"pitch\":\"low\",\"pace\":\"natural\",\"seat\":2,\"mode\":\"described\",\"reference\":\"\",\"reference_start\":0,\"reference_duration\":8,\"rights_confirmed\":false,\"picture_index\":0},{\"id\":\"heroine\",\"name\":\"圆脸伙计\",\"description\":\"成年男性声音，略带宽厚鼻音，语气灵活带一点喜感，吐字自然，不做童声。\",\"language\":\"Chinese\",\"age\":\"adult\",\"gender\":\"male\",\"pitch\":\"medium\",\"pace\":\"natural\",\"seat\":3,\"mode\":\"described\",\"reference\":\"\",\"reference_start\":0,\"reference_duration\":8,\"rights_confirmed\":false,\"picture_index\":0},{\"id\":\"hero\",\"name\":\"黑袍反派\",\"description\":\"中年男性声音，低沉粗粝，压迫感强，咬字有力量，情绪内敛而危险。\",\"language\":\"Chinese\",\"age\":\"middle_age\",\"gender\":\"male\",\"pitch\":\"low\",\"pace\":\"natural\",\"seat\":4,\"mode\":\"described\",\"reference\":\"\",\"reference_start\":0,\"reference_duration\":8,\"rights_confirmed\":false,\"picture_index\":0},{\"id\":\"old_woman\",\"name\":\"老太太\",\"description\":\"年长女性声音，略带岁月沙哑和轻微气声，语速偏慢，咬字清楚。\",\"language\":\"Chinese\",\"age\":\"elder\",\"gender\":\"female\",\"pitch\":\"low\",\"pace\":\"slow\",\"seat\":5,\"mode\":\"described\",\"reference\":\"\",\"reference_start\":0,\"reference_duration\":8,\"rights_confirmed\":false,\"picture_index\":0},{\"id\":\"old_man\",\"name\":\"老爷子\",\"description\":\"年长男性声音，低沉宽厚，带轻微沙哑和岁月感，语速偏慢。\",\"language\":\"Chinese\",\"age\":\"elder\",\"gender\":\"male\",\"pitch\":\"low\",\"pace\":\"slow\",\"seat\":6,\"mode\":\"described\",\"reference\":\"\",\"reference_start\":0,\"reference_duration\":8,\"rights_confirmed\":false,\"picture_index\":0}]}",
+        "Node name for S&R": "AICG3D_H3CharacterVoiceLibrary",
+        "cnr_id": "aicg3d-h3-suite",
+        "minimax_h3_character_voice_enabled": false
+      },
+      "widgets_values": [
+        "{\"version\": 1, \"roles\": [{\"id\": \"girl\", \"name\": \"女主角\", \"description\": \"年轻成年女性声音，清亮柔和，音色细腻稳定，古风对白自然，情绪克制而清楚。\", \"language\": \"Chinese\", \"age\": \"young_adult\", \"gender\": \"female\", \"pitch\": \"medium\", \"pace\": \"natural\", \"seat\": 1, \"mode\": \"reference\", \"reference\": \"\", \"reference_start\": 0, \"reference_duration\": 8, \"rights_confirmed\": false, \"picture_index\": 3}, {\"id\": \"boy\", \"name\": \"男主角\", \"description\": \"年轻成年男性声音，低稳温厚，咬字清楚，语气沉着有力量，情绪推进自然。\", \"language\": \"Chinese\", \"age\": \"young_adult\", \"gender\": \"male\", \"pitch\": \"low\", \"pace\": \"natural\", \"seat\": 2, \"mode\": \"described\", \"reference\": \"\", \"reference_start\": 0, \"reference_duration\": 8, \"rights_confirmed\": false, \"picture_index\": 2}, {\"id\": \"heroine\", \"name\": \"圆脸伙计\", \"description\": \"成年男性声音，略带宽厚鼻音，语气灵活带一点喜感，吐字自然，不做童声。\", \"language\": \"Chinese\", \"age\": \"adult\", \"gender\": \"male\", \"pitch\": \"medium\", \"pace\": \"natural\", \"seat\": 3, \"mode\": \"described\", \"reference\": \"\", \"reference_start\": 0, \"reference_duration\": 8, \"rights_confirmed\": false, \"picture_index\": 5}, {\"id\": \"hero\", \"name\": \"黑袍反派\", \"description\": \"中年男性声音，低沉粗粝，压迫感强，咬字有力量，情绪内敛而危险。\", \"language\": \"Chinese\", \"age\": \"middle_age\", \"gender\": \"male\", \"pitch\": \"low\", \"pace\": \"natural\", \"seat\": 4, \"mode\": \"described\", \"reference\": \"\", \"reference_start\": 0, \"reference_duration\": 8, \"rights_confirmed\": false, \"picture_index\": 4}, {\"id\": \"old_woman\", \"name\": \"老太太\", \"description\": \"年长女性声音，略带岁月沙哑和轻微气声，语速偏慢，咬字清楚。\", \"language\": \"Chinese\", \"age\": \"elder\", \"gender\": \"female\", \"pitch\": \"low\", \"pace\": \"slow\", \"seat\": 5, \"mode\": \"described\", \"reference\": \"\", \"reference_start\": 0, \"reference_duration\": 8, \"rights_confirmed\": false, \"picture_index\": 0}, {\"id\": \"old_man\", \"name\": \"老爷子\", \"description\": \"年长男性声音，低沉宽厚，带轻微沙哑和岁月感，语速偏慢。\", \"language\": \"Chinese\", \"age\": \"elder\", \"gender\": \"male\", \"pitch\": \"low\", \"pace\": \"slow\", \"seat\": 6, \"mode\": \"described\", \"reference\": \"\", \"reference_start\": 0, \"reference_duration\": 8, \"rights_confirmed\": false, \"picture_index\": 0}]}",
+        false
+      ],
+      "widgets_values_named": {
+        "voice_state": "{\"version\": 1, \"roles\": [{\"id\": \"girl\", \"name\": \"女主角\", \"description\": \"年轻成年女性声音，清亮柔和，音色细腻稳定，古风对白自然，情绪克制而清楚。\", \"language\": \"Chinese\", \"age\": \"young_adult\", \"gender\": \"female\", \"pitch\": \"medium\", \"pace\": \"natural\", \"seat\": 1, \"mode\": \"reference\", \"reference\": \"\", \"reference_start\": 0, \"reference_duration\": 8, \"rights_confirmed\": false, \"picture_index\": 3}, {\"id\": \"boy\", \"name\": \"男主角\", \"description\": \"年轻成年男性声音，低稳温厚，咬字清楚，语气沉着有力量，情绪推进自然。\", \"language\": \"Chinese\", \"age\": \"young_adult\", \"gender\": \"male\", \"pitch\": \"low\", \"pace\": \"natural\", \"seat\": 2, \"mode\": \"described\", \"reference\": \"\", \"reference_start\": 0, \"reference_duration\": 8, \"rights_confirmed\": false, \"picture_index\": 2}, {\"id\": \"heroine\", \"name\": \"圆脸伙计\", \"description\": \"成年男性声音，略带宽厚鼻音，语气灵活带一点喜感，吐字自然，不做童声。\", \"language\": \"Chinese\", \"age\": \"adult\", \"gender\": \"male\", \"pitch\": \"medium\", \"pace\": \"natural\", \"seat\": 3, \"mode\": \"described\", \"reference\": \"\", \"reference_start\": 0, \"reference_duration\": 8, \"rights_confirmed\": false, \"picture_index\": 5}, {\"id\": \"hero\", \"name\": \"黑袍反派\", \"description\": \"中年男性声音，低沉粗粝，压迫感强，咬字有力量，情绪内敛而危险。\", \"language\": \"Chinese\", \"age\": \"middle_age\", \"gender\": \"male\", \"pitch\": \"low\", \"pace\": \"natural\", \"seat\": 4, \"mode\": \"described\", \"reference\": \"\", \"reference_start\": 0, \"reference_duration\": 8, \"rights_confirmed\": false, \"picture_index\": 4}, {\"id\": \"old_woman\", \"name\": \"老太太\", \"description\": \"年长女性声音，略带岁月沙哑和轻微气声，语速偏慢，咬字清楚。\", \"language\": \"Chinese\", \"age\": \"elder\", \"gender\": \"female\", \"pitch\": \"low\", \"pace\": \"slow\", \"seat\": 5, \"mode\": \"described\", \"reference\": \"\", \"reference_start\": 0, \"reference_duration\": 8, \"rights_confirmed\": false, \"picture_index\": 0}, {\"id\": \"old_man\", \"name\": \"老爷子\", \"description\": \"年长男性声音，低沉宽厚，带轻微沙哑和岁月感，语速偏慢。\", \"language\": \"Chinese\", \"age\": \"elder\", \"gender\": \"male\", \"pitch\": \"low\", \"pace\": \"slow\", \"seat\": 6, \"mode\": \"described\", \"reference\": \"\", \"reference_start\": 0, \"reference_duration\": 8, \"rights_confirmed\": false, \"picture_index\": 0}]}",
+        "enabled": false
+      }
+    },
+    {
+      "id": 290,
+      "type": "AICG3D_H3MediaLoader",
+      "pos": [
+        -2560,
+        80
+      ],
+      "size": [
+        370,
+        1179
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "AICG3D",
+          "name": "media_bundle",
+          "type": "MINIMAX_H3_MEDIA_BUNDLE",
+          "links": [
+            581
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AICG3D_H3MediaLoader",
+        "aicg3d_media_trim": {
+          "videos": {},
+          "audios": {}
+        },
+        "media_loader_state": "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}"
+      },
+      "widgets_values": [
+        "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        0
+      ],
+      "widgets_values_named": {
+        "media_state": "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "视频解码长边": 0
+      }
+    },
+    {
+      "id": 674,
+      "type": "AICG3D_H3SequenceSegment",
+      "pos": [
+        -1710,
+        -30
+      ],
+      "size": [
+        420,
+        800
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "全局设置",
+          "name": "sequence_config",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_CONFIG",
+          "link": null
+        },
+        {
+          "label": "上一分段",
+          "name": "previous_segment",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "link": 599
+        },
+        {
+          "name": "voice_cast",
+          "shape": 7,
+          "type": "AICG3D_CHARACTER_VOICE_CAST",
+          "link": null
+        },
+        {
+          "label": "AICG3D",
+          "name": "media",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "label": "引导图片",
+          "name": "guide_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "引导音频",
+          "name": "guide_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "视频段落",
+          "name": "segment",
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "links": [
+            748
+          ]
+        }
+      ],
+      "title": "视频段落 2",
+      "properties": {
+        "Node name for S&R": "AICG3D_H3SequenceSegment",
+        "minimax_h3_inline_media_state": "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "minimax_h3_inline_media_owned": false,
+        "minimax_h3_inline_media_inherited": true,
+        "minimax_h3_virtual_media_links": [],
+        "minimax_h3_prompt_reference_doc": {
+          "version": 1,
+          "text": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S1 停在石栏前三步、左手按刀，S4 双手抱箱在胸前，S2 立在石栏后、右手在袖中按住软剑、视线指向 S1，摄影机停在推近末端，机位高度未变。摄影机沿摄影轴线向右平稳横移约一个身位，不推不拉，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：近景，S2 自画面右缘进入画心，四分之三侧脸转向正面、人脸占画面二分之一以上；S1 的侧脸留在画面左缘，S4 在画面右下抱箱半入画，焦点由 S1 平滑移交到她脸上。S1 对应<Picture 2>、S2 对应<Picture 3>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S4 三人，画面里没有第四个任何人。画面无字幕、无文字、无水印。\n0.0～1.8秒：S2 自石栏后直身走出，与 S1 相距两步，软剑出鞘半寸、剑尖斜指地面；人群在灯棚下退开半步，她鬓边碎发与花冠垂珠滞后半拍轻晃，发梢掠过肩头再落下。\n1.8～3.6秒：(S2) says: <d>[Chinese]把箱子放下，我不伤人。</d> 她的语态：平稳、清晰、尾音轻，克制而坚决；说话时头部基本不动，只有眉心与嘴角小幅变化，视线在 S1 与镖箱之间移动，几缕碎发在额前持续极轻地飘。\n3.6～5.0秒：S4 侧身挡住镖箱，双手收紧；(S4) says: <d>[Chinese]你谁啊，这箱子不能给。</d> 他的语态：略带宽厚鼻音，语气灵活，吐字自然；说时肩膀把箱护得更低。S1 的左手按刀不动，刀柄在灯影里反光一次。段尾交接锚点：S2 站在石栏前一步，软剑出鞘半寸、剑尖斜指地面，视线在 S1 与镖箱之间；S4 侧身抱箱、双手收紧；S1 左手按刀未动，摄影机停在横移末端。\n\noverall_soundscape: 灯市底噪压低半档、雨滴敲打灯罩、人群在灯棚下移动的脚步声、软剑出鞘的金属轻响、她纱袖摩擦声。\nnon_diegetic_music: 同一段弦乐长音延续，梆子点不变，未换曲、未起新段。",
+          "parts": [
+            {
+              "type": "text",
+              "text": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S1 停在石栏前三步、左手按刀，S4 双手抱箱在胸前，S2 立在石栏后、右手在袖中按住软剑、视线指向 S1，摄影机停在推近末端，机位高度未变。摄影机沿摄影轴线向右平稳横移约一个身位，不推不拉，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：近景，S2 自画面右缘进入画心，四分之三侧脸转向正面、人脸占画面二分之一以上；S1 的侧脸留在画面左缘，S4 在画面右下抱箱半入画，焦点由 S1 平滑移交到她脸上。S1 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片2",
+              "tag": "<Picture 2>",
+              "label": "图片2",
+              "fullLabel": "image2.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 2,
+              "mediaIndex": 2,
+              "sourceId": 674,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image2.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "、S2 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片3",
+              "tag": "<Picture 3>",
+              "label": "图片3",
+              "fullLabel": "image3.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 3,
+              "mediaIndex": 3,
+              "sourceId": 674,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image3.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "、S4 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片5",
+              "tag": "<Picture 5>",
+              "label": "图片5",
+              "fullLabel": "image5.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 5,
+              "mediaIndex": 5,
+              "sourceId": 674,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image5.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "，道具金木镖箱"
+            },
+            {
+              "type": "mention",
+              "token": "@图片6",
+              "tag": "<Picture 6>",
+              "label": "图片6",
+              "fullLabel": "image6.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 6,
+              "mediaIndex": 6,
+              "sourceId": 674,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image6.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S4 三人，画面里没有第四个任何人。画面无字幕、无文字、无水印。\n0.0～1.8秒：S2 自石栏后直身走出，与 S1 相距两步，软剑出鞘半寸、剑尖斜指地面；人群在灯棚下退开半步，她鬓边碎发与花冠垂珠滞后半拍轻晃，发梢掠过肩头再落下。\n1.8～3.6秒：(S2) says: "
+            },
+            {
+              "type": "dialogue",
+              "text": "[Chinese]把箱子放下，我不伤人。"
+            },
+            {
+              "type": "text",
+              "text": " 她的语态：平稳、清晰、尾音轻，克制而坚决；说话时头部基本不动，只有眉心与嘴角小幅变化，视线在 S1 与镖箱之间移动，几缕碎发在额前持续极轻地飘。\n3.6～5.0秒：S4 侧身挡住镖箱，双手收紧；(S4) says: "
+            },
+            {
+              "type": "dialogue",
+              "text": "[Chinese]你谁啊，这箱子不能给。"
+            },
+            {
+              "type": "text",
+              "text": " 他的语态：略带宽厚鼻音，语气灵活，吐字自然；说时肩膀把箱护得更低。S1 的左手按刀不动，刀柄在灯影里反光一次。段尾交接锚点：S2 站在石栏前一步，软剑出鞘半寸、剑尖斜指地面，视线在 S1 与镖箱之间；S4 侧身抱箱、双手收紧；S1 左手按刀未动，摄影机停在横移末端。\n\noverall_soundscape: 灯市底噪压低半档、雨滴敲打灯罩、人群在灯棚下移动的脚步声、软剑出鞘的金属轻响、她纱袖摩擦声。\nnon_diegetic_music: 同一段弦乐长音延续，梆子点不变，未换曲、未起新段。"
+            }
+          ]
+        }
+      },
+      "widgets_values": [
+        "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S1 停在石栏前三步、左手按刀，S4 双手抱箱在胸前，S2 立在石栏后、右手在袖中按住软剑、视线指向 S1，摄影机停在推近末端，机位高度未变。摄影机沿摄影轴线向右平稳横移约一个身位，不推不拉，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：近景，S2 自画面右缘进入画心，四分之三侧脸转向正面、人脸占画面二分之一以上；S1 的侧脸留在画面左缘，S4 在画面右下抱箱半入画，焦点由 S1 平滑移交到她脸上。S1 对应<Picture 2>、S2 对应<Picture 3>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S4 三人，画面里没有第四个任何人。画面无字幕、无文字、无水印。\n0.0～1.8秒：S2 自石栏后直身走出，与 S1 相距两步，软剑出鞘半寸、剑尖斜指地面；人群在灯棚下退开半步，她鬓边碎发与花冠垂珠滞后半拍轻晃，发梢掠过肩头再落下。\n1.8～3.6秒：(S2) says: <d>[Chinese]把箱子放下，我不伤人。</d> 她的语态：平稳、清晰、尾音轻，克制而坚决；说话时头部基本不动，只有眉心与嘴角小幅变化，视线在 S1 与镖箱之间移动，几缕碎发在额前持续极轻地飘。\n3.6～5.0秒：S4 侧身挡住镖箱，双手收紧；(S4) says: <d>[Chinese]你谁啊，这箱子不能给。</d> 他的语态：略带宽厚鼻音，语气灵活，吐字自然；说时肩膀把箱护得更低。S1 的左手按刀不动，刀柄在灯影里反光一次。段尾交接锚点：S2 站在石栏前一步，软剑出鞘半寸、剑尖斜指地面，视线在 S1 与镖箱之间；S4 侧身抱箱、双手收紧；S1 左手按刀未动，摄影机停在横移末端。\n\noverall_soundscape: 灯市底噪压低半档、雨滴敲打灯罩、人群在灯棚下移动的脚步声、软剑出鞘的金属轻响、她纱袖摩擦声。\nnon_diegetic_music: 同一段弦乐长音延续，梆子点不变，未换曲、未起新段。",
+        5,
+        7711002,
+        "fixed",
+        0,
+        "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "",
+        false,
+        "",
+        "",
+        0,
+        0
+      ],
+      "widgets_values_named": {
+        "prompt": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S1 停在石栏前三步、左手按刀，S4 双手抱箱在胸前，S2 立在石栏后、右手在袖中按住软剑、视线指向 S1，摄影机停在推近末端，机位高度未变。摄影机沿摄影轴线向右平稳横移约一个身位，不推不拉，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：近景，S2 自画面右缘进入画心，四分之三侧脸转向正面、人脸占画面二分之一以上；S1 的侧脸留在画面左缘，S4 在画面右下抱箱半入画，焦点由 S1 平滑移交到她脸上。S1 对应<Picture 2>、S2 对应<Picture 3>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S4 三人，画面里没有第四个任何人。画面无字幕、无文字、无水印。\n0.0～1.8秒：S2 自石栏后直身走出，与 S1 相距两步，软剑出鞘半寸、剑尖斜指地面；人群在灯棚下退开半步，她鬓边碎发与花冠垂珠滞后半拍轻晃，发梢掠过肩头再落下。\n1.8～3.6秒：(S2) says: <d>[Chinese]把箱子放下，我不伤人。</d> 她的语态：平稳、清晰、尾音轻，克制而坚决；说话时头部基本不动，只有眉心与嘴角小幅变化，视线在 S1 与镖箱之间移动，几缕碎发在额前持续极轻地飘。\n3.6～5.0秒：S4 侧身挡住镖箱，双手收紧；(S4) says: <d>[Chinese]你谁啊，这箱子不能给。</d> 他的语态：略带宽厚鼻音，语气灵活，吐字自然；说时肩膀把箱护得更低。S1 的左手按刀不动，刀柄在灯影里反光一次。段尾交接锚点：S2 站在石栏前一步，软剑出鞘半寸、剑尖斜指地面，视线在 S1 与镖箱之间；S4 侧身抱箱、双手收紧；S1 左手按刀未动，摄影机停在横移末端。\n\noverall_soundscape: 灯市底噪压低半档、雨滴敲打灯罩、人群在灯棚下移动的脚步声、软剑出鞘的金属轻响、她纱袖摩擦声。\nnon_diegetic_music: 同一段弦乐长音延续，梆子点不变，未换曲、未起新段。",
+        "seconds": 5,
+        "seed": 7711002,
+        "control_after_generate": "fixed",
+        "guide_frame_idx": 0,
+        "inline_media_state": "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "sequence_scope": "",
+        "draw_previous_from_cache": false,
+        "draw_previous_scope": "",
+        "draw_previous_chain_key": "",
+        "draw_previous_node_id": 0,
+        "draw_previous_index": 0
+      }
+    },
+    {
+      "id": 682,
+      "type": "AICG3D_H3PromptSegmentSplit",
+      "pos": [
+        -2680,
+        800
+      ],
+      "size": [
+        450,
+        640
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "段1提示词",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AICG3D_H3PromptSegmentSplit"
+      },
+      "widgets_values": [
+        false,
+        "",
+        "【第1段｜5秒】\nintegrated_multimodal_description: [Shot 1] 16:9，东方古风写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物金线经纬清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，雨夜灯市的背景虚化成暖黄光斑与水雾。发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。摄影机自街南端极缓慢向前推近（五秒内推进幅度极小，不改变构图重心），机位高度略低于眼平5°，全程不切镜、不旋转、不改变构图重心。构图：街景纵深，S1 在画面中央偏左（四分之三侧脸），S4 在画面中央偏右贴身随行，S2 在画面右缘石栏后侧身半入画，三人同一层，纵深约八米。角色S1对应<Picture 2>：年轻成年男性，剑眉、薄唇、下颌线利落，深墨青底金缠枝纹劲装、深红内衬、高马尾配银灰枝状金属发冠，左手握直刀（刀身窄、刀背厚实）；角色S2对应<Picture 3>：年轻成年女性，杏眼、眉峰细、唇色淡，红白花冠配垂珠金流苏、赤金与玉坠耳饰、红白渐变半透纱衣外罩、红底金纹内衬，右手持软剑（剑身细窄可弯）；角色S4对应<Picture 5>：成年男性，圆脸、双颊饱满、鼻宽，粗麻短褂配皮肩带、短发蓬松，双手抱金木镖箱；道具金木镖箱对应<Picture 6>：铜角包边、铜锁、箱身尺寸不变。主光为画面左前方的暖橙灯笼光（约3200K），街北口落一层冷蓝夜色补光，鼻梁与下颌边缘有细窄高光，背景压暗，曝光跨段锁定。本段画面只有 S1、S2、S4 三人（S3 尚未入画），不得出现任何其他人物的面部、身体或背影。画面里没有第四个任何人。画面无字幕、无文字、无水印。\n0.0～2.0秒：夜雨，青石板反光流动，暖橙灯笼连排明灭，灯市底噪与人群低语在画面边缘铺开；S1 左手按刀、右肩护着 S4 怀中的金木镖箱，步伐稳定，呼吸轻，高马尾发梢被穿堂风带起后滞后半拍落回。\n2.0～3.6秒：(S4) says: <d>[Chinese]轻点，这箱子比咱们命贵。</d> 他的语态：气声压着，气息不稳，略带宽厚鼻音，带喜感；说话时双手把镖箱抱得更紧，额前碎发随重音轻抖，镖箱铜锁在灯影里反光一次。\n3.6～5.0秒：东巷口石栏后 S2 侧身入画，右手在袖中按住软剑，视线落到 S1 身上；S1 停步，肩膀压低。(S1) says: <d>[Chinese]前面巷口有人。</d> 他的语态：低沉、简短、气息沉稳；说时头部不转，只有下唇小幅起落。灯笼在雨里晃一次，曝光不变。段尾交接锚点：S1 停在石栏前三步、左手按刀，S4 双手抱箱在胸前，S2 立在石栏后、右手在袖中按住软剑、视线指向 S1，摄影机停在推近末端，机位高度未变。\n\noverall_soundscape: 灯市底噪与人群低语在画面边缘铺开、雨打灯棚布幔、灯笼纸响、人群脚步在湿石板上移动、镖箱铜锁轻碰一次。\nnon_diegetic_music: 低音弦乐长音打底，加入稀疏梆子点，音量与情绪克制，跨段持续不停。\n【第2段｜5秒】\nintegrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S1 停在石栏前三步、左手按刀，S4 双手抱箱在胸前，S2 立在石栏后、右手在袖中按住软剑、视线指向 S1，摄影机停在推近末端，机位高度未变。摄影机沿摄影轴线向右平稳横移约一个身位，不推不拉，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：近景，S2 自画面右缘进入画心，四分之三侧脸转向正面、人脸占画面二分之一以上；S1 的侧脸留在画面左缘，S4 在画面右下抱箱半入画，焦点由 S1 平滑移交到她脸上。S1 对应<Picture 2>、S2 对应<Picture 3>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S4 三人，画面里没有第四个任何人。画面无字幕、无文字、无水印。\n0.0～1.8秒：S2 自石栏后直身走出，与 S1 相距两步，软剑出鞘半寸、剑尖斜指地面；人群在灯棚下退开半步，她鬓边碎发与花冠垂珠滞后半拍轻晃，发梢掠过肩头再落下。\n1.8～3.6秒：(S2) says: <d>[Chinese]把箱子放下，我不伤人。</d> 她的语态：平稳、清晰、尾音轻，克制而坚决；说话时头部基本不动，只有眉心与嘴角小幅变化，视线在 S1 与镖箱之间移动，几缕碎发在额前持续极轻地飘。\n3.6～5.0秒：S4 侧身挡住镖箱，双手收紧；(S4) says: <d>[Chinese]你谁啊，这箱子不能给。</d> 他的语态：略带宽厚鼻音，语气灵活，吐字自然；说时肩膀把箱护得更低。S1 的左手按刀不动，刀柄在灯影里反光一次。段尾交接锚点：S2 站在石栏前一步，软剑出鞘半寸、剑尖斜指地面，视线在 S1 与镖箱之间；S4 侧身抱箱、双手收紧；S1 左手按刀未动，摄影机停在横移末端。\n\noverall_soundscape: 灯市底噪压低半档、雨滴敲打灯罩、人群在灯棚下移动的脚步声、软剑出鞘的金属轻响、她纱袖摩擦声。\nnon_diegetic_music: 同一段弦乐长音延续，梆子点不变，未换曲、未起新段。\n【第3段｜5秒】\nintegrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S2 站在石栏前一步，软剑出鞘半寸、剑尖斜指地面，视线在 S1 与镖箱之间；S4 侧身抱箱、双手收紧；S1 左手按刀未动，摄影机停在横移末端。摄影机沿视线轴向画面右侧匀缓摇过去，摇速恒定，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：S3 的脸由画面右缘进入并占据画心，景别收紧为面部近景（下巴到额头，人脸占画面三分之二以上）；S1、S2、S4 的身位在画面左缘与背景里保持前段位置。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：S3 自灯棚阴影里走出，玄黑袍角扫过湿石板；灯笼在他肩上明灭一次，冠下长直黑发与鬓角随他粗重的呼吸轻颤，末梢一直在飘。\n1.6～3.4秒：(S3) says: <d>[Chinese]箱子留下。人可以走。</d> 他的语态：低沉粗粝，压迫感强，咬字有力；说话时头部小幅前压，嘴型张合幅度大，眉毛随重音抖动，鬓边长发随每次重音向后轻甩半寸再落回。\n3.4～5.0秒：四人成三角站位（S3 居北台阶下，S1 与 S4 居南，S2 居东巷口）；(S1) says: <d>[Chinese]黑风渡的人，也来抢镖？</d> 他的语态：低稳温厚，咬字清楚，语气沉着；说时视线落在 S3 的双掌上。段尾交接锚点：S3 立于北台阶下，双掌垂在身侧；S1 与 S4 居南，S2 居东巷口；镖箱在 S4 怀中；摄影机停在摇镜末端，机位高度未变。\n\noverall_soundscape: 灯市底噪压低半档、黑袍扫过湿地布面摩擦声、人群在灯棚下停止移动、灯笼骨架轻响、指节弹响一次。\nnon_diegetic_music: 同一段弦乐延续，音高不变，梆子点在此段加密一档，低音略微加厚。\n【第4段｜5秒】\nintegrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S3 立于北台阶下，双掌垂在身侧；S1 与 S4 居南，S2 居东巷口；镖箱在 S4 怀中；摄影机停在摇镜末端，机位高度未变。摄影机保持固定机位，只随出刀产生一次极轻微的呼吸式抖动，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：四人同框的中景，S1 在画面左、S3 在画面右相对而立，S2 在画面右缘巷口，S4 在画面左下木柜角抱箱，纵深约六米。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：S1 右手抽刀出鞘，刀背压过衣摆，起手式展开，脚下青石板压出一次水花；刀风带动灯笼轻晃，高马尾发梢与鬓边碎发被风带起后滞后半拍落回。\n1.6～3.4秒：S3 单掌迎上，掌风与刀锋在灯影里相击，气浪推开雨雾；西侧木柜上的灯罩抖，S3 袍角翻起未落。\n3.4～5.0秒：(S3) says: <d>[Chinese]刀不错。</d> 他的语态：低沉粗粝，短促，危险而内敛；说时右掌未撤，指节弹响一次。S2 在巷口挪半步，软剑沿墙影压低，S4 在木柜角把箱抱得更低。段尾交接锚点：S1 直刀已出鞘，刀身斜指向 S3；S3 右掌迎住刀锋，两力相持；S2 软剑压低，S4 在木柜角抱箱；摄影机保持眼平略低5°。\n\noverall_soundscape: 抽刀出鞘的金属摩擦、掌风气浪的压迫、两兵相击的短促撞击、人群在两侧退开的脚步。\nnon_diegetic_music: 同一段弦乐延续，鼓点加入一次重击，音高不变。\n【第5段｜5秒】\nintegrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S1 直刀已出鞘，刀身斜指向 S3；S3 右掌迎住刀锋，两力相持；S2 软剑压低，S4 在木柜角抱箱；摄影机保持眼平略低5°。摄影机沿摄影轴线向左回横移半个身位，焦点由刀线平滑移交到剑身，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：三人交错的近景，S1 在画面左下、S2 在画面左上、S3 在画面中央；S4 在画面左缘木柜角半入画。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：S2 软剑缠入刀线，剑身抖动出弧形，剑尖擦过灯棚布幔；她手腕转半圈，剑身弯出弧形后回弹一次，垂珠金流苏滞后半拍轻晃。\n1.6～3.4秒：S3 掌风撕开布幔，袍角翻起；S1 刀背压住剑线，两人身位交错，脚步在湿石板上碾出一次水痕。\n3.4～5.0秒：(S2) says: <d>[Chinese]刀走左，我取他腕。</d> 她的语态：平稳清晰，语速略快，气息短；说时剑尖沿刀线前送半寸。灯笼连排明灭一次，曝光不变。段尾交接锚点：S2 软剑缠在刀线上、剑身弯出弧形；S1 刀背压住剑线，与 S3 身位交错；S3 袍角翻起未落；镖箱仍在 S4 怀中；摄影机停在回横移末端。\n\noverall_soundscape: 布幔撕裂、灯笼骨架轻响、两兵相击、软剑与刀背摩擦，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐加快，音高不变，鼓点延续。\n【第6段｜5秒】\nintegrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S2 软剑缠在刀线上、剑身弯出弧形；S1 刀背压住剑线，与 S3 身位交错；S3 袍角翻起未落；镖箱仍在 S4 怀中；摄影机停在回横移末端。摄影机从木柜角向右小幅横移，焦点由交线的兵刃接手到 S4，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：S4 的中近景在画心，倾倒的灯架在他右后方，镖箱在他双手与三级石台阶之间；S3 的袍角入画在画面右上。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：掌风与刀气扫过西侧木柜角，S4 被气浪掀翻，镖箱滑向三级石台阶下；铜角包边在石板上擦出一道水花。\n1.6～3.4秒：S4 半爬起扑抱镖箱，双手扣紧，肩背撞在灯架；灯笼架倾倒一次，木料摩擦与落地。\n3.4～5.0秒：(S4) says: <d>[Chinese]箱子！箱子！</d> 他的语态：略带宽厚鼻音，喊声急促带喜感；喊时额头碎发随身体起伏抖动，双手始终扣住箱身。S3 袍角扫过他背，未停步。段尾交接锚点：S4 半爬起扑抱镖箱，肩背倚在倾倒的灯架旁，双手扣紧；镖箱在石台阶下、离地半尺；S3 袍角仍翻起，S1 与 S2 兵刃未收；摄影机停在小幅横移末端。\n\noverall_soundscape: 灯架倾倒的木料摩擦与落地、镖箱铜角在石板上滑动、灯市底噪压低半档。\nnon_diegetic_music: 同一段弦乐在低音区加密，音高不变，鼓点一次重音。\n【第7段｜5秒】\nintegrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S4 半爬起扑抱镖箱，肩背倚在倾倒的灯架旁，双手扣紧；镖箱在石台阶下、离地半尺；S3 袍角仍翻起，S1 与 S2 兵刃未收；摄影机停在小幅横移末端。摄影机保持固定机位，焦点锁在 S3 手腕与镖箱之间，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：近景，S3 右手扣住 S4 手腕在画心，镖箱被提起半尺悬空；S1 与 S2 在画面左右边缘收势，焦点在中央。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.5秒：S3 反手扣住 S4 手腕，将镖箱提起半尺；S4 左膝着地半跪，肩背被拉得前倾，短发额前碎发随拉拽抖动。\n1.5～3.5秒：(S3) says: <d>[Chinese]刀收起来，不然他手断。</d> 他的语态：低沉粗粝，压迫感强，语速放慢；说时手腕收紧一次，镖箱在空中轻转半圈，铜锁朝向镜头。\n3.5～5.0秒：S1 与 S2 收势停步，刀尖与剑尖下垂；雨落在刀背上，两人都不再前进。段尾交接锚点：S3 右手扣住 S4 手腕，镖箱被提起半尺悬空；S4 半跪，左膝着地；S1 与 S2 收势停步，刀尖与剑尖下垂；摄影机保持固定，焦点在 S3 手腕。\n\noverall_soundscape: 手腕被扣的布料摩擦、镖箱悬空的轻响、灯架倾倒木料余响，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐进入低音区，音高不变，鼓点暂停。\n【第8段｜5秒】\nintegrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S3 右手扣住 S4 手腕，镖箱被提起半尺悬空；S4 半跪，左膝着地；S1 与 S2 收势停步，刀尖与剑尖下垂；摄影机保持固定，焦点在 S3 手腕。摄影机保持固定机位，焦点由 S1 的脸平滑移交 S2 的脸，再随脚步轻跟，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：中景，S3 与半跪的 S4 在画面中央偏右，S1 在画面左侧木柜角，S2 在画面右侧灯棚立柱旁，四人成夹角。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：S1 的目光落在 S2 脸上，嘴角微动，无台词；S2 的眼角与下颌轻抬，视线接住他的视线，两人之间无语言，只有呼吸对齐一次。\n1.6～3.4秒：S1 侧移两步到西侧木柜角，刀尖拖过湿石板拖出一道水痕；S2 顺势滑向灯棚立柱，软剑横于身前，鬓边碎发随侧移滞后半拍跟上。\n3.4～5.0秒：二人站位换位完成；S3 的手腕收紧，S4 半跪不动；灯影明灭一次，曝光锁定。段尾交接锚点：S1 站在西侧木柜角，刀尖拖在湿石板上；S2 立在灯棚立柱旁，软剑横于身前；S3 右手仍扣 S4 手腕，镖箱悬空；S4 半跪；摄影机保持固定。\n\noverall_soundscape: 刀尖在湿石板的摩擦、两步侧移脚步、换位脚步在湿石板的轻响，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐在低音区加密，音高不变，鼓点暂停。\n【第9段｜5秒】\nintegrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S1 站在西侧木柜角，刀尖拖在湿石板上；S2 立在灯棚立柱旁，软剑横于身前；S3 右手仍扣 S4 手腕，镖箱悬空；S4 半跪；摄影机保持固定。摄影机沿摄影轴线小幅后撤半个身位，容纳两路兵器，焦点随兵器移动，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：中景，S1 在画面左下、S2 在画面右上成夹角，S3 在画面中央，镖箱在 S3 右手与三级石台阶之间。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.5秒：S1 刀锋走下路，刀背贴地推入；S2 软剑自上路穿入灯影，两路兵器在画面里成 X 形，灯影在剑身上滑过一道高光。\n1.5～3.3秒：两路兵器在灯影里交错，S3 被迫撒手，镖箱脱手飞向三级石台阶；铜锁在半空反光一次。\n3.3～5.0秒：(S1) says: <d>[Chinese]箱子！</d> 他的语态：低沉短促，气息推前；喊时刀锋未收，身体前送半步。灯笼连排明灭，光轴不变。段尾交接锚点：镖箱脱手飞向三级石台阶、仍在半空；S3 右手撒手收回，S1 刀锋在下路、S2 软剑在上路成夹角；S4 半跪伸手去接；摄影机停在后撤末端。\n\noverall_soundscape: 两路兵器交错在灯影里相击、灯笼连排晃动、镖箱脱手的轻响，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐与鼓点进入最密，音高不变。\n【第10段｜5秒】\nintegrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：镖箱脱手飞向三级石台阶、仍在半空；S3 右手撒手收回，S1 刀锋在下路、S2 软剑在上路成夹角；S4 半跪伸手去接；摄影机停在后撤末端。摄影机保持固定机位，焦点锁 S3 前伸的右掌与 S1 的胸肩，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：中近景，S3 在画面右、S1 在画面左撞向木柜角，S2 在画面右上，S4 在画面左下台阶旁。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.5秒：S3 掌风击中 S1 胸肩，S1 撞在西侧木柜角，单膝跪地，刀斜插石板缝；衣料在掌风下皱起一道折痕。\n1.5～3.4秒：S1 唇边见血，肩背前倾，右手仍握刀柄；无清晰可见伤口，不见血泊，画面不出现血腥细节。\n3.4～5.0秒：(S3) says: <d>[Chinese]滚。</d> 他的语态：低沉粗粝，单字，压迫感强；说时右掌前伸未收。S2 剑尖被逼回，灯罩抖一次。段尾交接锚点：S1 单膝跪在西侧木柜角，刀斜插石板缝，右手仍握刀柄；S3 站在台阶下，右掌前伸；S2 剑尖被逼回、剑身压低；S4 半跪在台阶旁；摄影机保持固定。\n\noverall_soundscape: 掌风与身体撞在木柜角的闷响、刀斜插石板缝的摩擦、人群在两侧退开的脚步，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐鼓点最密，音高不变，低音略微加厚。\n【第11段｜5秒】\nintegrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S1 单膝跪在西侧木柜角，刀斜插石板缝，右手仍握刀柄；S3 站在台阶下，右掌前伸；S2 剑尖被逼回、剑身压低；S4 半跪在台阶旁；摄影机保持固定。摄影机随跃起极缓慢上摇（不切镜），焦点锁软剑剑尖，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：S2 跃起在画面上半，S3 在画面中央，S1 在画面左下跪在木柜角，镖箱在三级石台阶上方下落。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：S2 借 S1 斜插的刀背为支点发力跃起，软剑点向 S3 手腕；她纱衣下摆与垂珠在跃起瞬间向上扬起，发梢滞后半拍跟上。\n1.6～3.4秒：灯影明灭一次，S3 手腕被点中，松手退两步，袍角扫过三级石台阶。\n3.4～5.0秒：(S2) says: <d>[Chinese]撒手！</d> 她的语态：平稳清晰，爆发短促，气息收后延；说时剑尖已收回身侧。镖箱落回台阶。段尾交接锚点：S2 落地，软剑垂向台阶；S3 松手退两步，袍角扫过台阶；镖箱落回台阶上；S1 单膝跪在木柜角，刀仍斜插石板缝；摄影机上摇后停在台阶高度。\n\noverall_soundscape: 跃起发力时空气声、灯罩明灭、剑点手腕的短促撞击、袍角扫过台阶，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐在跃起后骤停，余音收束，音高不变。\n【第12段｜5秒】\nintegrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S2 落地，软剑垂向台阶；S3 松手退两步，袍角扫过台阶；镖箱落回台阶上；S1 单膝跪在木柜角，刀仍斜插石板缝；摄影机上摇后停在台阶高度。摄影机极缓慢向后拉远（幅度极小），容纳四人，这是全片唯一一次收束性拉远，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：四人同框的中全景，S4 与镖箱在画面中央台阶前，S2 在画面右落地收势，S1 在画面左扶刀起身，S3 只剩画面深处的背影退出灯市阴影。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：镖箱稳稳定在台阶上；S4 扑抱镖箱，双手扣紧，铜锁磕在台阶石面一次。\n1.6～3.4秒：S2 落地收势，软剑垂；S1 扶刀半跪后起身，刀身离开石板缝，石板缝里留一道浅刀痕。\n3.4～5.0秒：S3 退出灯市阴影，灯笼恢复摇晃；(S1) says: <d>[Chinese]人齐了。走。</d> 他的语态：低稳温厚，气息收稳，尾音略沉；说时视线从镖箱移到 S2，再移到街南端。段尾交接锚点：镖箱稳定在台阶上，S4 双手抱箱；S2 落地收势软剑垂；S1 扶刀起身，刀身离开石板缝；S3 背影退出灯市阴影；摄影机停在拉远末端，四人同框。\n\noverall_soundscape: 灯市底噪回升到第一段的音量、雨打灯棚布幔、灯笼骨架轻响、人群重新聚拢脚步。\nnon_diegetic_music: 同一段音乐收束为低音区一次低音，余音收，不从头另起一首。\n",
+        "自动识别",
+        "",
+        false,
+        "跟随文本标注",
+        5,
+        false,
+        false,
+        12,
+        0
+      ],
+      "widgets_values_named": {
+        "global_prompt_visible": false,
+        "global_text": "",
+        "text": "【第1段｜5秒】\nintegrated_multimodal_description: [Shot 1] 16:9，东方古风写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物金线经纬清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，雨夜灯市的背景虚化成暖黄光斑与水雾。发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。摄影机自街南端极缓慢向前推近（五秒内推进幅度极小，不改变构图重心），机位高度略低于眼平5°，全程不切镜、不旋转、不改变构图重心。构图：街景纵深，S1 在画面中央偏左（四分之三侧脸），S4 在画面中央偏右贴身随行，S2 在画面右缘石栏后侧身半入画，三人同一层，纵深约八米。角色S1对应<Picture 2>：年轻成年男性，剑眉、薄唇、下颌线利落，深墨青底金缠枝纹劲装、深红内衬、高马尾配银灰枝状金属发冠，左手握直刀（刀身窄、刀背厚实）；角色S2对应<Picture 3>：年轻成年女性，杏眼、眉峰细、唇色淡，红白花冠配垂珠金流苏、赤金与玉坠耳饰、红白渐变半透纱衣外罩、红底金纹内衬，右手持软剑（剑身细窄可弯）；角色S4对应<Picture 5>：成年男性，圆脸、双颊饱满、鼻宽，粗麻短褂配皮肩带、短发蓬松，双手抱金木镖箱；道具金木镖箱对应<Picture 6>：铜角包边、铜锁、箱身尺寸不变。主光为画面左前方的暖橙灯笼光（约3200K），街北口落一层冷蓝夜色补光，鼻梁与下颌边缘有细窄高光，背景压暗，曝光跨段锁定。本段画面只有 S1、S2、S4 三人（S3 尚未入画），不得出现任何其他人物的面部、身体或背影。画面里没有第四个任何人。画面无字幕、无文字、无水印。\n0.0～2.0秒：夜雨，青石板反光流动，暖橙灯笼连排明灭，灯市底噪与人群低语在画面边缘铺开；S1 左手按刀、右肩护着 S4 怀中的金木镖箱，步伐稳定，呼吸轻，高马尾发梢被穿堂风带起后滞后半拍落回。\n2.0～3.6秒：(S4) says: <d>[Chinese]轻点，这箱子比咱们命贵。</d> 他的语态：气声压着，气息不稳，略带宽厚鼻音，带喜感；说话时双手把镖箱抱得更紧，额前碎发随重音轻抖，镖箱铜锁在灯影里反光一次。\n3.6～5.0秒：东巷口石栏后 S2 侧身入画，右手在袖中按住软剑，视线落到 S1 身上；S1 停步，肩膀压低。(S1) says: <d>[Chinese]前面巷口有人。</d> 他的语态：低沉、简短、气息沉稳；说时头部不转，只有下唇小幅起落。灯笼在雨里晃一次，曝光不变。段尾交接锚点：S1 停在石栏前三步、左手按刀，S4 双手抱箱在胸前，S2 立在石栏后、右手在袖中按住软剑、视线指向 S1，摄影机停在推近末端，机位高度未变。\n\noverall_soundscape: 灯市底噪与人群低语在画面边缘铺开、雨打灯棚布幔、灯笼纸响、人群脚步在湿石板上移动、镖箱铜锁轻碰一次。\nnon_diegetic_music: 低音弦乐长音打底，加入稀疏梆子点，音量与情绪克制，跨段持续不停。\n【第2段｜5秒】\nintegrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S1 停在石栏前三步、左手按刀，S4 双手抱箱在胸前，S2 立在石栏后、右手在袖中按住软剑、视线指向 S1，摄影机停在推近末端，机位高度未变。摄影机沿摄影轴线向右平稳横移约一个身位，不推不拉，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：近景，S2 自画面右缘进入画心，四分之三侧脸转向正面、人脸占画面二分之一以上；S1 的侧脸留在画面左缘，S4 在画面右下抱箱半入画，焦点由 S1 平滑移交到她脸上。S1 对应<Picture 2>、S2 对应<Picture 3>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S4 三人，画面里没有第四个任何人。画面无字幕、无文字、无水印。\n0.0～1.8秒：S2 自石栏后直身走出，与 S1 相距两步，软剑出鞘半寸、剑尖斜指地面；人群在灯棚下退开半步，她鬓边碎发与花冠垂珠滞后半拍轻晃，发梢掠过肩头再落下。\n1.8～3.6秒：(S2) says: <d>[Chinese]把箱子放下，我不伤人。</d> 她的语态：平稳、清晰、尾音轻，克制而坚决；说话时头部基本不动，只有眉心与嘴角小幅变化，视线在 S1 与镖箱之间移动，几缕碎发在额前持续极轻地飘。\n3.6～5.0秒：S4 侧身挡住镖箱，双手收紧；(S4) says: <d>[Chinese]你谁啊，这箱子不能给。</d> 他的语态：略带宽厚鼻音，语气灵活，吐字自然；说时肩膀把箱护得更低。S1 的左手按刀不动，刀柄在灯影里反光一次。段尾交接锚点：S2 站在石栏前一步，软剑出鞘半寸、剑尖斜指地面，视线在 S1 与镖箱之间；S4 侧身抱箱、双手收紧；S1 左手按刀未动，摄影机停在横移末端。\n\noverall_soundscape: 灯市底噪压低半档、雨滴敲打灯罩、人群在灯棚下移动的脚步声、软剑出鞘的金属轻响、她纱袖摩擦声。\nnon_diegetic_music: 同一段弦乐长音延续，梆子点不变，未换曲、未起新段。\n【第3段｜5秒】\nintegrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S2 站在石栏前一步，软剑出鞘半寸、剑尖斜指地面，视线在 S1 与镖箱之间；S4 侧身抱箱、双手收紧；S1 左手按刀未动，摄影机停在横移末端。摄影机沿视线轴向画面右侧匀缓摇过去，摇速恒定，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：S3 的脸由画面右缘进入并占据画心，景别收紧为面部近景（下巴到额头，人脸占画面三分之二以上）；S1、S2、S4 的身位在画面左缘与背景里保持前段位置。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：S3 自灯棚阴影里走出，玄黑袍角扫过湿石板；灯笼在他肩上明灭一次，冠下长直黑发与鬓角随他粗重的呼吸轻颤，末梢一直在飘。\n1.6～3.4秒：(S3) says: <d>[Chinese]箱子留下。人可以走。</d> 他的语态：低沉粗粝，压迫感强，咬字有力；说话时头部小幅前压，嘴型张合幅度大，眉毛随重音抖动，鬓边长发随每次重音向后轻甩半寸再落回。\n3.4～5.0秒：四人成三角站位（S3 居北台阶下，S1 与 S4 居南，S2 居东巷口）；(S1) says: <d>[Chinese]黑风渡的人，也来抢镖？</d> 他的语态：低稳温厚，咬字清楚，语气沉着；说时视线落在 S3 的双掌上。段尾交接锚点：S3 立于北台阶下，双掌垂在身侧；S1 与 S4 居南，S2 居东巷口；镖箱在 S4 怀中；摄影机停在摇镜末端，机位高度未变。\n\noverall_soundscape: 灯市底噪压低半档、黑袍扫过湿地布面摩擦声、人群在灯棚下停止移动、灯笼骨架轻响、指节弹响一次。\nnon_diegetic_music: 同一段弦乐延续，音高不变，梆子点在此段加密一档，低音略微加厚。\n【第4段｜5秒】\nintegrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S3 立于北台阶下，双掌垂在身侧；S1 与 S4 居南，S2 居东巷口；镖箱在 S4 怀中；摄影机停在摇镜末端，机位高度未变。摄影机保持固定机位，只随出刀产生一次极轻微的呼吸式抖动，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：四人同框的中景，S1 在画面左、S3 在画面右相对而立，S2 在画面右缘巷口，S4 在画面左下木柜角抱箱，纵深约六米。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：S1 右手抽刀出鞘，刀背压过衣摆，起手式展开，脚下青石板压出一次水花；刀风带动灯笼轻晃，高马尾发梢与鬓边碎发被风带起后滞后半拍落回。\n1.6～3.4秒：S3 单掌迎上，掌风与刀锋在灯影里相击，气浪推开雨雾；西侧木柜上的灯罩抖，S3 袍角翻起未落。\n3.4～5.0秒：(S3) says: <d>[Chinese]刀不错。</d> 他的语态：低沉粗粝，短促，危险而内敛；说时右掌未撤，指节弹响一次。S2 在巷口挪半步，软剑沿墙影压低，S4 在木柜角把箱抱得更低。段尾交接锚点：S1 直刀已出鞘，刀身斜指向 S3；S3 右掌迎住刀锋，两力相持；S2 软剑压低，S4 在木柜角抱箱；摄影机保持眼平略低5°。\n\noverall_soundscape: 抽刀出鞘的金属摩擦、掌风气浪的压迫、两兵相击的短促撞击、人群在两侧退开的脚步。\nnon_diegetic_music: 同一段弦乐延续，鼓点加入一次重击，音高不变。\n【第5段｜5秒】\nintegrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S1 直刀已出鞘，刀身斜指向 S3；S3 右掌迎住刀锋，两力相持；S2 软剑压低，S4 在木柜角抱箱；摄影机保持眼平略低5°。摄影机沿摄影轴线向左回横移半个身位，焦点由刀线平滑移交到剑身，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：三人交错的近景，S1 在画面左下、S2 在画面左上、S3 在画面中央；S4 在画面左缘木柜角半入画。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：S2 软剑缠入刀线，剑身抖动出弧形，剑尖擦过灯棚布幔；她手腕转半圈，剑身弯出弧形后回弹一次，垂珠金流苏滞后半拍轻晃。\n1.6～3.4秒：S3 掌风撕开布幔，袍角翻起；S1 刀背压住剑线，两人身位交错，脚步在湿石板上碾出一次水痕。\n3.4～5.0秒：(S2) says: <d>[Chinese]刀走左，我取他腕。</d> 她的语态：平稳清晰，语速略快，气息短；说时剑尖沿刀线前送半寸。灯笼连排明灭一次，曝光不变。段尾交接锚点：S2 软剑缠在刀线上、剑身弯出弧形；S1 刀背压住剑线，与 S3 身位交错；S3 袍角翻起未落；镖箱仍在 S4 怀中；摄影机停在回横移末端。\n\noverall_soundscape: 布幔撕裂、灯笼骨架轻响、两兵相击、软剑与刀背摩擦，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐加快，音高不变，鼓点延续。\n【第6段｜5秒】\nintegrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S2 软剑缠在刀线上、剑身弯出弧形；S1 刀背压住剑线，与 S3 身位交错；S3 袍角翻起未落；镖箱仍在 S4 怀中；摄影机停在回横移末端。摄影机从木柜角向右小幅横移，焦点由交线的兵刃接手到 S4，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：S4 的中近景在画心，倾倒的灯架在他右后方，镖箱在他双手与三级石台阶之间；S3 的袍角入画在画面右上。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：掌风与刀气扫过西侧木柜角，S4 被气浪掀翻，镖箱滑向三级石台阶下；铜角包边在石板上擦出一道水花。\n1.6～3.4秒：S4 半爬起扑抱镖箱，双手扣紧，肩背撞在灯架；灯笼架倾倒一次，木料摩擦与落地。\n3.4～5.0秒：(S4) says: <d>[Chinese]箱子！箱子！</d> 他的语态：略带宽厚鼻音，喊声急促带喜感；喊时额头碎发随身体起伏抖动，双手始终扣住箱身。S3 袍角扫过他背，未停步。段尾交接锚点：S4 半爬起扑抱镖箱，肩背倚在倾倒的灯架旁，双手扣紧；镖箱在石台阶下、离地半尺；S3 袍角仍翻起，S1 与 S2 兵刃未收；摄影机停在小幅横移末端。\n\noverall_soundscape: 灯架倾倒的木料摩擦与落地、镖箱铜角在石板上滑动、灯市底噪压低半档。\nnon_diegetic_music: 同一段弦乐在低音区加密，音高不变，鼓点一次重音。\n【第7段｜5秒】\nintegrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S4 半爬起扑抱镖箱，肩背倚在倾倒的灯架旁，双手扣紧；镖箱在石台阶下、离地半尺；S3 袍角仍翻起，S1 与 S2 兵刃未收；摄影机停在小幅横移末端。摄影机保持固定机位，焦点锁在 S3 手腕与镖箱之间，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：近景，S3 右手扣住 S4 手腕在画心，镖箱被提起半尺悬空；S1 与 S2 在画面左右边缘收势，焦点在中央。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.5秒：S3 反手扣住 S4 手腕，将镖箱提起半尺；S4 左膝着地半跪，肩背被拉得前倾，短发额前碎发随拉拽抖动。\n1.5～3.5秒：(S3) says: <d>[Chinese]刀收起来，不然他手断。</d> 他的语态：低沉粗粝，压迫感强，语速放慢；说时手腕收紧一次，镖箱在空中轻转半圈，铜锁朝向镜头。\n3.5～5.0秒：S1 与 S2 收势停步，刀尖与剑尖下垂；雨落在刀背上，两人都不再前进。段尾交接锚点：S3 右手扣住 S4 手腕，镖箱被提起半尺悬空；S4 半跪，左膝着地；S1 与 S2 收势停步，刀尖与剑尖下垂；摄影机保持固定，焦点在 S3 手腕。\n\noverall_soundscape: 手腕被扣的布料摩擦、镖箱悬空的轻响、灯架倾倒木料余响，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐进入低音区，音高不变，鼓点暂停。\n【第8段｜5秒】\nintegrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S3 右手扣住 S4 手腕，镖箱被提起半尺悬空；S4 半跪，左膝着地；S1 与 S2 收势停步，刀尖与剑尖下垂；摄影机保持固定，焦点在 S3 手腕。摄影机保持固定机位，焦点由 S1 的脸平滑移交 S2 的脸，再随脚步轻跟，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：中景，S3 与半跪的 S4 在画面中央偏右，S1 在画面左侧木柜角，S2 在画面右侧灯棚立柱旁，四人成夹角。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：S1 的目光落在 S2 脸上，嘴角微动，无台词；S2 的眼角与下颌轻抬，视线接住他的视线，两人之间无语言，只有呼吸对齐一次。\n1.6～3.4秒：S1 侧移两步到西侧木柜角，刀尖拖过湿石板拖出一道水痕；S2 顺势滑向灯棚立柱，软剑横于身前，鬓边碎发随侧移滞后半拍跟上。\n3.4～5.0秒：二人站位换位完成；S3 的手腕收紧，S4 半跪不动；灯影明灭一次，曝光锁定。段尾交接锚点：S1 站在西侧木柜角，刀尖拖在湿石板上；S2 立在灯棚立柱旁，软剑横于身前；S3 右手仍扣 S4 手腕，镖箱悬空；S4 半跪；摄影机保持固定。\n\noverall_soundscape: 刀尖在湿石板的摩擦、两步侧移脚步、换位脚步在湿石板的轻响，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐在低音区加密，音高不变，鼓点暂停。\n【第9段｜5秒】\nintegrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S1 站在西侧木柜角，刀尖拖在湿石板上；S2 立在灯棚立柱旁，软剑横于身前；S3 右手仍扣 S4 手腕，镖箱悬空；S4 半跪；摄影机保持固定。摄影机沿摄影轴线小幅后撤半个身位，容纳两路兵器，焦点随兵器移动，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：中景，S1 在画面左下、S2 在画面右上成夹角，S3 在画面中央，镖箱在 S3 右手与三级石台阶之间。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.5秒：S1 刀锋走下路，刀背贴地推入；S2 软剑自上路穿入灯影，两路兵器在画面里成 X 形，灯影在剑身上滑过一道高光。\n1.5～3.3秒：两路兵器在灯影里交错，S3 被迫撒手，镖箱脱手飞向三级石台阶；铜锁在半空反光一次。\n3.3～5.0秒：(S1) says: <d>[Chinese]箱子！</d> 他的语态：低沉短促，气息推前；喊时刀锋未收，身体前送半步。灯笼连排明灭，光轴不变。段尾交接锚点：镖箱脱手飞向三级石台阶、仍在半空；S3 右手撒手收回，S1 刀锋在下路、S2 软剑在上路成夹角；S4 半跪伸手去接；摄影机停在后撤末端。\n\noverall_soundscape: 两路兵器交错在灯影里相击、灯笼连排晃动、镖箱脱手的轻响，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐与鼓点进入最密，音高不变。\n【第10段｜5秒】\nintegrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：镖箱脱手飞向三级石台阶、仍在半空；S3 右手撒手收回，S1 刀锋在下路、S2 软剑在上路成夹角；S4 半跪伸手去接；摄影机停在后撤末端。摄影机保持固定机位，焦点锁 S3 前伸的右掌与 S1 的胸肩，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：中近景，S3 在画面右、S1 在画面左撞向木柜角，S2 在画面右上，S4 在画面左下台阶旁。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.5秒：S3 掌风击中 S1 胸肩，S1 撞在西侧木柜角，单膝跪地，刀斜插石板缝；衣料在掌风下皱起一道折痕。\n1.5～3.4秒：S1 唇边见血，肩背前倾，右手仍握刀柄；无清晰可见伤口，不见血泊，画面不出现血腥细节。\n3.4～5.0秒：(S3) says: <d>[Chinese]滚。</d> 他的语态：低沉粗粝，单字，压迫感强；说时右掌前伸未收。S2 剑尖被逼回，灯罩抖一次。段尾交接锚点：S1 单膝跪在西侧木柜角，刀斜插石板缝，右手仍握刀柄；S3 站在台阶下，右掌前伸；S2 剑尖被逼回、剑身压低；S4 半跪在台阶旁；摄影机保持固定。\n\noverall_soundscape: 掌风与身体撞在木柜角的闷响、刀斜插石板缝的摩擦、人群在两侧退开的脚步，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐鼓点最密，音高不变，低音略微加厚。\n【第11段｜5秒】\nintegrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S1 单膝跪在西侧木柜角，刀斜插石板缝，右手仍握刀柄；S3 站在台阶下，右掌前伸；S2 剑尖被逼回、剑身压低；S4 半跪在台阶旁；摄影机保持固定。摄影机随跃起极缓慢上摇（不切镜），焦点锁软剑剑尖，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：S2 跃起在画面上半，S3 在画面中央，S1 在画面左下跪在木柜角，镖箱在三级石台阶上方下落。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：S2 借 S1 斜插的刀背为支点发力跃起，软剑点向 S3 手腕；她纱衣下摆与垂珠在跃起瞬间向上扬起，发梢滞后半拍跟上。\n1.6～3.4秒：灯影明灭一次，S3 手腕被点中，松手退两步，袍角扫过三级石台阶。\n3.4～5.0秒：(S2) says: <d>[Chinese]撒手！</d> 她的语态：平稳清晰，爆发短促，气息收后延；说时剑尖已收回身侧。镖箱落回台阶。段尾交接锚点：S2 落地，软剑垂向台阶；S3 松手退两步，袍角扫过台阶；镖箱落回台阶上；S1 单膝跪在木柜角，刀仍斜插石板缝；摄影机上摇后停在台阶高度。\n\noverall_soundscape: 跃起发力时空气声、灯罩明灭、剑点手腕的短促撞击、袍角扫过台阶，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐在跃起后骤停，余音收束，音高不变。\n【第12段｜5秒】\nintegrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S2 落地，软剑垂向台阶；S3 松手退两步，袍角扫过台阶；镖箱落回台阶上；S1 单膝跪在木柜角，刀仍斜插石板缝；摄影机上摇后停在台阶高度。摄影机极缓慢向后拉远（幅度极小），容纳四人，这是全片唯一一次收束性拉远，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：四人同框的中全景，S4 与镖箱在画面中央台阶前，S2 在画面右落地收势，S1 在画面左扶刀起身，S3 只剩画面深处的背影退出灯市阴影。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：镖箱稳稳定在台阶上；S4 扑抱镖箱，双手扣紧，铜锁磕在台阶石面一次。\n1.6～3.4秒：S2 落地收势，软剑垂；S1 扶刀半跪后起身，刀身离开石板缝，石板缝里留一道浅刀痕。\n3.4～5.0秒：S3 退出灯市阴影，灯笼恢复摇晃；(S1) says: <d>[Chinese]人齐了。走。</d> 他的语态：低稳温厚，气息收稳，尾音略沉；说时视线从镖箱移到 S2，再移到街南端。段尾交接锚点：镖箱稳定在台阶上，S4 双手抱箱；S2 落地收势软剑垂；S1 扶刀起身，刀身离开石板缝；S3 背影退出灯市阴影；摄影机停在拉远末端，四人同框。\n\noverall_soundscape: 灯市底噪回升到第一段的音量、雨打灯棚布幔、灯笼骨架轻响、人群重新聚拢脚步。\nnon_diegetic_music: 同一段音乐收束为低音区一次低音，余音收，不从头另起一首。\n",
+        "mode": "自动识别",
+        "custom_regex": "",
+        "keep_header": false,
+        "seconds_mode": "跟随文本标注",
+        "default_seconds": 5,
+        "auto_fill": false,
+        "randomize_seed": false,
+        "max_segments": 12,
+        "seed_start": 0
+      }
+    },
+    {
+      "id": 1125,
+      "type": "1ed6f447-3389-4f03-ad2f-6c6d99a69925",
+      "pos": [
+        -3480,
+        30
+      ],
+      "size": [
+        140,
+        30
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 649
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            650
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.45.0",
+        "previewExposures": []
+      }
+    },
+    {
+      "id": 1134,
+      "type": "AICG3D_H3SequenceSegment",
+      "pos": [
+        -1270,
+        -30
+      ],
+      "size": [
+        430,
+        800
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "全局设置",
+          "name": "sequence_config",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_CONFIG",
+          "link": null
+        },
+        {
+          "label": "上一分段",
+          "name": "previous_segment",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "link": 748
+        },
+        {
+          "name": "voice_cast",
+          "shape": 7,
+          "type": "AICG3D_CHARACTER_VOICE_CAST",
+          "link": null
+        },
+        {
+          "label": "AICG3D",
+          "name": "media",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "label": "引导图片",
+          "name": "guide_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "引导音频",
+          "name": "guide_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "视频段落",
+          "name": "segment",
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "links": [
+            750
+          ]
+        }
+      ],
+      "title": "视频段落 3",
+      "properties": {
+        "Node name for S&R": "AICG3D_H3SequenceSegment",
+        "minimax_h3_inline_media_state": "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "minimax_h3_inline_media_owned": false,
+        "minimax_h3_inline_media_inherited": true,
+        "minimax_h3_virtual_media_links": [],
+        "minimax_h3_prompt_reference_doc": {
+          "version": 1,
+          "text": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S2 站在石栏前一步，软剑出鞘半寸、剑尖斜指地面，视线在 S1 与镖箱之间；S4 侧身抱箱、双手收紧；S1 左手按刀未动，摄影机停在横移末端。摄影机沿视线轴向画面右侧匀缓摇过去，摇速恒定，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：S3 的脸由画面右缘进入并占据画心，景别收紧为面部近景（下巴到额头，人脸占画面三分之二以上）；S1、S2、S4 的身位在画面左缘与背景里保持前段位置。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：S3 自灯棚阴影里走出，玄黑袍角扫过湿石板；灯笼在他肩上明灭一次，冠下长直黑发与鬓角随他粗重的呼吸轻颤，末梢一直在飘。\n1.6～3.4秒：(S3) says: <d>[Chinese]箱子留下。人可以走。</d> 他的语态：低沉粗粝，压迫感强，咬字有力；说话时头部小幅前压，嘴型张合幅度大，眉毛随重音抖动，鬓边长发随每次重音向后轻甩半寸再落回。\n3.4～5.0秒：四人成三角站位（S3 居北台阶下，S1 与 S4 居南，S2 居东巷口）；(S1) says: <d>[Chinese]黑风渡的人，也来抢镖？</d> 他的语态：低稳温厚，咬字清楚，语气沉着；说时视线落在 S3 的双掌上。段尾交接锚点：S3 立于北台阶下，双掌垂在身侧；S1 与 S4 居南，S2 居东巷口；镖箱在 S4 怀中；摄影机停在摇镜末端，机位高度未变。\n\noverall_soundscape: 灯市底噪压低半档、黑袍扫过湿地布面摩擦声、人群在灯棚下停止移动、灯笼骨架轻响、指节弹响一次。\nnon_diegetic_music: 同一段弦乐延续，音高不变，梆子点在此段加密一档，低音略微加厚。",
+          "parts": [
+            {
+              "type": "text",
+              "text": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S2 站在石栏前一步，软剑出鞘半寸、剑尖斜指地面，视线在 S1 与镖箱之间；S4 侧身抱箱、双手收紧；S1 左手按刀未动，摄影机停在横移末端。摄影机沿视线轴向画面右侧匀缓摇过去，摇速恒定，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：S3 的脸由画面右缘进入并占据画心，景别收紧为面部近景（下巴到额头，人脸占画面三分之二以上）；S1、S2、S4 的身位在画面左缘与背景里保持前段位置。S1 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片2",
+              "tag": "<Picture 2>",
+              "label": "图片2",
+              "fullLabel": "image2.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 2,
+              "mediaIndex": 2,
+              "sourceId": 1134,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image2.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "、S2 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片3",
+              "tag": "<Picture 3>",
+              "label": "图片3",
+              "fullLabel": "image3.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 3,
+              "mediaIndex": 3,
+              "sourceId": 1134,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image3.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "、S3 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片4",
+              "tag": "<Picture 4>",
+              "label": "图片4",
+              "fullLabel": "image4.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 4,
+              "mediaIndex": 4,
+              "sourceId": 1134,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image4.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "、S4 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片5",
+              "tag": "<Picture 5>",
+              "label": "图片5",
+              "fullLabel": "image5.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 5,
+              "mediaIndex": 5,
+              "sourceId": 1134,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image5.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "，道具金木镖箱"
+            },
+            {
+              "type": "mention",
+              "token": "@图片6",
+              "tag": "<Picture 6>",
+              "label": "图片6",
+              "fullLabel": "image6.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 6,
+              "mediaIndex": 6,
+              "sourceId": 1134,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image6.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：S3 自灯棚阴影里走出，玄黑袍角扫过湿石板；灯笼在他肩上明灭一次，冠下长直黑发与鬓角随他粗重的呼吸轻颤，末梢一直在飘。\n1.6～3.4秒：(S3) says: "
+            },
+            {
+              "type": "dialogue",
+              "text": "[Chinese]箱子留下。人可以走。"
+            },
+            {
+              "type": "text",
+              "text": " 他的语态：低沉粗粝，压迫感强，咬字有力；说话时头部小幅前压，嘴型张合幅度大，眉毛随重音抖动，鬓边长发随每次重音向后轻甩半寸再落回。\n3.4～5.0秒：四人成三角站位（S3 居北台阶下，S1 与 S4 居南，S2 居东巷口）；(S1) says: "
+            },
+            {
+              "type": "dialogue",
+              "text": "[Chinese]黑风渡的人，也来抢镖？"
+            },
+            {
+              "type": "text",
+              "text": " 他的语态：低稳温厚，咬字清楚，语气沉着；说时视线落在 S3 的双掌上。段尾交接锚点：S3 立于北台阶下，双掌垂在身侧；S1 与 S4 居南，S2 居东巷口；镖箱在 S4 怀中；摄影机停在摇镜末端，机位高度未变。\n\noverall_soundscape: 灯市底噪压低半档、黑袍扫过湿地布面摩擦声、人群在灯棚下停止移动、灯笼骨架轻响、指节弹响一次。\nnon_diegetic_music: 同一段弦乐延续，音高不变，梆子点在此段加密一档，低音略微加厚。"
+            }
+          ]
+        }
+      },
+      "widgets_values": [
+        "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S2 站在石栏前一步，软剑出鞘半寸、剑尖斜指地面，视线在 S1 与镖箱之间；S4 侧身抱箱、双手收紧；S1 左手按刀未动，摄影机停在横移末端。摄影机沿视线轴向画面右侧匀缓摇过去，摇速恒定，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：S3 的脸由画面右缘进入并占据画心，景别收紧为面部近景（下巴到额头，人脸占画面三分之二以上）；S1、S2、S4 的身位在画面左缘与背景里保持前段位置。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：S3 自灯棚阴影里走出，玄黑袍角扫过湿石板；灯笼在他肩上明灭一次，冠下长直黑发与鬓角随他粗重的呼吸轻颤，末梢一直在飘。\n1.6～3.4秒：(S3) says: <d>[Chinese]箱子留下。人可以走。</d> 他的语态：低沉粗粝，压迫感强，咬字有力；说话时头部小幅前压，嘴型张合幅度大，眉毛随重音抖动，鬓边长发随每次重音向后轻甩半寸再落回。\n3.4～5.0秒：四人成三角站位（S3 居北台阶下，S1 与 S4 居南，S2 居东巷口）；(S1) says: <d>[Chinese]黑风渡的人，也来抢镖？</d> 他的语态：低稳温厚，咬字清楚，语气沉着；说时视线落在 S3 的双掌上。段尾交接锚点：S3 立于北台阶下，双掌垂在身侧；S1 与 S4 居南，S2 居东巷口；镖箱在 S4 怀中；摄影机停在摇镜末端，机位高度未变。\n\noverall_soundscape: 灯市底噪压低半档、黑袍扫过湿地布面摩擦声、人群在灯棚下停止移动、灯笼骨架轻响、指节弹响一次。\nnon_diegetic_music: 同一段弦乐延续，音高不变，梆子点在此段加密一档，低音略微加厚。",
+        5,
+        7711003,
+        "fixed",
+        0,
+        "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "",
+        false,
+        "",
+        "",
+        0,
+        0
+      ],
+      "widgets_values_named": {
+        "prompt": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S2 站在石栏前一步，软剑出鞘半寸、剑尖斜指地面，视线在 S1 与镖箱之间；S4 侧身抱箱、双手收紧；S1 左手按刀未动，摄影机停在横移末端。摄影机沿视线轴向画面右侧匀缓摇过去，摇速恒定，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：S3 的脸由画面右缘进入并占据画心，景别收紧为面部近景（下巴到额头，人脸占画面三分之二以上）；S1、S2、S4 的身位在画面左缘与背景里保持前段位置。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：S3 自灯棚阴影里走出，玄黑袍角扫过湿石板；灯笼在他肩上明灭一次，冠下长直黑发与鬓角随他粗重的呼吸轻颤，末梢一直在飘。\n1.6～3.4秒：(S3) says: <d>[Chinese]箱子留下。人可以走。</d> 他的语态：低沉粗粝，压迫感强，咬字有力；说话时头部小幅前压，嘴型张合幅度大，眉毛随重音抖动，鬓边长发随每次重音向后轻甩半寸再落回。\n3.4～5.0秒：四人成三角站位（S3 居北台阶下，S1 与 S4 居南，S2 居东巷口）；(S1) says: <d>[Chinese]黑风渡的人，也来抢镖？</d> 他的语态：低稳温厚，咬字清楚，语气沉着；说时视线落在 S3 的双掌上。段尾交接锚点：S3 立于北台阶下，双掌垂在身侧；S1 与 S4 居南，S2 居东巷口；镖箱在 S4 怀中；摄影机停在摇镜末端，机位高度未变。\n\noverall_soundscape: 灯市底噪压低半档、黑袍扫过湿地布面摩擦声、人群在灯棚下停止移动、灯笼骨架轻响、指节弹响一次。\nnon_diegetic_music: 同一段弦乐延续，音高不变，梆子点在此段加密一档，低音略微加厚。",
+        "seconds": 5,
+        "seed": 7711003,
+        "control_after_generate": "fixed",
+        "guide_frame_idx": 0,
+        "inline_media_state": "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "sequence_scope": "",
+        "draw_previous_from_cache": false,
+        "draw_previous_scope": "",
+        "draw_previous_chain_key": "",
+        "draw_previous_node_id": 0,
+        "draw_previous_index": 0
+      }
+    },
+    {
+      "id": 1160,
+      "type": "SaveVideo",
+      "pos": [
+        980,
+        -30
+      ],
+      "size": [
+        1250,
+        830
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "视频",
+          "name": "video",
+          "type": "VIDEO",
+          "link": 711
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.45.0",
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "video/ComfyUI",
+        "auto",
+        "auto",
+        "auto"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "video/ComfyUI",
+        "format": "auto",
+        "format.codec": "auto",
+        "codec": "auto"
+      }
+    },
+    {
+      "id": 1175,
+      "type": "AICG3D_H3SequenceSegment",
+      "pos": [
+        -810,
+        -30
+      ],
+      "size": [
+        450,
+        800
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "全局设置",
+          "name": "sequence_config",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_CONFIG",
+          "link": null
+        },
+        {
+          "label": "上一分段",
+          "name": "previous_segment",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "link": 750
+        },
+        {
+          "name": "voice_cast",
+          "shape": 7,
+          "type": "AICG3D_CHARACTER_VOICE_CAST",
+          "link": null
+        },
+        {
+          "label": "AICG3D",
+          "name": "media",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "label": "引导图片",
+          "name": "guide_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "引导音频",
+          "name": "guide_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "视频段落",
+          "name": "segment",
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "links": [
+            752
+          ]
+        }
+      ],
+      "title": "视频段落 4",
+      "properties": {
+        "Node name for S&R": "AICG3D_H3SequenceSegment",
+        "minimax_h3_inline_media_state": "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "minimax_h3_inline_media_owned": false,
+        "minimax_h3_inline_media_inherited": true,
+        "minimax_h3_virtual_media_links": [],
+        "minimax_h3_prompt_reference_doc": {
+          "version": 1,
+          "text": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S3 立于北台阶下，双掌垂在身侧；S1 与 S4 居南，S2 居东巷口；镖箱在 S4 怀中；摄影机停在摇镜末端，机位高度未变。摄影机保持固定机位，只随出刀产生一次极轻微的呼吸式抖动，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：四人同框的中景，S1 在画面左、S3 在画面右相对而立，S2 在画面右缘巷口，S4 在画面左下木柜角抱箱，纵深约六米。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：S1 右手抽刀出鞘，刀背压过衣摆，起手式展开，脚下青石板压出一次水花；刀风带动灯笼轻晃，高马尾发梢与鬓边碎发被风带起后滞后半拍落回。\n1.6～3.4秒：S3 单掌迎上，掌风与刀锋在灯影里相击，气浪推开雨雾；西侧木柜上的灯罩抖，S3 袍角翻起未落。\n3.4～5.0秒：(S3) says: <d>[Chinese]刀不错。</d> 他的语态：低沉粗粝，短促，危险而内敛；说时右掌未撤，指节弹响一次。S2 在巷口挪半步，软剑沿墙影压低，S4 在木柜角把箱抱得更低。段尾交接锚点：S1 直刀已出鞘，刀身斜指向 S3；S3 右掌迎住刀锋，两力相持；S2 软剑压低，S4 在木柜角抱箱；摄影机保持眼平略低5°。\n\noverall_soundscape: 抽刀出鞘的金属摩擦、掌风气浪的压迫、两兵相击的短促撞击、人群在两侧退开的脚步。\nnon_diegetic_music: 同一段弦乐延续，鼓点加入一次重击，音高不变。",
+          "parts": [
+            {
+              "type": "text",
+              "text": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S3 立于北台阶下，双掌垂在身侧；S1 与 S4 居南，S2 居东巷口；镖箱在 S4 怀中；摄影机停在摇镜末端，机位高度未变。摄影机保持固定机位，只随出刀产生一次极轻微的呼吸式抖动，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：四人同框的中景，S1 在画面左、S3 在画面右相对而立，S2 在画面右缘巷口，S4 在画面左下木柜角抱箱，纵深约六米。S1 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片2",
+              "tag": "<Picture 2>",
+              "label": "图片2",
+              "fullLabel": "image2.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 2,
+              "mediaIndex": 2,
+              "sourceId": 1175,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image2.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "、S2 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片3",
+              "tag": "<Picture 3>",
+              "label": "图片3",
+              "fullLabel": "image3.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 3,
+              "mediaIndex": 3,
+              "sourceId": 1175,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image3.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "、S3 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片4",
+              "tag": "<Picture 4>",
+              "label": "图片4",
+              "fullLabel": "image4.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 4,
+              "mediaIndex": 4,
+              "sourceId": 1175,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image4.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "、S4 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片5",
+              "tag": "<Picture 5>",
+              "label": "图片5",
+              "fullLabel": "image5.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 5,
+              "mediaIndex": 5,
+              "sourceId": 1175,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image5.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "，道具金木镖箱"
+            },
+            {
+              "type": "mention",
+              "token": "@图片6",
+              "tag": "<Picture 6>",
+              "label": "图片6",
+              "fullLabel": "image6.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 6,
+              "mediaIndex": 6,
+              "sourceId": 1175,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image6.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：S1 右手抽刀出鞘，刀背压过衣摆，起手式展开，脚下青石板压出一次水花；刀风带动灯笼轻晃，高马尾发梢与鬓边碎发被风带起后滞后半拍落回。\n1.6～3.4秒：S3 单掌迎上，掌风与刀锋在灯影里相击，气浪推开雨雾；西侧木柜上的灯罩抖，S3 袍角翻起未落。\n3.4～5.0秒：(S3) says: "
+            },
+            {
+              "type": "dialogue",
+              "text": "[Chinese]刀不错。"
+            },
+            {
+              "type": "text",
+              "text": " 他的语态：低沉粗粝，短促，危险而内敛；说时右掌未撤，指节弹响一次。S2 在巷口挪半步，软剑沿墙影压低，S4 在木柜角把箱抱得更低。段尾交接锚点：S1 直刀已出鞘，刀身斜指向 S3；S3 右掌迎住刀锋，两力相持；S2 软剑压低，S4 在木柜角抱箱；摄影机保持眼平略低5°。\n\noverall_soundscape: 抽刀出鞘的金属摩擦、掌风气浪的压迫、两兵相击的短促撞击、人群在两侧退开的脚步。\nnon_diegetic_music: 同一段弦乐延续，鼓点加入一次重击，音高不变。"
+            }
+          ]
+        }
+      },
+      "widgets_values": [
+        "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S3 立于北台阶下，双掌垂在身侧；S1 与 S4 居南，S2 居东巷口；镖箱在 S4 怀中；摄影机停在摇镜末端，机位高度未变。摄影机保持固定机位，只随出刀产生一次极轻微的呼吸式抖动，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：四人同框的中景，S1 在画面左、S3 在画面右相对而立，S2 在画面右缘巷口，S4 在画面左下木柜角抱箱，纵深约六米。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：S1 右手抽刀出鞘，刀背压过衣摆，起手式展开，脚下青石板压出一次水花；刀风带动灯笼轻晃，高马尾发梢与鬓边碎发被风带起后滞后半拍落回。\n1.6～3.4秒：S3 单掌迎上，掌风与刀锋在灯影里相击，气浪推开雨雾；西侧木柜上的灯罩抖，S3 袍角翻起未落。\n3.4～5.0秒：(S3) says: <d>[Chinese]刀不错。</d> 他的语态：低沉粗粝，短促，危险而内敛；说时右掌未撤，指节弹响一次。S2 在巷口挪半步，软剑沿墙影压低，S4 在木柜角把箱抱得更低。段尾交接锚点：S1 直刀已出鞘，刀身斜指向 S3；S3 右掌迎住刀锋，两力相持；S2 软剑压低，S4 在木柜角抱箱；摄影机保持眼平略低5°。\n\noverall_soundscape: 抽刀出鞘的金属摩擦、掌风气浪的压迫、两兵相击的短促撞击、人群在两侧退开的脚步。\nnon_diegetic_music: 同一段弦乐延续，鼓点加入一次重击，音高不变。",
+        5,
+        827222789,
+        "randomize",
+        0,
+        "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "",
+        false,
+        "",
+        "",
+        0,
+        0
+      ],
+      "widgets_values_named": {
+        "prompt": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S3 立于北台阶下，双掌垂在身侧；S1 与 S4 居南，S2 居东巷口；镖箱在 S4 怀中；摄影机停在摇镜末端，机位高度未变。摄影机保持固定机位，只随出刀产生一次极轻微的呼吸式抖动，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：四人同框的中景，S1 在画面左、S3 在画面右相对而立，S2 在画面右缘巷口，S4 在画面左下木柜角抱箱，纵深约六米。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：S1 右手抽刀出鞘，刀背压过衣摆，起手式展开，脚下青石板压出一次水花；刀风带动灯笼轻晃，高马尾发梢与鬓边碎发被风带起后滞后半拍落回。\n1.6～3.4秒：S3 单掌迎上，掌风与刀锋在灯影里相击，气浪推开雨雾；西侧木柜上的灯罩抖，S3 袍角翻起未落。\n3.4～5.0秒：(S3) says: <d>[Chinese]刀不错。</d> 他的语态：低沉粗粝，短促，危险而内敛；说时右掌未撤，指节弹响一次。S2 在巷口挪半步，软剑沿墙影压低，S4 在木柜角把箱抱得更低。段尾交接锚点：S1 直刀已出鞘，刀身斜指向 S3；S3 右掌迎住刀锋，两力相持；S2 软剑压低，S4 在木柜角抱箱；摄影机保持眼平略低5°。\n\noverall_soundscape: 抽刀出鞘的金属摩擦、掌风气浪的压迫、两兵相击的短促撞击、人群在两侧退开的脚步。\nnon_diegetic_music: 同一段弦乐延续，鼓点加入一次重击，音高不变。",
+        "seconds": 5,
+        "seed": 827222789,
+        "control_after_generate": "randomize",
+        "guide_frame_idx": 0,
+        "inline_media_state": "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "sequence_scope": "",
+        "draw_previous_from_cache": false,
+        "draw_previous_scope": "",
+        "draw_previous_chain_key": "",
+        "draw_previous_node_id": 0,
+        "draw_previous_index": 0
+      }
+    },
+    {
+      "id": 1176,
+      "type": "AICG3D_H3SequenceSegment",
+      "pos": [
+        -330,
+        -10
+      ],
+      "size": [
+        430,
+        800
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "全局设置",
+          "name": "sequence_config",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_CONFIG",
+          "link": null
+        },
+        {
+          "label": "上一分段",
+          "name": "previous_segment",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "link": 752
+        },
+        {
+          "name": "voice_cast",
+          "shape": 7,
+          "type": "AICG3D_CHARACTER_VOICE_CAST",
+          "link": null
+        },
+        {
+          "label": "AICG3D",
+          "name": "media",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "label": "引导图片",
+          "name": "guide_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "引导音频",
+          "name": "guide_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "视频段落",
+          "name": "segment",
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "links": [
+            754
+          ]
+        }
+      ],
+      "title": "视频段落 5",
+      "properties": {
+        "Node name for S&R": "AICG3D_H3SequenceSegment",
+        "minimax_h3_inline_media_state": "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "minimax_h3_inline_media_owned": false,
+        "minimax_h3_inline_media_inherited": true,
+        "minimax_h3_virtual_media_links": [],
+        "minimax_h3_prompt_reference_doc": {
+          "version": 1,
+          "text": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S1 直刀已出鞘，刀身斜指向 S3；S3 右掌迎住刀锋，两力相持；S2 软剑压低，S4 在木柜角抱箱；摄影机保持眼平略低5°。摄影机沿摄影轴线向左回横移半个身位，焦点由刀线平滑移交到剑身，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：三人交错的近景，S1 在画面左下、S2 在画面左上、S3 在画面中央；S4 在画面左缘木柜角半入画。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：S2 软剑缠入刀线，剑身抖动出弧形，剑尖擦过灯棚布幔；她手腕转半圈，剑身弯出弧形后回弹一次，垂珠金流苏滞后半拍轻晃。\n1.6～3.4秒：S3 掌风撕开布幔，袍角翻起；S1 刀背压住剑线，两人身位交错，脚步在湿石板上碾出一次水痕。\n3.4～5.0秒：(S2) says: <d>[Chinese]刀走左，我取他腕。</d> 她的语态：平稳清晰，语速略快，气息短；说时剑尖沿刀线前送半寸。灯笼连排明灭一次，曝光不变。段尾交接锚点：S2 软剑缠在刀线上、剑身弯出弧形；S1 刀背压住剑线，与 S3 身位交错；S3 袍角翻起未落；镖箱仍在 S4 怀中；摄影机停在回横移末端。\n\noverall_soundscape: 布幔撕裂、灯笼骨架轻响、两兵相击、软剑与刀背摩擦，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐加快，音高不变，鼓点延续。",
+          "parts": [
+            {
+              "type": "text",
+              "text": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S1 直刀已出鞘，刀身斜指向 S3；S3 右掌迎住刀锋，两力相持；S2 软剑压低，S4 在木柜角抱箱；摄影机保持眼平略低5°。摄影机沿摄影轴线向左回横移半个身位，焦点由刀线平滑移交到剑身，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：三人交错的近景，S1 在画面左下、S2 在画面左上、S3 在画面中央；S4 在画面左缘木柜角半入画。S1 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片2",
+              "tag": "<Picture 2>",
+              "label": "图片2",
+              "fullLabel": "image2.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 2,
+              "mediaIndex": 2,
+              "sourceId": 1176,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image2.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "、S2 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片3",
+              "tag": "<Picture 3>",
+              "label": "图片3",
+              "fullLabel": "image3.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 3,
+              "mediaIndex": 3,
+              "sourceId": 1176,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image3.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "、S3 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片4",
+              "tag": "<Picture 4>",
+              "label": "图片4",
+              "fullLabel": "image4.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 4,
+              "mediaIndex": 4,
+              "sourceId": 1176,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image4.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "、S4 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片5",
+              "tag": "<Picture 5>",
+              "label": "图片5",
+              "fullLabel": "image5.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 5,
+              "mediaIndex": 5,
+              "sourceId": 1176,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image5.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "，道具金木镖箱"
+            },
+            {
+              "type": "mention",
+              "token": "@图片6",
+              "tag": "<Picture 6>",
+              "label": "图片6",
+              "fullLabel": "image6.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 6,
+              "mediaIndex": 6,
+              "sourceId": 1176,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image6.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：S2 软剑缠入刀线，剑身抖动出弧形，剑尖擦过灯棚布幔；她手腕转半圈，剑身弯出弧形后回弹一次，垂珠金流苏滞后半拍轻晃。\n1.6～3.4秒：S3 掌风撕开布幔，袍角翻起；S1 刀背压住剑线，两人身位交错，脚步在湿石板上碾出一次水痕。\n3.4～5.0秒：(S2) says: "
+            },
+            {
+              "type": "dialogue",
+              "text": "[Chinese]刀走左，我取他腕。"
+            },
+            {
+              "type": "text",
+              "text": " 她的语态：平稳清晰，语速略快，气息短；说时剑尖沿刀线前送半寸。灯笼连排明灭一次，曝光不变。段尾交接锚点：S2 软剑缠在刀线上、剑身弯出弧形；S1 刀背压住剑线，与 S3 身位交错；S3 袍角翻起未落；镖箱仍在 S4 怀中；摄影机停在回横移末端。\n\noverall_soundscape: 布幔撕裂、灯笼骨架轻响、两兵相击、软剑与刀背摩擦，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐加快，音高不变，鼓点延续。"
+            }
+          ]
+        }
+      },
+      "widgets_values": [
+        "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S1 直刀已出鞘，刀身斜指向 S3；S3 右掌迎住刀锋，两力相持；S2 软剑压低，S4 在木柜角抱箱；摄影机保持眼平略低5°。摄影机沿摄影轴线向左回横移半个身位，焦点由刀线平滑移交到剑身，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：三人交错的近景，S1 在画面左下、S2 在画面左上、S3 在画面中央；S4 在画面左缘木柜角半入画。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：S2 软剑缠入刀线，剑身抖动出弧形，剑尖擦过灯棚布幔；她手腕转半圈，剑身弯出弧形后回弹一次，垂珠金流苏滞后半拍轻晃。\n1.6～3.4秒：S3 掌风撕开布幔，袍角翻起；S1 刀背压住剑线，两人身位交错，脚步在湿石板上碾出一次水痕。\n3.4～5.0秒：(S2) says: <d>[Chinese]刀走左，我取他腕。</d> 她的语态：平稳清晰，语速略快，气息短；说时剑尖沿刀线前送半寸。灯笼连排明灭一次，曝光不变。段尾交接锚点：S2 软剑缠在刀线上、剑身弯出弧形；S1 刀背压住剑线，与 S3 身位交错；S3 袍角翻起未落；镖箱仍在 S4 怀中；摄影机停在回横移末端。\n\noverall_soundscape: 布幔撕裂、灯笼骨架轻响、两兵相击、软剑与刀背摩擦，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐加快，音高不变，鼓点延续。",
+        5,
+        4160288822,
+        "randomize",
+        0,
+        "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "",
+        false,
+        "",
+        "",
+        0,
+        0
+      ],
+      "widgets_values_named": {
+        "prompt": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S1 直刀已出鞘，刀身斜指向 S3；S3 右掌迎住刀锋，两力相持；S2 软剑压低，S4 在木柜角抱箱；摄影机保持眼平略低5°。摄影机沿摄影轴线向左回横移半个身位，焦点由刀线平滑移交到剑身，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：三人交错的近景，S1 在画面左下、S2 在画面左上、S3 在画面中央；S4 在画面左缘木柜角半入画。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：S2 软剑缠入刀线，剑身抖动出弧形，剑尖擦过灯棚布幔；她手腕转半圈，剑身弯出弧形后回弹一次，垂珠金流苏滞后半拍轻晃。\n1.6～3.4秒：S3 掌风撕开布幔，袍角翻起；S1 刀背压住剑线，两人身位交错，脚步在湿石板上碾出一次水痕。\n3.4～5.0秒：(S2) says: <d>[Chinese]刀走左，我取他腕。</d> 她的语态：平稳清晰，语速略快，气息短；说时剑尖沿刀线前送半寸。灯笼连排明灭一次，曝光不变。段尾交接锚点：S2 软剑缠在刀线上、剑身弯出弧形；S1 刀背压住剑线，与 S3 身位交错；S3 袍角翻起未落；镖箱仍在 S4 怀中；摄影机停在回横移末端。\n\noverall_soundscape: 布幔撕裂、灯笼骨架轻响、两兵相击、软剑与刀背摩擦，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐加快，音高不变，鼓点延续。",
+        "seconds": 5,
+        "seed": 4160288822,
+        "control_after_generate": "randomize",
+        "guide_frame_idx": 0,
+        "inline_media_state": "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "sequence_scope": "",
+        "draw_previous_from_cache": false,
+        "draw_previous_scope": "",
+        "draw_previous_chain_key": "",
+        "draw_previous_node_id": 0,
+        "draw_previous_index": 0
+      }
+    },
+    {
+      "id": 1177,
+      "type": "AICG3D_H3SequenceSegment",
+      "pos": [
+        120,
+        -30
+      ],
+      "size": [
+        430,
+        800
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "全局设置",
+          "name": "sequence_config",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_CONFIG",
+          "link": null
+        },
+        {
+          "label": "上一分段",
+          "name": "previous_segment",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "link": 754
+        },
+        {
+          "name": "voice_cast",
+          "shape": 7,
+          "type": "AICG3D_CHARACTER_VOICE_CAST",
+          "link": null
+        },
+        {
+          "label": "AICG3D",
+          "name": "media",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "label": "引导图片",
+          "name": "guide_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "引导音频",
+          "name": "guide_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "视频段落",
+          "name": "segment",
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "links": [
+            755
+          ]
+        }
+      ],
+      "title": "视频段落 6",
+      "properties": {
+        "Node name for S&R": "AICG3D_H3SequenceSegment",
+        "minimax_h3_inline_media_state": "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "minimax_h3_inline_media_owned": false,
+        "minimax_h3_inline_media_inherited": true,
+        "minimax_h3_virtual_media_links": [],
+        "minimax_h3_prompt_reference_doc": {
+          "version": 1,
+          "text": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S2 软剑缠在刀线上、剑身弯出弧形；S1 刀背压住剑线，与 S3 身位交错；S3 袍角翻起未落；镖箱仍在 S4 怀中；摄影机停在回横移末端。摄影机从木柜角向右小幅横移，焦点由交线的兵刃接手到 S4，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：S4 的中近景在画心，倾倒的灯架在他右后方，镖箱在他双手与三级石台阶之间；S3 的袍角入画在画面右上。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：掌风与刀气扫过西侧木柜角，S4 被气浪掀翻，镖箱滑向三级石台阶下；铜角包边在石板上擦出一道水花。\n1.6～3.4秒：S4 半爬起扑抱镖箱，双手扣紧，肩背撞在灯架；灯笼架倾倒一次，木料摩擦与落地。\n3.4～5.0秒：(S4) says: <d>[Chinese]箱子！箱子！</d> 他的语态：略带宽厚鼻音，喊声急促带喜感；喊时额头碎发随身体起伏抖动，双手始终扣住箱身。S3 袍角扫过他背，未停步。段尾交接锚点：S4 半爬起扑抱镖箱，肩背倚在倾倒的灯架旁，双手扣紧；镖箱在石台阶下、离地半尺；S3 袍角仍翻起，S1 与 S2 兵刃未收；摄影机停在小幅横移末端。\n\noverall_soundscape: 灯架倾倒的木料摩擦与落地、镖箱铜角在石板上滑动、灯市底噪压低半档。\nnon_diegetic_music: 同一段弦乐在低音区加密，音高不变，鼓点一次重音。",
+          "parts": [
+            {
+              "type": "text",
+              "text": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S2 软剑缠在刀线上、剑身弯出弧形；S1 刀背压住剑线，与 S3 身位交错；S3 袍角翻起未落；镖箱仍在 S4 怀中；摄影机停在回横移末端。摄影机从木柜角向右小幅横移，焦点由交线的兵刃接手到 S4，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：S4 的中近景在画心，倾倒的灯架在他右后方，镖箱在他双手与三级石台阶之间；S3 的袍角入画在画面右上。S1 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片2",
+              "tag": "<Picture 2>",
+              "label": "图片2",
+              "fullLabel": "image2.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 2,
+              "mediaIndex": 2,
+              "sourceId": 1177,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image2.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "、S2 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片3",
+              "tag": "<Picture 3>",
+              "label": "图片3",
+              "fullLabel": "image3.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 3,
+              "mediaIndex": 3,
+              "sourceId": 1177,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image3.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "、S3 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片4",
+              "tag": "<Picture 4>",
+              "label": "图片4",
+              "fullLabel": "image4.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 4,
+              "mediaIndex": 4,
+              "sourceId": 1177,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image4.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "、S4 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片5",
+              "tag": "<Picture 5>",
+              "label": "图片5",
+              "fullLabel": "image5.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 5,
+              "mediaIndex": 5,
+              "sourceId": 1177,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image5.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "，道具金木镖箱"
+            },
+            {
+              "type": "mention",
+              "token": "@图片6",
+              "tag": "<Picture 6>",
+              "label": "图片6",
+              "fullLabel": "image6.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 6,
+              "mediaIndex": 6,
+              "sourceId": 1177,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image6.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：掌风与刀气扫过西侧木柜角，S4 被气浪掀翻，镖箱滑向三级石台阶下；铜角包边在石板上擦出一道水花。\n1.6～3.4秒：S4 半爬起扑抱镖箱，双手扣紧，肩背撞在灯架；灯笼架倾倒一次，木料摩擦与落地。\n3.4～5.0秒：(S4) says: "
+            },
+            {
+              "type": "dialogue",
+              "text": "[Chinese]箱子！箱子！"
+            },
+            {
+              "type": "text",
+              "text": " 他的语态：略带宽厚鼻音，喊声急促带喜感；喊时额头碎发随身体起伏抖动，双手始终扣住箱身。S3 袍角扫过他背，未停步。段尾交接锚点：S4 半爬起扑抱镖箱，肩背倚在倾倒的灯架旁，双手扣紧；镖箱在石台阶下、离地半尺；S3 袍角仍翻起，S1 与 S2 兵刃未收；摄影机停在小幅横移末端。\n\noverall_soundscape: 灯架倾倒的木料摩擦与落地、镖箱铜角在石板上滑动、灯市底噪压低半档。\nnon_diegetic_music: 同一段弦乐在低音区加密，音高不变，鼓点一次重音。"
+            }
+          ]
+        }
+      },
+      "widgets_values": [
+        "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S2 软剑缠在刀线上、剑身弯出弧形；S1 刀背压住剑线，与 S3 身位交错；S3 袍角翻起未落；镖箱仍在 S4 怀中；摄影机停在回横移末端。摄影机从木柜角向右小幅横移，焦点由交线的兵刃接手到 S4，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：S4 的中近景在画心，倾倒的灯架在他右后方，镖箱在他双手与三级石台阶之间；S3 的袍角入画在画面右上。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：掌风与刀气扫过西侧木柜角，S4 被气浪掀翻，镖箱滑向三级石台阶下；铜角包边在石板上擦出一道水花。\n1.6～3.4秒：S4 半爬起扑抱镖箱，双手扣紧，肩背撞在灯架；灯笼架倾倒一次，木料摩擦与落地。\n3.4～5.0秒：(S4) says: <d>[Chinese]箱子！箱子！</d> 他的语态：略带宽厚鼻音，喊声急促带喜感；喊时额头碎发随身体起伏抖动，双手始终扣住箱身。S3 袍角扫过他背，未停步。段尾交接锚点：S4 半爬起扑抱镖箱，肩背倚在倾倒的灯架旁，双手扣紧；镖箱在石台阶下、离地半尺；S3 袍角仍翻起，S1 与 S2 兵刃未收；摄影机停在小幅横移末端。\n\noverall_soundscape: 灯架倾倒的木料摩擦与落地、镖箱铜角在石板上滑动、灯市底噪压低半档。\nnon_diegetic_music: 同一段弦乐在低音区加密，音高不变，鼓点一次重音。",
+        5,
+        1090722257,
+        "randomize",
+        0,
+        "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "",
+        false,
+        "",
+        "",
+        0,
+        0
+      ],
+      "widgets_values_named": {
+        "prompt": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S2 软剑缠在刀线上、剑身弯出弧形；S1 刀背压住剑线，与 S3 身位交错；S3 袍角翻起未落；镖箱仍在 S4 怀中；摄影机停在回横移末端。摄影机从木柜角向右小幅横移，焦点由交线的兵刃接手到 S4，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：S4 的中近景在画心，倾倒的灯架在他右后方，镖箱在他双手与三级石台阶之间；S3 的袍角入画在画面右上。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：掌风与刀气扫过西侧木柜角，S4 被气浪掀翻，镖箱滑向三级石台阶下；铜角包边在石板上擦出一道水花。\n1.6～3.4秒：S4 半爬起扑抱镖箱，双手扣紧，肩背撞在灯架；灯笼架倾倒一次，木料摩擦与落地。\n3.4～5.0秒：(S4) says: <d>[Chinese]箱子！箱子！</d> 他的语态：略带宽厚鼻音，喊声急促带喜感；喊时额头碎发随身体起伏抖动，双手始终扣住箱身。S3 袍角扫过他背，未停步。段尾交接锚点：S4 半爬起扑抱镖箱，肩背倚在倾倒的灯架旁，双手扣紧；镖箱在石台阶下、离地半尺；S3 袍角仍翻起，S1 与 S2 兵刃未收；摄影机停在小幅横移末端。\n\noverall_soundscape: 灯架倾倒的木料摩擦与落地、镖箱铜角在石板上滑动、灯市底噪压低半档。\nnon_diegetic_music: 同一段弦乐在低音区加密，音高不变，鼓点一次重音。",
+        "seconds": 5,
+        "seed": 1090722257,
+        "control_after_generate": "randomize",
+        "guide_frame_idx": 0,
+        "inline_media_state": "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "sequence_scope": "",
+        "draw_previous_from_cache": false,
+        "draw_previous_scope": "",
+        "draw_previous_chain_key": "",
+        "draw_previous_node_id": 0,
+        "draw_previous_index": 0
+      }
+    },
+    {
+      "id": 1189,
+      "type": "CustomSigmas",
+      "pos": [
+        -3470,
+        190
+      ],
+      "size": [
+        230,
+        130
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "SIGMAS",
+          "type": "SIGMAS",
+          "links": [
+            762
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CustomSigmas"
+      },
+      "widgets_values": [
+        "1.0, 0.972973, 0.923077, 0.8, 0.571429, 0.333333, 0.0",
+        10
+      ],
+      "widgets_values_named": {
+        "sigmas_string": "1.0, 0.972973, 0.923077, 0.8, 0.571429, 0.333333, 0.0",
+        "interpolate_to_steps": 10
+      }
+    },
+    {
+      "id": 1194,
+      "type": "AICG3D_H3SequenceSegment",
+      "pos": [
+        -2170,
+        900
+      ],
+      "size": [
+        430,
+        800
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "全局设置",
+          "name": "sequence_config",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_CONFIG",
+          "link": null
+        },
+        {
+          "label": "上一分段",
+          "name": "previous_segment",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "link": 755
+        },
+        {
+          "name": "voice_cast",
+          "shape": 7,
+          "type": "AICG3D_CHARACTER_VOICE_CAST",
+          "link": null
+        },
+        {
+          "label": "AICG3D",
+          "name": "media",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "label": "引导图片",
+          "name": "guide_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "引导音频",
+          "name": "guide_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "视频段落",
+          "name": "segment",
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "links": [
+            763
+          ]
+        }
+      ],
+      "title": "视频段落 7",
+      "properties": {
+        "Node name for S&R": "AICG3D_H3SequenceSegment",
+        "minimax_h3_inline_media_state": "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "minimax_h3_inline_media_owned": false,
+        "minimax_h3_inline_media_inherited": true,
+        "minimax_h3_virtual_media_links": [],
+        "minimax_h3_prompt_reference_doc": {
+          "version": 1,
+          "text": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S4 半爬起扑抱镖箱，肩背倚在倾倒的灯架旁，双手扣紧；镖箱在石台阶下、离地半尺；S3 袍角仍翻起，S1 与 S2 兵刃未收；摄影机停在小幅横移末端。摄影机保持固定机位，焦点锁在 S3 手腕与镖箱之间，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：近景，S3 右手扣住 S4 手腕在画心，镖箱被提起半尺悬空；S1 与 S2 在画面左右边缘收势，焦点在中央。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.5秒：S3 反手扣住 S4 手腕，将镖箱提起半尺；S4 左膝着地半跪，肩背被拉得前倾，短发额前碎发随拉拽抖动。\n1.5～3.5秒：(S3) says: <d>[Chinese]刀收起来，不然他手断。</d> 他的语态：低沉粗粝，压迫感强，语速放慢；说时手腕收紧一次，镖箱在空中轻转半圈，铜锁朝向镜头。\n3.5～5.0秒：S1 与 S2 收势停步，刀尖与剑尖下垂；雨落在刀背上，两人都不再前进。段尾交接锚点：S3 右手扣住 S4 手腕，镖箱被提起半尺悬空；S4 半跪，左膝着地；S1 与 S2 收势停步，刀尖与剑尖下垂；摄影机保持固定，焦点在 S3 手腕。\n\noverall_soundscape: 手腕被扣的布料摩擦、镖箱悬空的轻响、灯架倾倒木料余响，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐进入低音区，音高不变，鼓点暂停。",
+          "parts": [
+            {
+              "type": "text",
+              "text": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S4 半爬起扑抱镖箱，肩背倚在倾倒的灯架旁，双手扣紧；镖箱在石台阶下、离地半尺；S3 袍角仍翻起，S1 与 S2 兵刃未收；摄影机停在小幅横移末端。摄影机保持固定机位，焦点锁在 S3 手腕与镖箱之间，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：近景，S3 右手扣住 S4 手腕在画心，镖箱被提起半尺悬空；S1 与 S2 在画面左右边缘收势，焦点在中央。S1 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片2",
+              "tag": "<Picture 2>",
+              "label": "图片2",
+              "fullLabel": "image2.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 2,
+              "mediaIndex": 2,
+              "sourceId": 1194,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image2.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "、S2 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片3",
+              "tag": "<Picture 3>",
+              "label": "图片3",
+              "fullLabel": "image3.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 3,
+              "mediaIndex": 3,
+              "sourceId": 1194,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image3.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "、S3 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片4",
+              "tag": "<Picture 4>",
+              "label": "图片4",
+              "fullLabel": "image4.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 4,
+              "mediaIndex": 4,
+              "sourceId": 1194,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image4.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "、S4 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片5",
+              "tag": "<Picture 5>",
+              "label": "图片5",
+              "fullLabel": "image5.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 5,
+              "mediaIndex": 5,
+              "sourceId": 1194,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image5.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "，道具金木镖箱"
+            },
+            {
+              "type": "mention",
+              "token": "@图片6",
+              "tag": "<Picture 6>",
+              "label": "图片6",
+              "fullLabel": "image6.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 6,
+              "mediaIndex": 6,
+              "sourceId": 1194,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image6.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.5秒：S3 反手扣住 S4 手腕，将镖箱提起半尺；S4 左膝着地半跪，肩背被拉得前倾，短发额前碎发随拉拽抖动。\n1.5～3.5秒：(S3) says: "
+            },
+            {
+              "type": "dialogue",
+              "text": "[Chinese]刀收起来，不然他手断。"
+            },
+            {
+              "type": "text",
+              "text": " 他的语态：低沉粗粝，压迫感强，语速放慢；说时手腕收紧一次，镖箱在空中轻转半圈，铜锁朝向镜头。\n3.5～5.0秒：S1 与 S2 收势停步，刀尖与剑尖下垂；雨落在刀背上，两人都不再前进。段尾交接锚点：S3 右手扣住 S4 手腕，镖箱被提起半尺悬空；S4 半跪，左膝着地；S1 与 S2 收势停步，刀尖与剑尖下垂；摄影机保持固定，焦点在 S3 手腕。\n\noverall_soundscape: 手腕被扣的布料摩擦、镖箱悬空的轻响、灯架倾倒木料余响，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐进入低音区，音高不变，鼓点暂停。"
+            }
+          ]
+        }
+      },
+      "widgets_values": [
+        "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S4 半爬起扑抱镖箱，肩背倚在倾倒的灯架旁，双手扣紧；镖箱在石台阶下、离地半尺；S3 袍角仍翻起，S1 与 S2 兵刃未收；摄影机停在小幅横移末端。摄影机保持固定机位，焦点锁在 S3 手腕与镖箱之间，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：近景，S3 右手扣住 S4 手腕在画心，镖箱被提起半尺悬空；S1 与 S2 在画面左右边缘收势，焦点在中央。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.5秒：S3 反手扣住 S4 手腕，将镖箱提起半尺；S4 左膝着地半跪，肩背被拉得前倾，短发额前碎发随拉拽抖动。\n1.5～3.5秒：(S3) says: <d>[Chinese]刀收起来，不然他手断。</d> 他的语态：低沉粗粝，压迫感强，语速放慢；说时手腕收紧一次，镖箱在空中轻转半圈，铜锁朝向镜头。\n3.5～5.0秒：S1 与 S2 收势停步，刀尖与剑尖下垂；雨落在刀背上，两人都不再前进。段尾交接锚点：S3 右手扣住 S4 手腕，镖箱被提起半尺悬空；S4 半跪，左膝着地；S1 与 S2 收势停步，刀尖与剑尖下垂；摄影机保持固定，焦点在 S3 手腕。\n\noverall_soundscape: 手腕被扣的布料摩擦、镖箱悬空的轻响、灯架倾倒木料余响，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐进入低音区，音高不变，鼓点暂停。",
+        5,
+        2863208667,
+        "randomize",
+        0,
+        "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "",
+        false,
+        "",
+        "",
+        0,
+        0
+      ],
+      "widgets_values_named": {
+        "prompt": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S4 半爬起扑抱镖箱，肩背倚在倾倒的灯架旁，双手扣紧；镖箱在石台阶下、离地半尺；S3 袍角仍翻起，S1 与 S2 兵刃未收；摄影机停在小幅横移末端。摄影机保持固定机位，焦点锁在 S3 手腕与镖箱之间，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：近景，S3 右手扣住 S4 手腕在画心，镖箱被提起半尺悬空；S1 与 S2 在画面左右边缘收势，焦点在中央。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.5秒：S3 反手扣住 S4 手腕，将镖箱提起半尺；S4 左膝着地半跪，肩背被拉得前倾，短发额前碎发随拉拽抖动。\n1.5～3.5秒：(S3) says: <d>[Chinese]刀收起来，不然他手断。</d> 他的语态：低沉粗粝，压迫感强，语速放慢；说时手腕收紧一次，镖箱在空中轻转半圈，铜锁朝向镜头。\n3.5～5.0秒：S1 与 S2 收势停步，刀尖与剑尖下垂；雨落在刀背上，两人都不再前进。段尾交接锚点：S3 右手扣住 S4 手腕，镖箱被提起半尺悬空；S4 半跪，左膝着地；S1 与 S2 收势停步，刀尖与剑尖下垂；摄影机保持固定，焦点在 S3 手腕。\n\noverall_soundscape: 手腕被扣的布料摩擦、镖箱悬空的轻响、灯架倾倒木料余响，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐进入低音区，音高不变，鼓点暂停。",
+        "seconds": 5,
+        "seed": 2863208667,
+        "control_after_generate": "randomize",
+        "guide_frame_idx": 0,
+        "inline_media_state": "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "sequence_scope": "",
+        "draw_previous_from_cache": false,
+        "draw_previous_scope": "",
+        "draw_previous_chain_key": "",
+        "draw_previous_node_id": 0,
+        "draw_previous_index": 0
+      }
+    },
+    {
+      "id": 1195,
+      "type": "AICG3D_H3SequenceSegment",
+      "pos": [
+        -1710,
+        900
+      ],
+      "size": [
+        430,
+        800
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "全局设置",
+          "name": "sequence_config",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_CONFIG",
+          "link": null
+        },
+        {
+          "label": "上一分段",
+          "name": "previous_segment",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "link": 763
+        },
+        {
+          "name": "voice_cast",
+          "shape": 7,
+          "type": "AICG3D_CHARACTER_VOICE_CAST",
+          "link": null
+        },
+        {
+          "label": "AICG3D",
+          "name": "media",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "label": "引导图片",
+          "name": "guide_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "引导音频",
+          "name": "guide_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "视频段落",
+          "name": "segment",
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "links": [
+            764
+          ]
+        }
+      ],
+      "title": "视频段落 8",
+      "properties": {
+        "Node name for S&R": "AICG3D_H3SequenceSegment",
+        "minimax_h3_inline_media_state": "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "minimax_h3_inline_media_owned": false,
+        "minimax_h3_inline_media_inherited": true,
+        "minimax_h3_virtual_media_links": [],
+        "minimax_h3_prompt_reference_doc": {
+          "version": 1,
+          "text": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S3 右手扣住 S4 手腕，镖箱被提起半尺悬空；S4 半跪，左膝着地；S1 与 S2 收势停步，刀尖与剑尖下垂；摄影机保持固定，焦点在 S3 手腕。摄影机保持固定机位，焦点由 S1 的脸平滑移交 S2 的脸，再随脚步轻跟，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：中景，S3 与半跪的 S4 在画面中央偏右，S1 在画面左侧木柜角，S2 在画面右侧灯棚立柱旁，四人成夹角。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：S1 的目光落在 S2 脸上，嘴角微动，无台词；S2 的眼角与下颌轻抬，视线接住他的视线，两人之间无语言，只有呼吸对齐一次。\n1.6～3.4秒：S1 侧移两步到西侧木柜角，刀尖拖过湿石板拖出一道水痕；S2 顺势滑向灯棚立柱，软剑横于身前，鬓边碎发随侧移滞后半拍跟上。\n3.4～5.0秒：二人站位换位完成；S3 的手腕收紧，S4 半跪不动；灯影明灭一次，曝光锁定。段尾交接锚点：S1 站在西侧木柜角，刀尖拖在湿石板上；S2 立在灯棚立柱旁，软剑横于身前；S3 右手仍扣 S4 手腕，镖箱悬空；S4 半跪；摄影机保持固定。\n\noverall_soundscape: 刀尖在湿石板的摩擦、两步侧移脚步、换位脚步在湿石板的轻响，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐在低音区加密，音高不变，鼓点暂停。",
+          "parts": [
+            {
+              "type": "text",
+              "text": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S3 右手扣住 S4 手腕，镖箱被提起半尺悬空；S4 半跪，左膝着地；S1 与 S2 收势停步，刀尖与剑尖下垂；摄影机保持固定，焦点在 S3 手腕。摄影机保持固定机位，焦点由 S1 的脸平滑移交 S2 的脸，再随脚步轻跟，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：中景，S3 与半跪的 S4 在画面中央偏右，S1 在画面左侧木柜角，S2 在画面右侧灯棚立柱旁，四人成夹角。S1 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片2",
+              "tag": "<Picture 2>",
+              "label": "图片2",
+              "fullLabel": "image2.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 2,
+              "mediaIndex": 2,
+              "sourceId": 1195,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image2.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "、S2 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片3",
+              "tag": "<Picture 3>",
+              "label": "图片3",
+              "fullLabel": "image3.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 3,
+              "mediaIndex": 3,
+              "sourceId": 1195,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image3.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "、S3 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片4",
+              "tag": "<Picture 4>",
+              "label": "图片4",
+              "fullLabel": "image4.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 4,
+              "mediaIndex": 4,
+              "sourceId": 1195,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image4.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "、S4 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片5",
+              "tag": "<Picture 5>",
+              "label": "图片5",
+              "fullLabel": "image5.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 5,
+              "mediaIndex": 5,
+              "sourceId": 1195,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image5.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "，道具金木镖箱"
+            },
+            {
+              "type": "mention",
+              "token": "@图片6",
+              "tag": "<Picture 6>",
+              "label": "图片6",
+              "fullLabel": "image6.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 6,
+              "mediaIndex": 6,
+              "sourceId": 1195,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image6.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：S1 的目光落在 S2 脸上，嘴角微动，无台词；S2 的眼角与下颌轻抬，视线接住他的视线，两人之间无语言，只有呼吸对齐一次。\n1.6～3.4秒：S1 侧移两步到西侧木柜角，刀尖拖过湿石板拖出一道水痕；S2 顺势滑向灯棚立柱，软剑横于身前，鬓边碎发随侧移滞后半拍跟上。\n3.4～5.0秒：二人站位换位完成；S3 的手腕收紧，S4 半跪不动；灯影明灭一次，曝光锁定。段尾交接锚点：S1 站在西侧木柜角，刀尖拖在湿石板上；S2 立在灯棚立柱旁，软剑横于身前；S3 右手仍扣 S4 手腕，镖箱悬空；S4 半跪；摄影机保持固定。\n\noverall_soundscape: 刀尖在湿石板的摩擦、两步侧移脚步、换位脚步在湿石板的轻响，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐在低音区加密，音高不变，鼓点暂停。"
+            }
+          ]
+        }
+      },
+      "widgets_values": [
+        "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S3 右手扣住 S4 手腕，镖箱被提起半尺悬空；S4 半跪，左膝着地；S1 与 S2 收势停步，刀尖与剑尖下垂；摄影机保持固定，焦点在 S3 手腕。摄影机保持固定机位，焦点由 S1 的脸平滑移交 S2 的脸，再随脚步轻跟，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：中景，S3 与半跪的 S4 在画面中央偏右，S1 在画面左侧木柜角，S2 在画面右侧灯棚立柱旁，四人成夹角。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：S1 的目光落在 S2 脸上，嘴角微动，无台词；S2 的眼角与下颌轻抬，视线接住他的视线，两人之间无语言，只有呼吸对齐一次。\n1.6～3.4秒：S1 侧移两步到西侧木柜角，刀尖拖过湿石板拖出一道水痕；S2 顺势滑向灯棚立柱，软剑横于身前，鬓边碎发随侧移滞后半拍跟上。\n3.4～5.0秒：二人站位换位完成；S3 的手腕收紧，S4 半跪不动；灯影明灭一次，曝光锁定。段尾交接锚点：S1 站在西侧木柜角，刀尖拖在湿石板上；S2 立在灯棚立柱旁，软剑横于身前；S3 右手仍扣 S4 手腕，镖箱悬空；S4 半跪；摄影机保持固定。\n\noverall_soundscape: 刀尖在湿石板的摩擦、两步侧移脚步、换位脚步在湿石板的轻响，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐在低音区加密，音高不变，鼓点暂停。",
+        5,
+        1755350916,
+        "randomize",
+        0,
+        "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "",
+        false,
+        "",
+        "",
+        0,
+        0
+      ],
+      "widgets_values_named": {
+        "prompt": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S3 右手扣住 S4 手腕，镖箱被提起半尺悬空；S4 半跪，左膝着地；S1 与 S2 收势停步，刀尖与剑尖下垂；摄影机保持固定，焦点在 S3 手腕。摄影机保持固定机位，焦点由 S1 的脸平滑移交 S2 的脸，再随脚步轻跟，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：中景，S3 与半跪的 S4 在画面中央偏右，S1 在画面左侧木柜角，S2 在画面右侧灯棚立柱旁，四人成夹角。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：S1 的目光落在 S2 脸上，嘴角微动，无台词；S2 的眼角与下颌轻抬，视线接住他的视线，两人之间无语言，只有呼吸对齐一次。\n1.6～3.4秒：S1 侧移两步到西侧木柜角，刀尖拖过湿石板拖出一道水痕；S2 顺势滑向灯棚立柱，软剑横于身前，鬓边碎发随侧移滞后半拍跟上。\n3.4～5.0秒：二人站位换位完成；S3 的手腕收紧，S4 半跪不动；灯影明灭一次，曝光锁定。段尾交接锚点：S1 站在西侧木柜角，刀尖拖在湿石板上；S2 立在灯棚立柱旁，软剑横于身前；S3 右手仍扣 S4 手腕，镖箱悬空；S4 半跪；摄影机保持固定。\n\noverall_soundscape: 刀尖在湿石板的摩擦、两步侧移脚步、换位脚步在湿石板的轻响，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐在低音区加密，音高不变，鼓点暂停。",
+        "seconds": 5,
+        "seed": 1755350916,
+        "control_after_generate": "randomize",
+        "guide_frame_idx": 0,
+        "inline_media_state": "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "sequence_scope": "",
+        "draw_previous_from_cache": false,
+        "draw_previous_scope": "",
+        "draw_previous_chain_key": "",
+        "draw_previous_node_id": 0,
+        "draw_previous_index": 0
+      }
+    },
+    {
+      "id": 1196,
+      "type": "AICG3D_H3SequenceSegment",
+      "pos": [
+        -1270,
+        900
+      ],
+      "size": [
+        430,
+        800
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "全局设置",
+          "name": "sequence_config",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_CONFIG",
+          "link": null
+        },
+        {
+          "label": "上一分段",
+          "name": "previous_segment",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "link": 764
+        },
+        {
+          "name": "voice_cast",
+          "shape": 7,
+          "type": "AICG3D_CHARACTER_VOICE_CAST",
+          "link": null
+        },
+        {
+          "label": "AICG3D",
+          "name": "media",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "label": "引导图片",
+          "name": "guide_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "引导音频",
+          "name": "guide_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "视频段落",
+          "name": "segment",
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "links": [
+            765
+          ]
+        }
+      ],
+      "title": "视频段落 9",
+      "properties": {
+        "Node name for S&R": "AICG3D_H3SequenceSegment",
+        "minimax_h3_inline_media_state": "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "minimax_h3_inline_media_owned": false,
+        "minimax_h3_inline_media_inherited": true,
+        "minimax_h3_virtual_media_links": [],
+        "minimax_h3_prompt_reference_doc": {
+          "version": 1,
+          "text": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S1 站在西侧木柜角，刀尖拖在湿石板上；S2 立在灯棚立柱旁，软剑横于身前；S3 右手仍扣 S4 手腕，镖箱悬空；S4 半跪；摄影机保持固定。摄影机沿摄影轴线小幅后撤半个身位，容纳两路兵器，焦点随兵器移动，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：中景，S1 在画面左下、S2 在画面右上成夹角，S3 在画面中央，镖箱在 S3 右手与三级石台阶之间。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.5秒：S1 刀锋走下路，刀背贴地推入；S2 软剑自上路穿入灯影，两路兵器在画面里成 X 形，灯影在剑身上滑过一道高光。\n1.5～3.3秒：两路兵器在灯影里交错，S3 被迫撒手，镖箱脱手飞向三级石台阶；铜锁在半空反光一次。\n3.3～5.0秒：(S1) says: <d>[Chinese]箱子！</d> 他的语态：低沉短促，气息推前；喊时刀锋未收，身体前送半步。灯笼连排明灭，光轴不变。段尾交接锚点：镖箱脱手飞向三级石台阶、仍在半空；S3 右手撒手收回，S1 刀锋在下路、S2 软剑在上路成夹角；S4 半跪伸手去接；摄影机停在后撤末端。\n\noverall_soundscape: 两路兵器交错在灯影里相击、灯笼连排晃动、镖箱脱手的轻响，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐与鼓点进入最密，音高不变。",
+          "parts": [
+            {
+              "type": "text",
+              "text": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S1 站在西侧木柜角，刀尖拖在湿石板上；S2 立在灯棚立柱旁，软剑横于身前；S3 右手仍扣 S4 手腕，镖箱悬空；S4 半跪；摄影机保持固定。摄影机沿摄影轴线小幅后撤半个身位，容纳两路兵器，焦点随兵器移动，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：中景，S1 在画面左下、S2 在画面右上成夹角，S3 在画面中央，镖箱在 S3 右手与三级石台阶之间。S1 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片2",
+              "tag": "<Picture 2>",
+              "label": "图片2",
+              "fullLabel": "image2.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 2,
+              "mediaIndex": 2,
+              "sourceId": 1196,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image2.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "、S2 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片3",
+              "tag": "<Picture 3>",
+              "label": "图片3",
+              "fullLabel": "image3.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 3,
+              "mediaIndex": 3,
+              "sourceId": 1196,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image3.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "、S3 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片4",
+              "tag": "<Picture 4>",
+              "label": "图片4",
+              "fullLabel": "image4.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 4,
+              "mediaIndex": 4,
+              "sourceId": 1196,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image4.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "、S4 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片5",
+              "tag": "<Picture 5>",
+              "label": "图片5",
+              "fullLabel": "image5.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 5,
+              "mediaIndex": 5,
+              "sourceId": 1196,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image5.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "，道具金木镖箱"
+            },
+            {
+              "type": "mention",
+              "token": "@图片6",
+              "tag": "<Picture 6>",
+              "label": "图片6",
+              "fullLabel": "image6.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 6,
+              "mediaIndex": 6,
+              "sourceId": 1196,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image6.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.5秒：S1 刀锋走下路，刀背贴地推入；S2 软剑自上路穿入灯影，两路兵器在画面里成 X 形，灯影在剑身上滑过一道高光。\n1.5～3.3秒：两路兵器在灯影里交错，S3 被迫撒手，镖箱脱手飞向三级石台阶；铜锁在半空反光一次。\n3.3～5.0秒：(S1) says: "
+            },
+            {
+              "type": "dialogue",
+              "text": "[Chinese]箱子！"
+            },
+            {
+              "type": "text",
+              "text": " 他的语态：低沉短促，气息推前；喊时刀锋未收，身体前送半步。灯笼连排明灭，光轴不变。段尾交接锚点：镖箱脱手飞向三级石台阶、仍在半空；S3 右手撒手收回，S1 刀锋在下路、S2 软剑在上路成夹角；S4 半跪伸手去接；摄影机停在后撤末端。\n\noverall_soundscape: 两路兵器交错在灯影里相击、灯笼连排晃动、镖箱脱手的轻响，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐与鼓点进入最密，音高不变。"
+            }
+          ]
+        }
+      },
+      "widgets_values": [
+        "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S1 站在西侧木柜角，刀尖拖在湿石板上；S2 立在灯棚立柱旁，软剑横于身前；S3 右手仍扣 S4 手腕，镖箱悬空；S4 半跪；摄影机保持固定。摄影机沿摄影轴线小幅后撤半个身位，容纳两路兵器，焦点随兵器移动，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：中景，S1 在画面左下、S2 在画面右上成夹角，S3 在画面中央，镖箱在 S3 右手与三级石台阶之间。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.5秒：S1 刀锋走下路，刀背贴地推入；S2 软剑自上路穿入灯影，两路兵器在画面里成 X 形，灯影在剑身上滑过一道高光。\n1.5～3.3秒：两路兵器在灯影里交错，S3 被迫撒手，镖箱脱手飞向三级石台阶；铜锁在半空反光一次。\n3.3～5.0秒：(S1) says: <d>[Chinese]箱子！</d> 他的语态：低沉短促，气息推前；喊时刀锋未收，身体前送半步。灯笼连排明灭，光轴不变。段尾交接锚点：镖箱脱手飞向三级石台阶、仍在半空；S3 右手撒手收回，S1 刀锋在下路、S2 软剑在上路成夹角；S4 半跪伸手去接；摄影机停在后撤末端。\n\noverall_soundscape: 两路兵器交错在灯影里相击、灯笼连排晃动、镖箱脱手的轻响，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐与鼓点进入最密，音高不变。",
+        5,
+        1292714418,
+        "randomize",
+        0,
+        "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "",
+        false,
+        "",
+        "",
+        0,
+        0
+      ],
+      "widgets_values_named": {
+        "prompt": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S1 站在西侧木柜角，刀尖拖在湿石板上；S2 立在灯棚立柱旁，软剑横于身前；S3 右手仍扣 S4 手腕，镖箱悬空；S4 半跪；摄影机保持固定。摄影机沿摄影轴线小幅后撤半个身位，容纳两路兵器，焦点随兵器移动，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：中景，S1 在画面左下、S2 在画面右上成夹角，S3 在画面中央，镖箱在 S3 右手与三级石台阶之间。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.5秒：S1 刀锋走下路，刀背贴地推入；S2 软剑自上路穿入灯影，两路兵器在画面里成 X 形，灯影在剑身上滑过一道高光。\n1.5～3.3秒：两路兵器在灯影里交错，S3 被迫撒手，镖箱脱手飞向三级石台阶；铜锁在半空反光一次。\n3.3～5.0秒：(S1) says: <d>[Chinese]箱子！</d> 他的语态：低沉短促，气息推前；喊时刀锋未收，身体前送半步。灯笼连排明灭，光轴不变。段尾交接锚点：镖箱脱手飞向三级石台阶、仍在半空；S3 右手撒手收回，S1 刀锋在下路、S2 软剑在上路成夹角；S4 半跪伸手去接；摄影机停在后撤末端。\n\noverall_soundscape: 两路兵器交错在灯影里相击、灯笼连排晃动、镖箱脱手的轻响，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐与鼓点进入最密，音高不变。",
+        "seconds": 5,
+        "seed": 1292714418,
+        "control_after_generate": "randomize",
+        "guide_frame_idx": 0,
+        "inline_media_state": "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "sequence_scope": "",
+        "draw_previous_from_cache": false,
+        "draw_previous_scope": "",
+        "draw_previous_chain_key": "",
+        "draw_previous_node_id": 0,
+        "draw_previous_index": 0
+      }
+    },
+    {
+      "id": 1197,
+      "type": "AICG3D_H3SequenceSegment",
+      "pos": [
+        -810,
+        900
+      ],
+      "size": [
+        430,
+        800
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "全局设置",
+          "name": "sequence_config",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_CONFIG",
+          "link": null
+        },
+        {
+          "label": "上一分段",
+          "name": "previous_segment",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "link": 765
+        },
+        {
+          "name": "voice_cast",
+          "shape": 7,
+          "type": "AICG3D_CHARACTER_VOICE_CAST",
+          "link": null
+        },
+        {
+          "label": "AICG3D",
+          "name": "media",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "label": "引导图片",
+          "name": "guide_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "引导音频",
+          "name": "guide_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "视频段落",
+          "name": "segment",
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "links": [
+            766
+          ]
+        }
+      ],
+      "title": "视频段落 10",
+      "properties": {
+        "Node name for S&R": "AICG3D_H3SequenceSegment",
+        "minimax_h3_inline_media_state": "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "minimax_h3_inline_media_owned": false,
+        "minimax_h3_inline_media_inherited": true,
+        "minimax_h3_virtual_media_links": [],
+        "minimax_h3_prompt_reference_doc": {
+          "version": 1,
+          "text": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：镖箱脱手飞向三级石台阶、仍在半空；S3 右手撒手收回，S1 刀锋在下路、S2 软剑在上路成夹角；S4 半跪伸手去接；摄影机停在后撤末端。摄影机保持固定机位，焦点锁 S3 前伸的右掌与 S1 的胸肩，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：中近景，S3 在画面右、S1 在画面左撞向木柜角，S2 在画面右上，S4 在画面左下台阶旁。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.5秒：S3 掌风击中 S1 胸肩，S1 撞在西侧木柜角，单膝跪地，刀斜插石板缝；衣料在掌风下皱起一道折痕。\n1.5～3.4秒：S1 唇边见血，肩背前倾，右手仍握刀柄；无清晰可见伤口，不见血泊，画面不出现血腥细节。\n3.4～5.0秒：(S3) says: <d>[Chinese]滚。</d> 他的语态：低沉粗粝，单字，压迫感强；说时右掌前伸未收。S2 剑尖被逼回，灯罩抖一次。段尾交接锚点：S1 单膝跪在西侧木柜角，刀斜插石板缝，右手仍握刀柄；S3 站在台阶下，右掌前伸；S2 剑尖被逼回、剑身压低；S4 半跪在台阶旁；摄影机保持固定。\n\noverall_soundscape: 掌风与身体撞在木柜角的闷响、刀斜插石板缝的摩擦、人群在两侧退开的脚步，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐鼓点最密，音高不变，低音略微加厚。",
+          "parts": [
+            {
+              "type": "text",
+              "text": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：镖箱脱手飞向三级石台阶、仍在半空；S3 右手撒手收回，S1 刀锋在下路、S2 软剑在上路成夹角；S4 半跪伸手去接；摄影机停在后撤末端。摄影机保持固定机位，焦点锁 S3 前伸的右掌与 S1 的胸肩，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：中近景，S3 在画面右、S1 在画面左撞向木柜角，S2 在画面右上，S4 在画面左下台阶旁。S1 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片2",
+              "tag": "<Picture 2>",
+              "label": "图片2",
+              "fullLabel": "image2.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 2,
+              "mediaIndex": 2,
+              "sourceId": 1197,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image2.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "、S2 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片3",
+              "tag": "<Picture 3>",
+              "label": "图片3",
+              "fullLabel": "image3.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 3,
+              "mediaIndex": 3,
+              "sourceId": 1197,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image3.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "、S3 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片4",
+              "tag": "<Picture 4>",
+              "label": "图片4",
+              "fullLabel": "image4.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 4,
+              "mediaIndex": 4,
+              "sourceId": 1197,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image4.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "、S4 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片5",
+              "tag": "<Picture 5>",
+              "label": "图片5",
+              "fullLabel": "image5.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 5,
+              "mediaIndex": 5,
+              "sourceId": 1197,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image5.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "，道具金木镖箱"
+            },
+            {
+              "type": "mention",
+              "token": "@图片6",
+              "tag": "<Picture 6>",
+              "label": "图片6",
+              "fullLabel": "image6.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 6,
+              "mediaIndex": 6,
+              "sourceId": 1197,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image6.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.5秒：S3 掌风击中 S1 胸肩，S1 撞在西侧木柜角，单膝跪地，刀斜插石板缝；衣料在掌风下皱起一道折痕。\n1.5～3.4秒：S1 唇边见血，肩背前倾，右手仍握刀柄；无清晰可见伤口，不见血泊，画面不出现血腥细节。\n3.4～5.0秒：(S3) says: "
+            },
+            {
+              "type": "dialogue",
+              "text": "[Chinese]滚。"
+            },
+            {
+              "type": "text",
+              "text": " 他的语态：低沉粗粝，单字，压迫感强；说时右掌前伸未收。S2 剑尖被逼回，灯罩抖一次。段尾交接锚点：S1 单膝跪在西侧木柜角，刀斜插石板缝，右手仍握刀柄；S3 站在台阶下，右掌前伸；S2 剑尖被逼回、剑身压低；S4 半跪在台阶旁；摄影机保持固定。\n\noverall_soundscape: 掌风与身体撞在木柜角的闷响、刀斜插石板缝的摩擦、人群在两侧退开的脚步，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐鼓点最密，音高不变，低音略微加厚。"
+            }
+          ]
+        }
+      },
+      "widgets_values": [
+        "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：镖箱脱手飞向三级石台阶、仍在半空；S3 右手撒手收回，S1 刀锋在下路、S2 软剑在上路成夹角；S4 半跪伸手去接；摄影机停在后撤末端。摄影机保持固定机位，焦点锁 S3 前伸的右掌与 S1 的胸肩，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：中近景，S3 在画面右、S1 在画面左撞向木柜角，S2 在画面右上，S4 在画面左下台阶旁。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.5秒：S3 掌风击中 S1 胸肩，S1 撞在西侧木柜角，单膝跪地，刀斜插石板缝；衣料在掌风下皱起一道折痕。\n1.5～3.4秒：S1 唇边见血，肩背前倾，右手仍握刀柄；无清晰可见伤口，不见血泊，画面不出现血腥细节。\n3.4～5.0秒：(S3) says: <d>[Chinese]滚。</d> 他的语态：低沉粗粝，单字，压迫感强；说时右掌前伸未收。S2 剑尖被逼回，灯罩抖一次。段尾交接锚点：S1 单膝跪在西侧木柜角，刀斜插石板缝，右手仍握刀柄；S3 站在台阶下，右掌前伸；S2 剑尖被逼回、剑身压低；S4 半跪在台阶旁；摄影机保持固定。\n\noverall_soundscape: 掌风与身体撞在木柜角的闷响、刀斜插石板缝的摩擦、人群在两侧退开的脚步，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐鼓点最密，音高不变，低音略微加厚。",
+        5,
+        2844232400,
+        "randomize",
+        0,
+        "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "",
+        false,
+        "",
+        "",
+        0,
+        0
+      ],
+      "widgets_values_named": {
+        "prompt": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：镖箱脱手飞向三级石台阶、仍在半空；S3 右手撒手收回，S1 刀锋在下路、S2 软剑在上路成夹角；S4 半跪伸手去接；摄影机停在后撤末端。摄影机保持固定机位，焦点锁 S3 前伸的右掌与 S1 的胸肩，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：中近景，S3 在画面右、S1 在画面左撞向木柜角，S2 在画面右上，S4 在画面左下台阶旁。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.5秒：S3 掌风击中 S1 胸肩，S1 撞在西侧木柜角，单膝跪地，刀斜插石板缝；衣料在掌风下皱起一道折痕。\n1.5～3.4秒：S1 唇边见血，肩背前倾，右手仍握刀柄；无清晰可见伤口，不见血泊，画面不出现血腥细节。\n3.4～5.0秒：(S3) says: <d>[Chinese]滚。</d> 他的语态：低沉粗粝，单字，压迫感强；说时右掌前伸未收。S2 剑尖被逼回，灯罩抖一次。段尾交接锚点：S1 单膝跪在西侧木柜角，刀斜插石板缝，右手仍握刀柄；S3 站在台阶下，右掌前伸；S2 剑尖被逼回、剑身压低；S4 半跪在台阶旁；摄影机保持固定。\n\noverall_soundscape: 掌风与身体撞在木柜角的闷响、刀斜插石板缝的摩擦、人群在两侧退开的脚步，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐鼓点最密，音高不变，低音略微加厚。",
+        "seconds": 5,
+        "seed": 2844232400,
+        "control_after_generate": "randomize",
+        "guide_frame_idx": 0,
+        "inline_media_state": "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "sequence_scope": "",
+        "draw_previous_from_cache": false,
+        "draw_previous_scope": "",
+        "draw_previous_chain_key": "",
+        "draw_previous_node_id": 0,
+        "draw_previous_index": 0
+      }
+    },
+    {
+      "id": 1198,
+      "type": "AICG3D_H3SequenceSegment",
+      "pos": [
+        -330,
+        900
+      ],
+      "size": [
+        430,
+        800
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "全局设置",
+          "name": "sequence_config",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_CONFIG",
+          "link": null
+        },
+        {
+          "label": "上一分段",
+          "name": "previous_segment",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "link": 766
+        },
+        {
+          "name": "voice_cast",
+          "shape": 7,
+          "type": "AICG3D_CHARACTER_VOICE_CAST",
+          "link": null
+        },
+        {
+          "label": "AICG3D",
+          "name": "media",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "label": "引导图片",
+          "name": "guide_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "引导音频",
+          "name": "guide_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "视频段落",
+          "name": "segment",
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "links": [
+            767
+          ]
+        }
+      ],
+      "title": "视频段落 11",
+      "properties": {
+        "Node name for S&R": "AICG3D_H3SequenceSegment",
+        "minimax_h3_inline_media_state": "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "minimax_h3_inline_media_owned": false,
+        "minimax_h3_inline_media_inherited": true,
+        "minimax_h3_virtual_media_links": [],
+        "minimax_h3_prompt_reference_doc": {
+          "version": 1,
+          "text": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S1 单膝跪在西侧木柜角，刀斜插石板缝，右手仍握刀柄；S3 站在台阶下，右掌前伸；S2 剑尖被逼回、剑身压低；S4 半跪在台阶旁；摄影机保持固定。摄影机随跃起极缓慢上摇（不切镜），焦点锁软剑剑尖，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：S2 跃起在画面上半，S3 在画面中央，S1 在画面左下跪在木柜角，镖箱在三级石台阶上方下落。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：S2 借 S1 斜插的刀背为支点发力跃起，软剑点向 S3 手腕；她纱衣下摆与垂珠在跃起瞬间向上扬起，发梢滞后半拍跟上。\n1.6～3.4秒：灯影明灭一次，S3 手腕被点中，松手退两步，袍角扫过三级石台阶。\n3.4～5.0秒：(S2) says: <d>[Chinese]撒手！</d> 她的语态：平稳清晰，爆发短促，气息收后延；说时剑尖已收回身侧。镖箱落回台阶。段尾交接锚点：S2 落地，软剑垂向台阶；S3 松手退两步，袍角扫过台阶；镖箱落回台阶上；S1 单膝跪在木柜角，刀仍斜插石板缝；摄影机上摇后停在台阶高度。\n\noverall_soundscape: 跃起发力时空气声、灯罩明灭、剑点手腕的短促撞击、袍角扫过台阶，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐在跃起后骤停，余音收束，音高不变。",
+          "parts": [
+            {
+              "type": "text",
+              "text": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S1 单膝跪在西侧木柜角，刀斜插石板缝，右手仍握刀柄；S3 站在台阶下，右掌前伸；S2 剑尖被逼回、剑身压低；S4 半跪在台阶旁；摄影机保持固定。摄影机随跃起极缓慢上摇（不切镜），焦点锁软剑剑尖，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：S2 跃起在画面上半，S3 在画面中央，S1 在画面左下跪在木柜角，镖箱在三级石台阶上方下落。S1 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片2",
+              "tag": "<Picture 2>",
+              "label": "图片2",
+              "fullLabel": "image2.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 2,
+              "mediaIndex": 2,
+              "sourceId": 1198,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image2.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "、S2 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片3",
+              "tag": "<Picture 3>",
+              "label": "图片3",
+              "fullLabel": "image3.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 3,
+              "mediaIndex": 3,
+              "sourceId": 1198,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image3.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "、S3 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片4",
+              "tag": "<Picture 4>",
+              "label": "图片4",
+              "fullLabel": "image4.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 4,
+              "mediaIndex": 4,
+              "sourceId": 1198,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image4.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "、S4 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片5",
+              "tag": "<Picture 5>",
+              "label": "图片5",
+              "fullLabel": "image5.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 5,
+              "mediaIndex": 5,
+              "sourceId": 1198,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image5.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "，道具金木镖箱"
+            },
+            {
+              "type": "mention",
+              "token": "@图片6",
+              "tag": "<Picture 6>",
+              "label": "图片6",
+              "fullLabel": "image6.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 6,
+              "mediaIndex": 6,
+              "sourceId": 1198,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image6.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：S2 借 S1 斜插的刀背为支点发力跃起，软剑点向 S3 手腕；她纱衣下摆与垂珠在跃起瞬间向上扬起，发梢滞后半拍跟上。\n1.6～3.4秒：灯影明灭一次，S3 手腕被点中，松手退两步，袍角扫过三级石台阶。\n3.4～5.0秒：(S2) says: "
+            },
+            {
+              "type": "dialogue",
+              "text": "[Chinese]撒手！"
+            },
+            {
+              "type": "text",
+              "text": " 她的语态：平稳清晰，爆发短促，气息收后延；说时剑尖已收回身侧。镖箱落回台阶。段尾交接锚点：S2 落地，软剑垂向台阶；S3 松手退两步，袍角扫过台阶；镖箱落回台阶上；S1 单膝跪在木柜角，刀仍斜插石板缝；摄影机上摇后停在台阶高度。\n\noverall_soundscape: 跃起发力时空气声、灯罩明灭、剑点手腕的短促撞击、袍角扫过台阶，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐在跃起后骤停，余音收束，音高不变。"
+            }
+          ]
+        }
+      },
+      "widgets_values": [
+        "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S1 单膝跪在西侧木柜角，刀斜插石板缝，右手仍握刀柄；S3 站在台阶下，右掌前伸；S2 剑尖被逼回、剑身压低；S4 半跪在台阶旁；摄影机保持固定。摄影机随跃起极缓慢上摇（不切镜），焦点锁软剑剑尖，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：S2 跃起在画面上半，S3 在画面中央，S1 在画面左下跪在木柜角，镖箱在三级石台阶上方下落。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：S2 借 S1 斜插的刀背为支点发力跃起，软剑点向 S3 手腕；她纱衣下摆与垂珠在跃起瞬间向上扬起，发梢滞后半拍跟上。\n1.6～3.4秒：灯影明灭一次，S3 手腕被点中，松手退两步，袍角扫过三级石台阶。\n3.4～5.0秒：(S2) says: <d>[Chinese]撒手！</d> 她的语态：平稳清晰，爆发短促，气息收后延；说时剑尖已收回身侧。镖箱落回台阶。段尾交接锚点：S2 落地，软剑垂向台阶；S3 松手退两步，袍角扫过台阶；镖箱落回台阶上；S1 单膝跪在木柜角，刀仍斜插石板缝；摄影机上摇后停在台阶高度。\n\noverall_soundscape: 跃起发力时空气声、灯罩明灭、剑点手腕的短促撞击、袍角扫过台阶，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐在跃起后骤停，余音收束，音高不变。",
+        5,
+        1082495265,
+        "randomize",
+        0,
+        "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "",
+        false,
+        "",
+        "",
+        0,
+        0
+      ],
+      "widgets_values_named": {
+        "prompt": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S1 单膝跪在西侧木柜角，刀斜插石板缝，右手仍握刀柄；S3 站在台阶下，右掌前伸；S2 剑尖被逼回、剑身压低；S4 半跪在台阶旁；摄影机保持固定。摄影机随跃起极缓慢上摇（不切镜），焦点锁软剑剑尖，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：S2 跃起在画面上半，S3 在画面中央，S1 在画面左下跪在木柜角，镖箱在三级石台阶上方下落。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：S2 借 S1 斜插的刀背为支点发力跃起，软剑点向 S3 手腕；她纱衣下摆与垂珠在跃起瞬间向上扬起，发梢滞后半拍跟上。\n1.6～3.4秒：灯影明灭一次，S3 手腕被点中，松手退两步，袍角扫过三级石台阶。\n3.4～5.0秒：(S2) says: <d>[Chinese]撒手！</d> 她的语态：平稳清晰，爆发短促，气息收后延；说时剑尖已收回身侧。镖箱落回台阶。段尾交接锚点：S2 落地，软剑垂向台阶；S3 松手退两步，袍角扫过台阶；镖箱落回台阶上；S1 单膝跪在木柜角，刀仍斜插石板缝；摄影机上摇后停在台阶高度。\n\noverall_soundscape: 跃起发力时空气声、灯罩明灭、剑点手腕的短促撞击、袍角扫过台阶，灯市底噪压低。\nnon_diegetic_music: 同一段弦乐在跃起后骤停，余音收束，音高不变。",
+        "seconds": 5,
+        "seed": 1082495265,
+        "control_after_generate": "randomize",
+        "guide_frame_idx": 0,
+        "inline_media_state": "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "sequence_scope": "",
+        "draw_previous_from_cache": false,
+        "draw_previous_scope": "",
+        "draw_previous_chain_key": "",
+        "draw_previous_node_id": 0,
+        "draw_previous_index": 0
+      }
+    },
+    {
+      "id": 1199,
+      "type": "AICG3D_H3SequenceSegment",
+      "pos": [
+        120,
+        900
+      ],
+      "size": [
+        430,
+        800
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "全局设置",
+          "name": "sequence_config",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_CONFIG",
+          "link": null
+        },
+        {
+          "label": "上一分段",
+          "name": "previous_segment",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "link": 767
+        },
+        {
+          "name": "voice_cast",
+          "shape": 7,
+          "type": "AICG3D_CHARACTER_VOICE_CAST",
+          "link": null
+        },
+        {
+          "label": "AICG3D",
+          "name": "media",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "label": "引导图片",
+          "name": "guide_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "引导音频",
+          "name": "guide_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "视频段落",
+          "name": "segment",
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "links": [
+            768
+          ]
+        }
+      ],
+      "title": "视频段落 12",
+      "properties": {
+        "Node name for S&R": "AICG3D_H3SequenceSegment",
+        "minimax_h3_inline_media_state": "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "minimax_h3_inline_media_owned": false,
+        "minimax_h3_inline_media_inherited": true,
+        "minimax_h3_virtual_media_links": [],
+        "minimax_h3_prompt_reference_doc": {
+          "version": 1,
+          "text": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S2 落地，软剑垂向台阶；S3 松手退两步，袍角扫过台阶；镖箱落回台阶上；S1 单膝跪在木柜角，刀仍斜插石板缝；摄影机上摇后停在台阶高度。摄影机极缓慢向后拉远（幅度极小），容纳四人，这是全片唯一一次收束性拉远，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：四人同框的中全景，S4 与镖箱在画面中央台阶前，S2 在画面右落地收势，S1 在画面左扶刀起身，S3 只剩画面深处的背影退出灯市阴影。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：镖箱稳稳定在台阶上；S4 扑抱镖箱，双手扣紧，铜锁磕在台阶石面一次。\n1.6～3.4秒：S2 落地收势，软剑垂；S1 扶刀半跪后起身，刀身离开石板缝，石板缝里留一道浅刀痕。\n3.4～5.0秒：S3 退出灯市阴影，灯笼恢复摇晃；(S1) says: <d>[Chinese]人齐了。走。</d> 他的语态：低稳温厚，气息收稳，尾音略沉；说时视线从镖箱移到 S2，再移到街南端。段尾交接锚点：镖箱稳定在台阶上，S4 双手抱箱；S2 落地收势软剑垂；S1 扶刀起身，刀身离开石板缝；S3 背影退出灯市阴影；摄影机停在拉远末端，四人同框。\n\noverall_soundscape: 灯市底噪回升到第一段的音量、雨打灯棚布幔、灯笼骨架轻响、人群重新聚拢脚步。\nnon_diegetic_music: 同一段音乐收束为低音区一次低音，余音收，不从头另起一首。",
+          "parts": [
+            {
+              "type": "text",
+              "text": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S2 落地，软剑垂向台阶；S3 松手退两步，袍角扫过台阶；镖箱落回台阶上；S1 单膝跪在木柜角，刀仍斜插石板缝；摄影机上摇后停在台阶高度。摄影机极缓慢向后拉远（幅度极小），容纳四人，这是全片唯一一次收束性拉远，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：四人同框的中全景，S4 与镖箱在画面中央台阶前，S2 在画面右落地收势，S1 在画面左扶刀起身，S3 只剩画面深处的背影退出灯市阴影。S1 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片2",
+              "tag": "<Picture 2>",
+              "label": "图片2",
+              "fullLabel": "image2.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 2,
+              "mediaIndex": 2,
+              "sourceId": 1199,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image2.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "、S2 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片3",
+              "tag": "<Picture 3>",
+              "label": "图片3",
+              "fullLabel": "image3.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 3,
+              "mediaIndex": 3,
+              "sourceId": 1199,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image3.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "、S3 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片4",
+              "tag": "<Picture 4>",
+              "label": "图片4",
+              "fullLabel": "image4.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 4,
+              "mediaIndex": 4,
+              "sourceId": 1199,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image4.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "、S4 对应"
+            },
+            {
+              "type": "mention",
+              "token": "@图片5",
+              "tag": "<Picture 5>",
+              "label": "图片5",
+              "fullLabel": "image5.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 5,
+              "mediaIndex": 5,
+              "sourceId": 1199,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image5.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "，道具金木镖箱"
+            },
+            {
+              "type": "mention",
+              "token": "@图片6",
+              "tag": "<Picture 6>",
+              "label": "图片6",
+              "fullLabel": "image6.jpg",
+              "mediaType": "image",
+              "referenceMode": "index",
+              "ordinal": 6,
+              "mediaIndex": 6,
+              "sourceId": 1199,
+              "sourceSlot": 0,
+              "previewUrl": "/view?filename=image6.jpg&type=input"
+            },
+            {
+              "type": "text",
+              "text": "，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：镖箱稳稳定在台阶上；S4 扑抱镖箱，双手扣紧，铜锁磕在台阶石面一次。\n1.6～3.4秒：S2 落地收势，软剑垂；S1 扶刀半跪后起身，刀身离开石板缝，石板缝里留一道浅刀痕。\n3.4～5.0秒：S3 退出灯市阴影，灯笼恢复摇晃；(S1) says: "
+            },
+            {
+              "type": "dialogue",
+              "text": "[Chinese]人齐了。走。"
+            },
+            {
+              "type": "text",
+              "text": " 他的语态：低稳温厚，气息收稳，尾音略沉；说时视线从镖箱移到 S2，再移到街南端。段尾交接锚点：镖箱稳定在台阶上，S4 双手抱箱；S2 落地收势软剑垂；S1 扶刀起身，刀身离开石板缝；S3 背影退出灯市阴影；摄影机停在拉远末端，四人同框。\n\noverall_soundscape: 灯市底噪回升到第一段的音量、雨打灯棚布幔、灯笼骨架轻响、人群重新聚拢脚步。\nnon_diegetic_music: 同一段音乐收束为低音区一次低音，余音收，不从头另起一首。"
+            }
+          ]
+        }
+      },
+      "widgets_values": [
+        "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S2 落地，软剑垂向台阶；S3 松手退两步，袍角扫过台阶；镖箱落回台阶上；S1 单膝跪在木柜角，刀仍斜插石板缝；摄影机上摇后停在台阶高度。摄影机极缓慢向后拉远（幅度极小），容纳四人，这是全片唯一一次收束性拉远，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：四人同框的中全景，S4 与镖箱在画面中央台阶前，S2 在画面右落地收势，S1 在画面左扶刀起身，S3 只剩画面深处的背影退出灯市阴影。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：镖箱稳稳定在台阶上；S4 扑抱镖箱，双手扣紧，铜锁磕在台阶石面一次。\n1.6～3.4秒：S2 落地收势，软剑垂；S1 扶刀半跪后起身，刀身离开石板缝，石板缝里留一道浅刀痕。\n3.4～5.0秒：S3 退出灯市阴影，灯笼恢复摇晃；(S1) says: <d>[Chinese]人齐了。走。</d> 他的语态：低稳温厚，气息收稳，尾音略沉；说时视线从镖箱移到 S2，再移到街南端。段尾交接锚点：镖箱稳定在台阶上，S4 双手抱箱；S2 落地收势软剑垂；S1 扶刀起身，刀身离开石板缝；S3 背影退出灯市阴影；摄影机停在拉远末端，四人同框。\n\noverall_soundscape: 灯市底噪回升到第一段的音量、雨打灯棚布幔、灯笼骨架轻响、人群重新聚拢脚步。\nnon_diegetic_music: 同一段音乐收束为低音区一次低音，余音收，不从头另起一首。",
+        5,
+        803384957,
+        "randomize",
+        0,
+        "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "",
+        false,
+        "",
+        "",
+        0,
+        0
+      ],
+      "widgets_values_named": {
+        "prompt": "integrated_multimodal_description: [Shot 1] 16:9，同一风格与32K超清质感；发质规则延续——S1 的高马尾发梢在雨夜逆光里呈半透明暖色，束发绳随动作轻摆，鬓边碎发自由飞起；S2 的乌黑长发盘成高髻、髻侧与鬓边留柔软碎发，花冠垂珠与发丝一同轻摆；S3 冠下长直黑发与鬓角干燥蓬松；S4 短发蓬松带自然分缝，额前碎发随动作抖动；全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。承接上一段：S2 落地，软剑垂向台阶；S3 松手退两步，袍角扫过台阶；镖箱落回台阶上；S1 单膝跪在木柜角，刀仍斜插石板缝；摄影机上摇后停在台阶高度。摄影机极缓慢向后拉远（幅度极小），容纳四人，这是全片唯一一次收束性拉远，机位高度保持略低于眼平5°、不切镜、不旋转、不改变构图重心，曝光跨段锁定。构图：四人同框的中全景，S4 与镖箱在画面中央台阶前，S2 在画面右落地收势，S1 在画面左扶刀起身，S3 只剩画面深处的背影退出灯市阴影。S1 对应<Picture 2>、S2 对应<Picture 3>、S3 对应<Picture 4>、S4 对应<Picture 5>，道具金木镖箱<Picture 6>，铜角包边与铜锁位置不变，外观与前述完全一致。本段画面只有 S1、S2、S3、S4 四人，画面里没有第五个任何人。画面无字幕、无文字、无水印。\n0.0～1.6秒：镖箱稳稳定在台阶上；S4 扑抱镖箱，双手扣紧，铜锁磕在台阶石面一次。\n1.6～3.4秒：S2 落地收势，软剑垂；S1 扶刀半跪后起身，刀身离开石板缝，石板缝里留一道浅刀痕。\n3.4～5.0秒：S3 退出灯市阴影，灯笼恢复摇晃；(S1) says: <d>[Chinese]人齐了。走。</d> 他的语态：低稳温厚，气息收稳，尾音略沉；说时视线从镖箱移到 S2，再移到街南端。段尾交接锚点：镖箱稳定在台阶上，S4 双手抱箱；S2 落地收势软剑垂；S1 扶刀起身，刀身离开石板缝；S3 背影退出灯市阴影；摄影机停在拉远末端，四人同框。\n\noverall_soundscape: 灯市底噪回升到第一段的音量、雨打灯棚布幔、灯笼骨架轻响、人群重新聚拢脚步。\nnon_diegetic_music: 同一段音乐收束为低音区一次低音，余音收，不从头另起一首。",
+        "seconds": 5,
+        "seed": 803384957,
+        "control_after_generate": "randomize",
+        "guide_frame_idx": 0,
+        "inline_media_state": "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "sequence_scope": "",
+        "draw_previous_from_cache": false,
+        "draw_previous_scope": "",
+        "draw_previous_chain_key": "",
+        "draw_previous_node_id": 0,
+        "draw_previous_index": 0
+      }
+    }
+  ],
+  "links": [
+    [
+      649,
+      106,
+      1,
+      1125,
+      0,
+      "MODEL"
+    ],
+    [
+      399,
+      106,
+      0,
+      212,
+      0,
+      "MINIMAX_H3_BUNDLE"
+    ],
+    [
+      650,
+      1125,
+      0,
+      212,
+      1,
+      "MODEL"
+    ],
+    [
+      762,
+      1189,
+      0,
+      212,
+      3,
+      "SIGMAS"
+    ],
+    [
+      768,
+      1199,
+      0,
+      60,
+      0,
+      "SEGMENT"
+    ],
+    [
+      455,
+      212,
+      0,
+      248,
+      0,
+      "MINIMAX_H3_SEQUENCE_CONFIG"
+    ],
+    [
+      596,
+      285,
+      0,
+      248,
+      2,
+      "AICG3D_CHARACTER_VOICE_CAST"
+    ],
+    [
+      581,
+      290,
+      0,
+      248,
+      3,
+      "MINIMAX_H3_MEDIA_BUNDLE"
+    ],
+    [
+      599,
+      248,
+      0,
+      674,
+      1,
+      "MINIMAX_H3_SEQUENCE_SEGMENT"
+    ],
+    [
+      748,
+      674,
+      0,
+      1134,
+      1,
+      "MINIMAX_H3_SEQUENCE_SEGMENT"
+    ],
+    [
+      711,
+      60,
+      0,
+      1160,
+      0,
+      "VIDEO"
+    ],
+    [
+      750,
+      1134,
+      0,
+      1175,
+      1,
+      "MINIMAX_H3_SEQUENCE_SEGMENT"
+    ],
+    [
+      752,
+      1175,
+      0,
+      1176,
+      1,
+      "MINIMAX_H3_SEQUENCE_SEGMENT"
+    ],
+    [
+      754,
+      1176,
+      0,
+      1177,
+      1,
+      "MINIMAX_H3_SEQUENCE_SEGMENT"
+    ],
+    [
+      755,
+      1177,
+      0,
+      1194,
+      1,
+      "MINIMAX_H3_SEQUENCE_SEGMENT"
+    ],
+    [
+      763,
+      1194,
+      0,
+      1195,
+      1,
+      "MINIMAX_H3_SEQUENCE_SEGMENT"
+    ],
+    [
+      764,
+      1195,
+      0,
+      1196,
+      1,
+      "MINIMAX_H3_SEQUENCE_SEGMENT"
+    ],
+    [
+      765,
+      1196,
+      0,
+      1197,
+      1,
+      "MINIMAX_H3_SEQUENCE_SEGMENT"
+    ],
+    [
+      766,
+      1197,
+      0,
+      1198,
+      1,
+      "MINIMAX_H3_SEQUENCE_SEGMENT"
+    ],
+    [
+      767,
+      1198,
+      0,
+      1199,
+      1,
+      "MINIMAX_H3_SEQUENCE_SEGMENT"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "视频段落链（第 7~12 段）",
+      "bounding": [
+        -2240,
+        820,
+        2860,
+        900
+      ],
+      "color": "#486264",
+      "flags": {}
+    }
+  ],
+  "definitions": {
+    "subgraphs": [
+      {
+        "id": "1ed6f447-3389-4f03-ad2f-6c6d99a69925",
+        "version": 1,
+        "state": {
+          "lastGroupId": 3,
+          "lastNodeId": 1199,
+          "lastLinkId": 768,
+          "lastRerouteId": 0
+        },
+        "revision": 5,
+        "config": {},
+        "name": "第三方加速",
+        "inputNode": {
+          "id": -10,
+          "bounding": [
+            150,
+            110,
+            128,
+            68
+          ]
+        },
+        "outputNode": {
+          "id": -20,
+          "bounding": [
+            2430,
+            110,
+            128,
+            68
+          ]
+        },
+        "inputs": [
+          {
+            "id": "4af5de4f-8c68-4b08-b97e-d0bab201c243",
+            "name": "model",
+            "type": "MODEL",
+            "linkIds": [
+              270
+            ],
+            "localized_name": "model",
+            "pos": [
+              254,
+              134
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "id": "23cd58c1-2b1b-49de-b15c-4f65b06fcc7f",
+            "name": "model",
+            "type": "MODEL",
+            "linkIds": [
+              274
+            ],
+            "localized_name": "model",
+            "pos": [
+              2454,
+              134
+            ]
+          }
+        ],
+        "widgets": [],
+        "nodes": [
+          {
+            "id": 1119,
+            "type": "MiniMaxH3SigmaShift",
+            "pos": [
+              1010,
+              120
+            ],
+            "size": [
+              330,
+              120
+            ],
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [
+              {
+                "label": "model",
+                "localized_name": "model",
+                "name": "model",
+                "type": "MODEL",
+                "link": 270
+              },
+              {
+                "label": "shift_video",
+                "localized_name": "视频偏移",
+                "name": "shift_video",
+                "type": "FLOAT",
+                "widget": {
+                  "name": "shift_video"
+                },
+                "link": null
+              },
+              {
+                "label": "shift_audio",
+                "localized_name": "音频偏移",
+                "name": "shift_audio",
+                "type": "FLOAT",
+                "widget": {
+                  "name": "shift_audio"
+                },
+                "link": null
+              }
+            ],
+            "outputs": [
+              {
+                "label": "MODEL",
+                "localized_name": "模型",
+                "name": "MODEL",
+                "type": "MODEL",
+                "links": [
+                  274
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "MiniMaxH3SigmaShift",
+              "cnr_id": "comfy-core",
+              "ver": "0.30.0",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "input_ue_unconnectable": {},
+                "version": "7.8"
+              },
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              12,
+              3
+            ],
+            "widgets_values_named": {
+              "shift_video": 12,
+              "shift_audio": 3
+            }
+          }
+        ],
+        "groups": [],
+        "links": [
+          {
+            "id": 270,
+            "origin_id": -10,
+            "origin_slot": 0,
+            "target_id": 1119,
+            "target_slot": 0,
+            "type": "MODEL"
+          },
+          {
+            "id": 274,
+            "origin_id": 1119,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 0,
+            "type": "MODEL"
+          }
+        ],
+        "extra": {}
+      }
+    ]
+  },
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.2593742460100021,
+      "offset": [
+        3083.208636099459,
+        1155.9280463750565
+      ]
+    },
+    "frontendVersion": "1.59.1",
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "aicg3d_h3_sequence_cache_scope": "aicg3d:wuxia-duobao-60s-12seg-v1"
+  },
+  "version": 0.4
+}

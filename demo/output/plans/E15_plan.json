@@ -1,0 +1,108 @@
+{
+  "episode": "E15",
+  "episode_title": "第15段",
+  "videos": [
+    {
+      "title": "天机湖钓杀危机",
+      "src": "E15-S04–S05",
+      "logline": "惊虹留恨携棺赴天机湖，与叶小钗对峙并设下钓竿规则。",
+      "scene": "天机湖",
+      "characters": [
+        "惊虹留恨",
+        "叶小钗",
+        "秦假仙",
+        "业途灵"
+      ],
+      "props": [
+        "棺木"
+      ],
+      "segments": [
+        {
+          "i": 1,
+          "action": "惊虹留恨拖着紫晶木棺材现身，秦假仙在一旁跳脚。",
+          "dialogue": {
+            "speaker": "秦假仙",
+            "delivery": "提醒",
+            "text": "小心一点，不可打扰他。",
+            "line": "E15-L028"
+          }
+        },
+        {
+          "i": 2,
+          "action": "惊虹留恨放下棺材，目光锁定正在垂钓的叶小钗。",
+          "dialogue": {
+            "speaker": "惊虹留恨",
+            "delivery": "宣告",
+            "text": "我是收银取命的杀手。",
+            "line": "E15-L029"
+          }
+        },
+        {
+          "i": 3,
+          "action": "业途灵怒指惊虹留恨，惊虹留恨抬脚将其绊倒。",
+          "dialogue": {
+            "speaker": "业途灵",
+            "delivery": "愤怒",
+            "text": "喂！你手上拿的是我的钓竿耶！",
+            "line": "E15-L030"
+          }
+        },
+        {
+          "i": 4,
+          "action": "惊虹留恨拿起钓竿，学人风雅垂钓，眼神凶狠。",
+          "dialogue": {
+            "speaker": "惊虹留恨",
+            "delivery": "规则",
+            "text": "钓竿离水面，杀招毫不留情。",
+            "line": ""
+          }
+        },
+        {
+          "i": 5,
+          "action": "秦假仙在后方焦急徘徊，双手乱挥不知所措。",
+          "dialogue": {
+            "speaker": "秦假仙",
+            "delivery": "焦急",
+            "text": "啊唷喂呀～～受伤怎麽办？",
+            "line": ""
+          }
+        },
+        {
+          "i": 6,
+          "action": "叶小钗左手突然抽搐，右手强行压下钓竿。",
+          "dialogue": null
+        },
+        {
+          "i": 7,
+          "action": "惊虹留恨猛然起身，误以为开战，随即察觉异样。",
+          "dialogue": null
+        },
+        {
+          "i": 8,
+          "action": "惊虹留恨走近，伸手协助叶小钗压制左手。",
+          "dialogue": null
+        },
+        {
+          "i": 9,
+          "action": "叶小钗发作完毕，两人继续默默垂钓。",
+          "dialogue": null
+        },
+        {
+          "i": 10,
+          "action": "上游水面浮沉，一个溺水孩童漂来。",
+          "dialogue": null
+        },
+        {
+          "i": 11,
+          "action": "惊虹留恨抱臂旁观，神色幸灾乐祸。",
+          "dialogue": null
+        },
+        {
+          "i": 12,
+          "action": "叶小钗钓竿一起，将孩童救上岸。",
+          "dialogue": null
+        }
+      ]
+    }
+  ]
+}

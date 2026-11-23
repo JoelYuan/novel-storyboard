@@ -1,0 +1,85 @@
+{
+  "episode": "E16",
+  "episode_title": "第16段",
+  "videos": [
+    {
+      "title": "命随刀入洞",
+      "src": "E16-S01–S02",
+      "logline": "命随刀开启山口入洞，叶小钗惊虹留恨战场对峙",
+      "scene": "神秘山口",
+      "characters": [
+        "命随刀",
+        "叶小钗",
+        "惊虹留恨"
+      ],
+      "props": [],
+      "segments": [
+        {
+          "i": 1,
+          "action": "命随刀在山林行走，脚步停驻",
+          "dialogue": null
+        },
+        {
+          "i": 2,
+          "action": "命随刀凝视前方山口，神情肃穆",
+          "dialogue": null
+        },
+        {
+          "i": 3,
+          "action": "命随刀嘴唇微动，念起八卦口诀",
+          "dialogue": null
+        },
+        {
+          "i": 4,
+          "action": "山口巨石轰然移动，尘烟扬起",
+          "dialogue": null
+        },
+        {
+          "i": 5,
+          "action": "命随刀迈步跨入山洞深处",
+          "dialogue": null
+        },
+        {
+          "i": 6,
+          "action": "命随刀背影没入黑暗，山口闭合",
+          "dialogue": {
+            "speaker": "命随刀",
+            "delivery": "喃喃",
+            "text": "再步出山洞，就不再是现在的命随刀了",
+            "line": ""
+          }
+        },
+        {
+          "i": 7,
+          "action": "画面切换，叶小钗持刀摆出战斗姿态",
+          "dialogue": null
+        },
+        {
+          "i": 8,
+          "action": "惊虹留恨面色凝重，手按剑柄",
+          "dialogue": null
+        },
+        {
+          "i": 9,
+          "action": "惊虹留恨拔出悲嚎剑，剑身震颤",
+          "dialogue": null
+        },
+        {
+          "i": 10,
+          "action": "四周气流激荡，发出如鬼泣之声",
+          "dialogue": null
+        },
+        {
+          "i": 11,
+          "action": "叶小钗与惊虹留恨目光交汇，杀气凝滞",
+          "dialogue": null
+        },
+        {
+          "i": 12,
+          "action": "两人同时发力，准备展开龙争狗斗",
+          "dialogue": null
+        }
+      ]
+    }
+  ]
+}

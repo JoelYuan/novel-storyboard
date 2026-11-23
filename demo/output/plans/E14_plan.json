@@ -1,0 +1,132 @@
+{
+  "episode": "E14",
+  "episode_title": "第14段",
+  "videos": [
+    {
+      "title": "命随刀复仇夺刀",
+      "src": "E14-S01–S03 / R0625–R0727",
+      "logline": "命随刀追杀蟠龙邪尊夺刀，半部禅设局除金角战牛。",
+      "scene": "巫石门内殿",
+      "characters": [
+        "命随刀",
+        "蟠龙邪尊",
+        "半部禅",
+        "花藏刀",
+        "竹藏剑"
+      ],
+      "props": [],
+      "segments": [
+        {
+          "i": 1,
+          "action": "命随刀持刀逼近蟠龙邪尊，刀锋抵住其脖颈。",
+          "dialogue": {
+            "speaker": "命随刀",
+            "delivery": "冷厉",
+            "text": "你就是蟠龙邪尊？",
+            "line": "E14-L013"
+          }
+        },
+        {
+          "i": 2,
+          "action": "蟠龙邪尊浑身颤抖，点头确认身份。",
+          "dialogue": {
+            "speaker": "蟠龙邪尊",
+            "delivery": "颤",
+            "text": "是。是。",
+            "line": "E14-L014"
+          }
+        },
+        {
+          "i": 3,
+          "action": "命随刀眼神凌厉，追问震天戢下落。",
+          "dialogue": {
+            "speaker": "命随刀",
+            "delivery": "冷厉",
+            "text": "震天戢的主人？",
+            "line": "E14-L015"
+          }
+        },
+        {
+          "i": 4,
+          "action": "蟠龙邪尊惊恐点头，命随刀伸手索要。",
+          "dialogue": {
+            "speaker": "命随刀",
+            "delivery": "命令",
+            "text": "交出震天戢。",
+            "line": "E14-L017"
+          }
+        },
+        {
+          "i": 5,
+          "action": "蟠龙邪尊摇头，指认震天戢在麾下手中。",
+          "dialogue": {
+            "speaker": "蟠龙邪尊",
+            "delivery": "颤",
+            "text": "在我...我的麾下手中...",
+            "line": "E14-L020"
+          }
+        },
+        {
+          "i": 6,
+          "action": "命随刀抽刀挥砍，鲜血喷溅，蟠龙邪尊头颅落地。",
+          "dialogue": null
+        },
+        {
+          "i": 7,
+          "action": "花藏刀与竹藏剑大笑，庆祝蟠龙邪尊死。",
+          "dialogue": {
+            "speaker": "花藏刀",
+            "delivery": "笑",
+            "text": "太好了，巫石门换我们兄弟作主了！",
+            "line": ""
+          }
+        },
+        {
+          "i": 8,
+          "action": "半部禅走入室内，打断二人庆祝。",
+          "dialogue": {
+            "speaker": "半部禅",
+            "delivery": "泼冷水",
+            "text": "你们高兴的太早了吧。",
+            "line": "E14-L024"
+          }
+        },
+        {
+          "i": 9,
+          "action": "花藏刀怒视半部禅，质问其身份。",
+          "dialogue": {
+            "speaker": "花藏刀",
+            "delivery": "怒",
+            "text": "你是谁？敢来这里撒野？",
+            "line": "E14-L025"
+          }
+        },
+        {
+          "i": 10,
+          "action": "半部禅指出金角战牛威胁，提议除掉他。",
+          "dialogue": {
+            "speaker": "半部禅",
+            "delivery": "道",
+            "text": "我可以设计帮你们除掉金角战牛。",
+            "line": ""
+          }
+        },
+        {
+          "i": 11,
+          "action": "花藏刀与竹藏剑点头，同意半部禅提议。",
+          "dialogue": {
+            "speaker": "花藏刀",
+            "delivery": "道",
+            "text": "震天戢太重拿不动，送你也无妨。",
+            "line": ""
+          }
+        },
+        {
+          "i": 12,
+          "action": "花藏刀与竹藏剑点头，同意半部禅提议。",
+          "dialogue": null
+        }
+      ]
+    }
+  ]
+}

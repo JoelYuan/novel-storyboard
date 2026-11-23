@@ -1,0 +1,139 @@
+{
+  "episode": "E07",
+  "episode_title": "第07段",
+  "videos": [
+    {
+      "title": "绝谷传功生死诀",
+      "src": "E07-S03",
+      "logline": "地灵手传功命随刀，告知生死风险与山洞口诀。",
+      "scene": "绝谷",
+      "characters": [
+        "命随刀",
+        "地灵手"
+      ],
+      "props": [],
+      "segments": [
+        {
+          "i": 1,
+          "action": "命随刀跪坐，抬头急切看向地灵手",
+          "dialogue": {
+            "speaker": "命随刀",
+            "delivery": "急切",
+            "text": "前辈！前辈！",
+            "line": "E07-L005"
+          }
+        },
+        {
+          "i": 2,
+          "action": "地灵手闭目，手指比划示意",
+          "dialogue": {
+            "speaker": "地灵手",
+            "delivery": "沉稳",
+            "text": "嗯！",
+            "line": "E07-L006"
+          }
+        },
+        {
+          "i": 3,
+          "action": "命随刀身体前倾，双手交握",
+          "dialogue": {
+            "speaker": "命随刀",
+            "delivery": "陈述",
+            "text": "你独自沉思叁个时辰，不出一语。",
+            "line": ""
+          }
+        },
+        {
+          "i": 4,
+          "action": "地灵手摇头，掌心对准命随刀",
+          "dialogue": {
+            "speaker": "地灵手",
+            "delivery": "解释",
+            "text": "我在想最快将你送出绝谷的方法。",
+            "line": ""
+          }
+        },
+        {
+          "i": 5,
+          "action": "命随刀皱眉，伸手欲拦",
+          "dialogue": {
+            "speaker": "命随刀",
+            "delivery": "疑问",
+            "text": "你不是要教我武功吗？",
+            "line": "E07-L009"
+          }
+        },
+        {
+          "i": 6,
+          "action": "地灵手挥手，表情凝重",
+          "dialogue": {
+            "speaker": "地灵手",
+            "delivery": "解释",
+            "text": "练武太慢，需真气灌体助你逃生。",
+            "line": ""
+          }
+        },
+        {
+          "i": 7,
+          "action": "命随刀呆住，随后低头",
+          "dialogue": {
+            "speaker": "命随刀",
+            "delivery": "追问",
+            "text": "那前辈的意思是....",
+            "line": "E07-L011"
+          }
+        },
+        {
+          "i": 8,
+          "action": "地灵手大笑，手指地面",
+          "dialogue": {
+            "speaker": "地灵手",
+            "delivery": "警告",
+            "text": "真气入体若承受不住，将爆裂而亡。",
+            "line": ""
+          }
+        },
+        {
+          "i": 9,
+          "action": "命随刀叹气，点头",
+          "dialogue": {
+            "speaker": "命随刀",
+            "delivery": "妥协",
+            "text": "啊..好吧....",
+            "line": "E07-L016"
+          }
+        },
+        {
+          "i": 10,
+          "action": "地灵手双手按在命随刀背上",
+          "dialogue": {
+            "speaker": "地灵手",
+            "delivery": "说明",
+            "text": "传授口诀，这是打开山洞的唯一方法。",
+            "line": ""
+          }
+        },
+        {
+          "i": 11,
+          "action": "命随刀缓缓开口，眼神空洞",
+          "dialogue": {
+            "speaker": "命随刀",
+            "delivery": "叙述",
+            "text": "九岁全村被毒杀，我独自寻仇。",
+            "line": ""
+          }
+        },
+        {
+          "i": 12,
+          "action": "地灵手叹气，挥手示意坐下",
+          "dialogue": {
+            "speaker": "地灵手",
+            "delivery": "叹息",
+            "text": "难怪你如此坚强。坐下来吧！",
+            "line": ""
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2336 @@
+{
+  "id": "e9d0e5e3-d173-4a09-a5e0-a6d974d9e9b9",
+  "revision": 1,
+  "last_node_id": 1199,
+  "last_link_id": 768,
+  "nodes": [
+    {
+      "id": 60,
+      "type": "AICG3D_H3FinalSequenceUpscale",
+      "pos": [
+        570,
+        -30
+      ],
+      "size": [
+        370,
+        390
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "最后一段",
+          "name": "final_segment",
+          "type": "*",
+          "link": 768
+        }
+      ],
+      "outputs": [
+        {
+          "label": "成片视频",
+          "name": "video",
+          "type": "VIDEO",
+          "links": [
+            711
+          ]
+        },
+        {
+          "label": "保存路径",
+          "name": "saved_file",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "label": "接缝报告",
+          "name": "seam_report",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "label": "高清处理报告",
+          "name": "upscale_report",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AICG3D_H3FinalSequenceUpscale",
+        "cnr_id": "aicg3d-h3-suite",
+        "aicg3d_h3_final_sequence_manual_draw": true
+      },
+      "widgets_values": [
+        "video/V10_草茅纵火与达观寺惊变",
+        false,
+        "none",
+        false,
+        "minimax_h3_latent_upscaler_3d_fp16_V2.safetensors",
+        "按倍数放大",
+        1.5,
+        1152,
+        640,
+        "GPU（CUDA）",
+        "FP16 半精度",
+        "er_sde",
+        "beta",
+        4,
+        0.3,
+        888888,
+        "fixed",
+        "关",
+        512,
+        512,
+        128,
+        32,
+        "关闭（仅 H3 二采）",
+        "自动选择",
+        1,
+        5,
+        2,
+        "LAB 色彩",
+        "超高质量",
+        "GPU（CUDA）",
+        0,
+        "CPU",
+        true,
+        true,
+        362,
+        24,
+        "关",
+        1,
+        "卸载模型",
+        true,
+        "relayvsr_x2_lightx2v_int8_convrot.safetensors",
+        "relayvsr_flash_vae_x2_fp32.safetensors",
+        0.5,
+        true,
+        false,
+        "",
+        0,
+        "",
+        "",
+        ""
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "video/V10_草茅纵火与达观寺惊变",
+        "second_pass": false,
+        "refiner_lora": "none",
+        "show_advanced_settings": false,
+        "latent_upscale_model": "minimax_h3_latent_upscaler_3d_fp16_V2.safetensors",
+        "upscale_mode": "按倍数放大",
+        "upscale_scale": 1.5,
+        "target_width": 1152,
+        "target_height": 640,
+        "upscale_device": "GPU（CUDA）",
+        "upscale_precision": "FP16 半精度",
+        "sampler_name": "er_sde",
+        "scheduler": "beta",
+        "steps": 4,
+        "second_pass_denoise": 0.3,
+        "second_pass_seed": 888888,
+        "control_after_generate": "fixed",
+        "tiled_sampling": "关",
+        "tile_width": 512,
+        "tile_height": 512,
+        "tile_overlap": 128,
+        "tile_fade": 32,
+        "repair_engine": "关闭（仅 H3 二采）",
+        "repair_model": "自动选择",
+        "repair_scale": 1,
+        "repair_batch_size": 5,
+        "repair_temporal_overlap": 2,
+        "repair_color_correction": "LAB 色彩",
+        "repair_quality": "超高质量",
+        "repair_device": "GPU（CUDA）",
+        "repair_blocks_to_swap": 0,
+        "repair_offload_device": "CPU",
+        "repair_vae_tiling": true,
+        "lock_source_exposure": true,
+        "max_window_frames": 362,
+        "window_overlap_frames": 24,
+        "sample_preview": "关",
+        "preview_interval": 1,
+        "cleanup_after_run": "卸载模型",
+        "relay_vsr_enabled": true,
+        "relay_vsr_model": "relayvsr_x2_lightx2v_int8_convrot.safetensors",
+        "relay_vsr_vae": "relayvsr_flash_vae_x2_fp32.safetensors",
+        "relay_vsr_detail": 0.5,
+        "relay_lock_source_exposure": true,
+        "cache_only": false,
+        "cache_scope": "",
+        "cache_segment_count": 0,
+        "cache_segment_indices": "",
+        "cache_segment_nodes": "",
+        "cache_chain_key": ""
+      }
+    },
+    {
+      "id": 106,
+      "type": "AICG3D_H3Loader",
+      "pos": [
+        -3850,
+        -30
+      ],
+      "size": [
+        360,
+        692.2919927790632
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "FL2VA 模型",
+          "name": "fl2va_model",
+          "type": "COMBO",
+          "widget": {
+            "name": "fl2va_model"
+          },
+          "link": null
+        },
+        {
+          "label": "REF2VA 模型",
+          "name": "ref2va_model",
+          "type": "COMBO",
+          "widget": {
+            "name": "ref2va_model"
+          },
+          "link": null
+        },
+        {
+          "label": "文本编码器",
+          "name": "text_encoder",
+          "type": "COMBO",
+          "widget": {
+            "name": "text_encoder"
+          },
+          "link": null
+        },
+        {
+          "label": "视频 VAE",
+          "name": "video_vae",
+          "type": "COMBO",
+          "widget": {
+            "name": "video_vae"
+          },
+          "link": null
+        },
+        {
+          "label": "音频 VAE",
+          "name": "audio_vae",
+          "type": "COMBO",
+          "widget": {
+            "name": "audio_vae"
+          },
+          "link": null
+        },
+        {
+          "label": "非 H3 权重处理",
+          "name": "non_h3_policy",
+          "type": "COMBO",
+          "widget": {
+            "name": "non_h3_policy"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "h3_bundle",
+          "type": "MINIMAX_H3_BUNDLE",
+          "links": [
+            399
+          ]
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            649
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AICG3D_H3Loader",
+        "aicg3d_lora_state": {
+          "1": {
+            "selected": "minimax\\pika_h3_flex_ref2va_v1_bf16.safetensors",
+            "enabled": true
+          },
+          "2": {
+            "selected": "minimax\\dmad_minimax_h3_8step_full_critic_comfyui.safetensors",
+            "enabled": false
+          },
+          "3": {
+            "selected": "minimax\\minimax_h3_turbo_v4_step600_ema_DasiwaREF2VAHybridV1_0_curveproj1025_compat_v001.safetensors",
+            "enabled": false
+          },
+          "4": {
+            "selected": "minimax\\Motion_Repair运动连续性.safetensors",
+            "enabled": false
+          },
+          "5": {
+            "selected": "minimax\\Motion_Repair_V2.safetensors",
+            "enabled": false
+          },
+          "6": {},
+          "7": {},
+          "8": {},
+          "9": {}
+        }
+      },
+      "widgets_values": [
+        "minimax_h3_fl2va_dit_16g.safetensors",
+        "minimax_h3_ref2va_dit_16g.safetensors",
+        "qwen3vl_32b_minimax_h3_nvfp4.safetensors",
+        "minimax_h3_video_vae_fp16.safetensors",
+        "minimax_h3_audio_vae_fp32.safetensors",
+        "none",
+        1,
+        "none",
+        0.5,
+        "none",
+        3,
+        "none",
+        0.3,
+        "自动回落",
+        "none",
+        0.3,
+        "none",
+        1,
+        "none",
+        1,
+        "none",
+        1,
+        "none",
+        "24",
+        1245
+      ],
+      "widgets_values_named": {
+        "fl2va_model": "minimax_h3_fl2va_dit_16g.safetensors",
+        "ref2va_model": "minimax_h3_ref2va_dit_16g.safetensors",
+        "text_encoder": "qwen3vl_32b_minimax_h3_nvfp4.safetensors",
+        "video_vae": "minimax_h3_video_vae_fp16.safetensors",
+        "audio_vae": "minimax_h3_audio_vae_fp32.safetensors",
+        "lora_1": "none",
+        "lora_1_strength": 1,
+        "lora_2": "none",
+        "lora_2_strength": 0.5,
+        "lora_3": "none",
+        "lora_3_strength": 3,
+        "lora_4": "none",
+        "lora_4_strength": 0.3,
+        "non_h3_policy": "自动回落",
+        "lora_5": "none",
+        "lora_5_strength": 0.3,
+        "lora_6": "none",
+        "lora_6_strength": 1,
+        "lora_7": "none",
+        "lora_7_strength": 1,
+        "lora_8": "none",
+        "lora_8_strength": 1,
+        "lora_9": "none",
+        "lora_9_strength": 1,
+        "注意力加速(Sage)": "自动（Sage 优先）"
+      }
+    },
+    {
+      "id": 212,
+      "type": "AICG3D_H3SequenceGlobal",
+      "pos": [
+        -3220,
+        -30
+      ],
+      "size": [
+        260,
+        690
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "H3 模型组合",
+          "name": "h3_bundle",
+          "type": "MINIMAX_H3_BUNDLE",
+          "link": 399
+        },
+        {
+          "name": "model",
+          "shape": 7,
+          "type": "MODEL",
+          "link": 650
+        },
+        {
+          "label": "外部采样器",
+          "name": "sampler",
+          "shape": 7,
+          "type": "SAMPLER",
+          "link": null
+        },
+        {
+          "label": "外部调度器（Sigmas）",
+          "name": "sigmas",
+          "shape": 7,
+          "type": "SIGMAS",
+          "link": 762
+        }
+      ],
+      "outputs": [
+        {
+          "label": "全局设置",
+          "name": "sequence_config",
+          "type": "MINIMAX_H3_SEQUENCE_CONFIG",
+          "links": [
+            455
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AICG3D_H3SequenceGlobal",
+        "minimax_h3_virtual_media_links": [],
+        "minimax_h3_prompt_reference_doc": "{\"mode\": \"ref_doc\", \"version\": \"minimax_h3_prompt_reference_v2\", \"text\": \"16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。 全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。 画面无字幕、无文字、无水印。 全程保持：运镜连贯，人物站位连续，16:9画幅，24fps，12段时长严格一致，色温统一。\", \"segments\": [], \"parts\": []}"
+      },
+      "widgets_values": [
+        "620x348",
+        "16:9",
+        "24",
+        39,
+        "尾帧续写（latent）",
+        "match",
+        "er_sde",
+        "beta",
+        6,
+        1,
+        "释放缓存",
+        "开",
+        1,
+        false,
+        "生成音频",
+        "自动（按显卡）",
+        "跨段曝光锁定",
+        true,
+        "video/V10_草茅纵火与达观寺惊变",
+        "合成后提示删除"
+      ],
+      "widgets_values_named": {
+        "resolution": "620x348",
+        "aspect_ratio": "16:9",
+        "fps": "24",
+        "handoff_frames": 39,
+        "handoff_mode": "尾帧续写（latent）",
+        "ref_image_size": "match",
+        "sampler_name": "er_sde",
+        "scheduler": "beta",
+        "steps": 6,
+        "denoise": 1,
+        "vram_policy": "释放缓存",
+        "sample_preview": "开",
+        "preview_interval": 1,
+        "prompt_optimizer_settings": false,
+        "audio_mode": "生成音频",
+        "vram_tier": "自动（按显卡）",
+        "exposure_lock": "跨段曝光锁定",
+        "keep_full": true,
+        "segment_output_directory": "video/V10_草茅纵火与达观寺惊变",
+        "segment_cleanup_policy": "合成后提示删除",
+        "prompt": "16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。 全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。 画面无字幕、无文字、无水印。 全程保持：运镜连贯，人物站位连续，16:9画幅，24fps，12段时长严格一致，色温统一。"
+      }
+    },
+    {
+      "id": 248,
+      "type": "AICG3D_H3SequenceSegment",
+      "pos": [
+        -2170,
+        -30
+      ],
+      "size": [
+        430,
+        800
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "全局设置",
+          "name": "sequence_config",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_CONFIG",
+          "link": 455
+        },
+        {
+          "label": "上一分段",
+          "name": "previous_segment",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "link": null
+        },
+        {
+          "label": "voice_cast",
+          "name": "voice_cast",
+          "shape": 7,
+          "type": "AICG3D_CHARACTER_VOICE_CAST",
+          "link": 596
+        },
+        {
+          "label": "AICG3D",
+          "name": "media",
+          "shape": 7,
+          "type": "*",
+          "link": 581
+        },
+        {
+          "label": "引导图片",
+          "name": "guide_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "引导音频",
+          "name": "guide_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "视频段落",
+          "name": "segment",
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "links": [
+            599
+          ]
+        }
+      ],
+      "title": "视频段落 1",
+      "properties": {
+        "Node name for S&R": "AICG3D_H3SequenceSegment",
+        "minimax_h3_inline_media_state": "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "minimax_h3_inline_media_owned": false,
+        "minimax_h3_inline_media_inherited": true,
+        "minimax_h3_virtual_media_links": [],
+        "minimax_h3_prompt_view_mode": "structured",
+        "minimax_h3_prompt_reference_doc": "{\"mode\": \"ref_doc\", \"version\": \"minimax_h3_prompt_reference_v2\", \"text\": \"【第1段｜5秒】\\n[Shot 1] 全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。\\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\\n[C] 角色情海过客对应<Picture 2>：成年男性，眉目清朗，神态温和克制；月白长袍，手持折扇常遮半面，腰悬玉佩；发质：黑长发束儒冠，冠后直发垂背，干燥蓬松；角色病兰花对应<Picture 3>：年轻女性，瓜子脸，眉目清秀，唇色淡，神态柔弱带愁；淡紫襦裙外披白纱，腕系兰花香囊；发质：乌黑长发松挽低髻，髻边垂丝，风里轻摆。\\n[C] 【present-constraint】草茅（see <Picture 1>） + 情海过客（see <Picture 2>） + 病兰花（see <Picture 3>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\\n\\n0.0～5.0秒：(S26) says: <d>[Chinese]嘘！不要再说了，唐皇教的人已经在外面。</d> delivery: 轻声；情海过客用茅草覆盖病兰花，手指竖在唇边\\n\\nsegment_handoff: 情海过客用茅草覆盖病兰花，手指竖在唇边；人物站位延续，光源方向与色调延续，机位固定不切镜。\\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\", \"segments\": [{\"seg\": 1, \"duration\": 5.0, \"seed\": 1245}], \"parts\": [{\"type\": \"text\", \"content\": \"【第1段｜5秒】\\n\"}, {\"type\": \"mention\", \"mediaIndex\": 0, \"sourceId\": \"290\", \"previewUrl\": \"/view?filename=image1.jpg&type=input\", \"text\": \"<Picture 1>\", \"slot\": \"slot:0\"}, {\"type\": \"text\", \"content\": \" \"}, {\"type\": \"mention\", \"mediaIndex\": 1, \"sourceId\": \"290\", \"previewUrl\": \"/view?filename=image2.jpg&type=input\", \"text\": \"<Picture 2>\", \"slot\": \"slot:1\"}, {\"type\": \"text\", \"content\": \" \"}, {\"type\": \"mention\", \"mediaIndex\": 2, \"sourceId\": \"290\", \"previewUrl\": \"/view?filename=image3.jpg&type=input\", \"text\": \"<Picture 3>\", \"slot\": \"slot:2\"}, {\"type\": \"text\", \"content\": \" \"}, {\"type\": \"dialogue\", \"mediaIndex\": 1, \"sourceId\": \"285\", \"text\": \"[Chinese]嘘！不要再说了，唐皇教的人已经在外面。\", \"slot\": \"slot:1\"}]}"
+      },
+      "widgets_values": [
+        "[Shot 1] 全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色情海过客对应<Picture 2>：成年男性，眉目清朗，神态温和克制；月白长袍，手持折扇常遮半面，腰悬玉佩；发质：黑长发束儒冠，冠后直发垂背，干燥蓬松；角色病兰花对应<Picture 3>：年轻女性，瓜子脸，眉目清秀，唇色淡，神态柔弱带愁；淡紫襦裙外披白纱，腕系兰花香囊；发质：乌黑长发松挽低髻，髻边垂丝，风里轻摆。\n[C] 【present-constraint】草茅（see <Picture 1>） + 情海过客（see <Picture 2>） + 病兰花（see <Picture 3>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～5.0秒：(S26) says: <d>[Chinese]嘘！不要再说了，唐皇教的人已经在外面。</d> delivery: 轻声；情海过客用茅草覆盖病兰花，手指竖在唇边\n\nsegment_handoff: 情海过客用茅草覆盖病兰花，手指竖在唇边；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。",
+        5,
+        1245,
+        "fixed",
+        0,
+        "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "",
+        false,
+        "",
+        "",
+        0,
+        0
+      ],
+      "widgets_values_named": {
+        "prompt": "[Shot 1] 全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色情海过客对应<Picture 2>：成年男性，眉目清朗，神态温和克制；月白长袍，手持折扇常遮半面，腰悬玉佩；发质：黑长发束儒冠，冠后直发垂背，干燥蓬松；角色病兰花对应<Picture 3>：年轻女性，瓜子脸，眉目清秀，唇色淡，神态柔弱带愁；淡紫襦裙外披白纱，腕系兰花香囊；发质：乌黑长发松挽低髻，髻边垂丝，风里轻摆。\n[C] 【present-constraint】草茅（see <Picture 1>） + 情海过客（see <Picture 2>） + 病兰花（see <Picture 3>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～5.0秒：(S26) says: <d>[Chinese]嘘！不要再说了，唐皇教的人已经在外面。</d> delivery: 轻声；情海过客用茅草覆盖病兰花，手指竖在唇边\n\nsegment_handoff: 情海过客用茅草覆盖病兰花，手指竖在唇边；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。",
+        "seconds": 5,
+        "seed": 1245,
+        "control_after_generate": "fixed",
+        "guide_frame_idx": 0,
+        "inline_media_state": "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "sequence_scope": "",
+        "draw_previous_from_cache": false,
+        "draw_previous_scope": "",
+        "draw_previous_chain_key": "",
+        "draw_previous_node_id": 0,
+        "draw_previous_index": 0,
+        "subgraph": "1125"
+      }
+    },
+    {
+      "id": 285,
+      "type": "AICG3D_H3CharacterVoiceLibrary",
+      "pos": [
+        -2920,
+        -30
+      ],
+      "size": [
+        320,
+        610
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "角色音色",
+          "name": "voice_cast",
+          "type": "AICG3D_CHARACTER_VOICE_CAST",
+          "links": [
+            596
+          ]
+        },
+        {
+          "label": "报告",
+          "name": "report_json",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "minimax_h3_character_voice_state": "{\"version\": 1, \"mode\": \"voice_cast\", \"roles\": [{\"role_id\": \"tanglongjianyun\", \"name\": \"25_唐龙剑云\", \"mode\": \"described\", \"language\": \"Chinese\", \"age\": \"young_adult\", \"gender\": \"male\", \"pitch\": \"medium_high\", \"pace\": \"natural\", \"emotion\": \"neutral\", \"picture_index\": 25}, {\"role_id\": \"qinghai\", \"name\": \"26_情海过客\", \"mode\": \"described\", \"language\": \"Chinese\", \"age\": \"adult\", \"gender\": \"male\", \"pitch\": \"medium\", \"pace\": \"natural\", \"emotion\": \"neutral\", \"picture_index\": 26}, {\"role_id\": \"binglanhua\", \"name\": \"29_病兰花\", \"mode\": \"described\", \"language\": \"Chinese\", \"age\": \"young_adult\", \"gender\": \"female\", \"pitch\": \"medium_high\", \"pace\": \"slow\", \"emotion\": \"neutral\", \"picture_index\": 29}, {\"role_id\": \"tianhuang\", \"name\": \"36_天荒\", \"mode\": \"described\", \"language\": \"Chinese\", \"age\": \"middle_age\", \"gender\": \"male\", \"pitch\": \"low\", \"pace\": \"natural\", \"emotion\": \"neutral\", \"picture_index\": 36}, {\"role_id\": \"role20\", \"name\": \"40_唐皇教众\", \"mode\": \"described\", \"language\": \"Chinese\", \"age\": \"adult\", \"gender\": \"unknown\", \"pitch\": \"medium\", \"pace\": \"natural\", \"emotion\": \"neutral\", \"picture_index\": 40}], \"source\": {\"mode\": \"reference_image\", \"use_character_reference\": true}}",
+        "Node name for S&R": "AICG3D_H3CharacterVoiceLibrary",
+        "cnr_id": "aicg3d-h3-suite",
+        "minimax_h3_character_voice_enabled": false
+      },
+      "widgets_values": [
+        "{\"version\": 1, \"mode\": \"voice_cast\", \"roles\": [{\"role_id\": \"tanglongjianyun\", \"name\": \"25_唐龙剑云\", \"mode\": \"described\", \"language\": \"Chinese\", \"age\": \"young_adult\", \"gender\": \"male\", \"pitch\": \"medium_high\", \"pace\": \"natural\", \"emotion\": \"neutral\", \"picture_index\": 25}, {\"role_id\": \"qinghai\", \"name\": \"26_情海过客\", \"mode\": \"described\", \"language\": \"Chinese\", \"age\": \"adult\", \"gender\": \"male\", \"pitch\": \"medium\", \"pace\": \"natural\", \"emotion\": \"neutral\", \"picture_index\": 26}, {\"role_id\": \"binglanhua\", \"name\": \"29_病兰花\", \"mode\": \"described\", \"language\": \"Chinese\", \"age\": \"young_adult\", \"gender\": \"female\", \"pitch\": \"medium_high\", \"pace\": \"slow\", \"emotion\": \"neutral\", \"picture_index\": 29}, {\"role_id\": \"tianhuang\", \"name\": \"36_天荒\", \"mode\": \"described\", \"language\": \"Chinese\", \"age\": \"middle_age\", \"gender\": \"male\", \"pitch\": \"low\", \"pace\": \"natural\", \"emotion\": \"neutral\", \"picture_index\": 36}, {\"role_id\": \"role20\", \"name\": \"40_唐皇教众\", \"mode\": \"described\", \"language\": \"Chinese\", \"age\": \"adult\", \"gender\": \"unknown\", \"pitch\": \"medium\", \"pace\": \"natural\", \"emotion\": \"neutral\", \"picture_index\": 40}], \"source\": {\"mode\": \"reference_image\", \"use_character_reference\": true}}",
+        false
+      ],
+      "widgets_values_named": {
+        "voice_state": "{\"version\": 1, \"mode\": \"voice_cast\", \"roles\": [{\"role_id\": \"tanglongjianyun\", \"name\": \"25_唐龙剑云\", \"mode\": \"described\", \"language\": \"Chinese\", \"age\": \"young_adult\", \"gender\": \"male\", \"pitch\": \"medium_high\", \"pace\": \"natural\", \"emotion\": \"neutral\", \"picture_index\": 25}, {\"role_id\": \"qinghai\", \"name\": \"26_情海过客\", \"mode\": \"described\", \"language\": \"Chinese\", \"age\": \"adult\", \"gender\": \"male\", \"pitch\": \"medium\", \"pace\": \"natural\", \"emotion\": \"neutral\", \"picture_index\": 26}, {\"role_id\": \"binglanhua\", \"name\": \"29_病兰花\", \"mode\": \"described\", \"language\": \"Chinese\", \"age\": \"young_adult\", \"gender\": \"female\", \"pitch\": \"medium_high\", \"pace\": \"slow\", \"emotion\": \"neutral\", \"picture_index\": 29}, {\"role_id\": \"tianhuang\", \"name\": \"36_天荒\", \"mode\": \"described\", \"language\": \"Chinese\", \"age\": \"middle_age\", \"gender\": \"male\", \"pitch\": \"low\", \"pace\": \"natural\", \"emotion\": \"neutral\", \"picture_index\": 36}, {\"role_id\": \"role20\", \"name\": \"40_唐皇教众\", \"mode\": \"described\", \"language\": \"Chinese\", \"age\": \"adult\", \"gender\": \"unknown\", \"pitch\": \"medium\", \"pace\": \"natural\", \"emotion\": \"neutral\", \"picture_index\": 40}], \"source\": {\"mode\": \"reference_image\", \"use_character_reference\": true}}",
+        "enabled": false
+      }
+    },
+    {
+      "id": 290,
+      "type": "AICG3D_H3MediaLoader",
+      "pos": [
+        -2560,
+        80
+      ],
+      "size": [
+        370,
+        1179
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "AICG3D",
+          "name": "media_bundle",
+          "type": "MINIMAX_H3_MEDIA_BUNDLE",
+          "links": [
+            581
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AICG3D_H3MediaLoader",
+        "aicg3d_media_trim": {
+          "videos": {},
+          "audios": {}
+        },
+        "media_loader_state": "{\"images\":[{\"filename\":\"image1.jpg\"},{\"filename\":\"image2.jpg\"},{\"filename\":\"image3.jpg\"},{\"filename\":\"image4.jpg\"},{\"filename\":\"image5.jpg\"},{\"filename\":\"image6.jpg\"}],\"audios\":[],\"videos\":[]}",
+        "minimax_h3_media_state": "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}"
+      },
+      "widgets_values": [
+        "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        0
+      ],
+      "widgets_values_named": {
+        "media_state": "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "视频解码长边": 0
+      }
+    },
+    {
+      "id": 674,
+      "type": "AICG3D_H3SequenceSegment",
+      "pos": [
+        -1710,
+        -30
+      ],
+      "size": [
+        420,
+        800
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "全局设置",
+          "name": "sequence_config",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_CONFIG",
+          "link": null
+        },
+        {
+          "label": "上一分段",
+          "name": "previous_segment",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "link": 599
+        },
+        {
+          "name": "voice_cast",
+          "shape": 7,
+          "type": "AICG3D_CHARACTER_VOICE_CAST",
+          "link": null
+        },
+        {
+          "label": "AICG3D",
+          "name": "media",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "label": "引导图片",
+          "name": "guide_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "引导音频",
+          "name": "guide_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "视频段落",
+          "name": "segment",
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "links": [
+            748
+          ]
+        }
+      ],
+      "title": "视频段落 2",
+      "properties": {
+        "Node name for S&R": "AICG3D_H3SequenceSegment",
+        "minimax_h3_inline_media_state": "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "minimax_h3_inline_media_owned": false,
+        "minimax_h3_inline_media_inherited": true,
+        "minimax_h3_virtual_media_links": [],
+        "minimax_h3_prompt_reference_doc": "{\"mode\": \"ref_doc\", \"version\": \"minimax_h3_prompt_reference_v2\", \"text\": \"【第2段｜5秒】\\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\\n[C] 角色情海过客对应<Picture 2>：成年男性，眉目清朗，神态温和克制；月白长袍，手持折扇常遮半面，腰悬玉佩；发质：黑长发束儒冠，冠后直发垂背，干燥蓬松；角色病兰花对应<Picture 3>：年轻女性，瓜子脸，眉目清秀，唇色淡，神态柔弱带愁；淡紫襦裙外披白纱，腕系兰花香囊；发质：乌黑长发松挽低髻，髻边垂丝，风里轻摆。\\n[C] 【present-constraint】草茅（see <Picture 1>） + 情海过客（see <Picture 2>） + 病兰花（see <Picture 3>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\\n\\n0.0～4.5秒：病兰花惊恐睁眼，情海过客按住她肩膀\\n4.5～5.0秒：(S29) says: <d>[Chinese]啊！</d> delivery: 大惊\\n\\nsegment_handoff: 啊！；人物站位延续，光源方向与色调延续，机位固定不切镜。\\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\", \"segments\": [{\"seg\": 2, \"duration\": 5.0, \"seed\": 1246}], \"parts\": [{\"type\": \"text\", \"content\": \"【第2段｜5秒】\\n\"}, {\"type\": \"mention\", \"mediaIndex\": 0, \"sourceId\": \"290\", \"previewUrl\": \"/view?filename=image1.jpg&type=input\", \"text\": \"<Picture 1>\", \"slot\": \"slot:0\"}, {\"type\": \"text\", \"content\": \" \"}, {\"type\": \"mention\", \"mediaIndex\": 1, \"sourceId\": \"290\", \"previewUrl\": \"/view?filename=image2.jpg&type=input\", \"text\": \"<Picture 2>\", \"slot\": \"slot:1\"}, {\"type\": \"text\", \"content\": \" \"}, {\"type\": \"mention\", \"mediaIndex\": 2, \"sourceId\": \"290\", \"previewUrl\": \"/view?filename=image3.jpg&type=input\", \"text\": \"<Picture 3>\", \"slot\": \"slot:2\"}, {\"type\": \"text\", \"content\": \" \"}, {\"type\": \"dialogue\", \"mediaIndex\": 2, \"sourceId\": \"285\", \"text\": \"[Chinese]啊！\", \"slot\": \"slot:2\"}]}"
+      },
+      "widgets_values": [
+        "[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色情海过客对应<Picture 2>：成年男性，眉目清朗，神态温和克制；月白长袍，手持折扇常遮半面，腰悬玉佩；发质：黑长发束儒冠，冠后直发垂背，干燥蓬松；角色病兰花对应<Picture 3>：年轻女性，瓜子脸，眉目清秀，唇色淡，神态柔弱带愁；淡紫襦裙外披白纱，腕系兰花香囊；发质：乌黑长发松挽低髻，髻边垂丝，风里轻摆。\n[C] 【present-constraint】草茅（see <Picture 1>） + 情海过客（see <Picture 2>） + 病兰花（see <Picture 3>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～4.5秒：病兰花惊恐睁眼，情海过客按住她肩膀\n4.5～5.0秒：(S29) says: <d>[Chinese]啊！</d> delivery: 大惊\n\nsegment_handoff: 啊！；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。",
+        5,
+        1246,
+        "fixed",
+        0,
+        "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "",
+        false,
+        "",
+        "",
+        0,
+        0
+      ],
+      "widgets_values_named": {
+        "prompt": "[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色情海过客对应<Picture 2>：成年男性，眉目清朗，神态温和克制；月白长袍，手持折扇常遮半面，腰悬玉佩；发质：黑长发束儒冠，冠后直发垂背，干燥蓬松；角色病兰花对应<Picture 3>：年轻女性，瓜子脸，眉目清秀，唇色淡，神态柔弱带愁；淡紫襦裙外披白纱，腕系兰花香囊；发质：乌黑长发松挽低髻，髻边垂丝，风里轻摆。\n[C] 【present-constraint】草茅（see <Picture 1>） + 情海过客（see <Picture 2>） + 病兰花（see <Picture 3>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～4.5秒：病兰花惊恐睁眼，情海过客按住她肩膀\n4.5～5.0秒：(S29) says: <d>[Chinese]啊！</d> delivery: 大惊\n\nsegment_handoff: 啊！；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。",
+        "seconds": 5,
+        "seed": 1246,
+        "control_after_generate": "fixed",
+        "guide_frame_idx": 0,
+        "inline_media_state": "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "sequence_scope": "",
+        "draw_previous_from_cache": false,
+        "draw_previous_scope": "",
+        "draw_previous_chain_key": "",
+        "draw_previous_node_id": 0,
+        "draw_previous_index": 0,
+        "subgraph": "1125"
+      }
+    },
+    {
+      "id": 682,
+      "type": "AICG3D_H3PromptSegmentSplit",
+      "pos": [
+        -2680,
+        800
+      ],
+      "size": [
+        450,
+        640
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "段1提示词",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AICG3D_H3PromptSegmentSplit"
+      },
+      "widgets_values": [
+        false,
+        "",
+        "【第1段｜5秒】\n[Shot 1] 全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色情海过客对应<Picture 2>：成年男性，眉目清朗，神态温和克制；月白长袍，手持折扇常遮半面，腰悬玉佩；发质：黑长发束儒冠，冠后直发垂背，干燥蓬松；角色病兰花对应<Picture 3>：年轻女性，瓜子脸，眉目清秀，唇色淡，神态柔弱带愁；淡紫襦裙外披白纱，腕系兰花香囊；发质：乌黑长发松挽低髻，髻边垂丝，风里轻摆。\n[C] 【present-constraint】草茅（see <Picture 1>） + 情海过客（see <Picture 2>） + 病兰花（see <Picture 3>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～5.0秒：(S26) says: <d>[Chinese]嘘！不要再说了，唐皇教的人已经在外面。</d> delivery: 轻声；情海过客用茅草覆盖病兰花，手指竖在唇边\n\nsegment_handoff: 情海过客用茅草覆盖病兰花，手指竖在唇边；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\n【第2段｜5秒】\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色情海过客对应<Picture 2>：成年男性，眉目清朗，神态温和克制；月白长袍，手持折扇常遮半面，腰悬玉佩；发质：黑长发束儒冠，冠后直发垂背，干燥蓬松；角色病兰花对应<Picture 3>：年轻女性，瓜子脸，眉目清秀，唇色淡，神态柔弱带愁；淡紫襦裙外披白纱，腕系兰花香囊；发质：乌黑长发松挽低髻，髻边垂丝，风里轻摆。\n[C] 【present-constraint】草茅（see <Picture 1>） + 情海过客（see <Picture 2>） + 病兰花（see <Picture 3>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～4.5秒：病兰花惊恐睁眼，情海过客按住她肩膀\n4.5～5.0秒：(S29) says: <d>[Chinese]啊！</d> delivery: 大惊\n\nsegment_handoff: 啊！；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\n【第3段｜5秒】\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色情海过客对应<Picture 2>：成年男性，眉目清朗，神态温和克制；月白长袍，手持折扇常遮半面，腰悬玉佩；发质：黑长发束儒冠，冠后直发垂背，干燥蓬松。\n[C] 【present-constraint】草茅（see <Picture 1>） + 情海过客（see <Picture 2>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～5.0秒：(S26) says: <d>[Chinese]你不要出声，我将他们引开，你自己要冷静。</d> delivery: 轻声；情海过客低声安抚，起身向草茅外闪身冲出\n\nsegment_handoff: 情海过客低声安抚，起身向草茅外闪身冲出；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\n【第4段｜5秒】\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色情海过客对应<Picture 2>：成年男性，眉目清朗，神态温和克制；月白长袍，手持折扇常遮半面，腰悬玉佩；发质：黑长发束儒冠，冠后直发垂背，干燥蓬松。\n[C] 【present-constraint】草茅（see <Picture 1>） + 情海过客（see <Picture 2>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～3.2秒：情海过客回头看了一眼，转身消失在夜色中\n3.2～5.0秒：(S26) says: <d>[Chinese]不要动，我去了。</d> delivery: 轻声\n\nsegment_handoff: 不要动，我去了；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\n【第5段｜5秒】\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色唐龙剑云对应<Picture 4>：青年男性，眉目英挺带傲气，薄唇微抿；金冠束发，玄底金纹华袍，肩披黑金大氅，背负宽刃大斧；发质：黑长发束金冠，冠后发束直垂，发梢微弯。\n[C] 【present-constraint】草茅（see <Picture 1>） + 唐龙剑云（see <Picture 4>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～5.0秒：(S25) says: <d>[Chinese]嗯！有人逃走，进入草房搜查，本皇追人。</d> delivery: 命令；唐龙剑云飞身掠入草茅，挥手指向内部\n\nsegment_handoff: 唐龙剑云飞身掠入草茅，挥手指向内部；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\n【第6段｜5秒】\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色天荒对应<Picture 5>：中年男性，魁梧宽肩，浓眉深目，左颊旧疤；黑铁甲外披深褐披风，右手宽剑；发质：黑短发硬短，头顶束铁环，发茬粗硬。\n[C] 【present-constraint】草茅（see <Picture 1>） + 天荒（see <Picture 5>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～3.0秒：天荒站在雨中，挥手向四周教众发令\n3.0～5.0秒：(S36) says: <d>[Chinese]来人啊！搜查草茅。</d> delivery: 发令\n\nsegment_handoff: 来人啊！搜查草茅；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\n【第7段｜5秒】\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色天荒对应<Picture 5>：中年男性，魁梧宽肩，浓眉深目，左颊旧疤；黑铁甲外披深褐披风，右手宽剑；发质：黑短发硬短，头顶束铁环，发茬粗硬；角色唐皇教众对应<Picture 6>：成年男性教众若干，深褐教服罩体束黑腰带，面容各异，站姿列队；发质：黑短发束黑布巾，巾下碎发干燥。\n[C] 【present-constraint】草茅（see <Picture 1>） + 天荒（see <Picture 5>） + 唐皇教众（see <Picture 6>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～1.8秒：唐皇教众用刀乱刺草堆，天荒上前查看\n1.8～5.0秒：(S40) says: <d>[Chinese]启禀天荒尊者，草茅之内没人。</d> delivery: 禀报\n\nsegment_handoff: 启禀天荒尊者，草茅之内没人；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\n【第8段｜5秒】\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色天荒对应<Picture 5>：中年男性，魁梧宽肩，浓眉深目，左颊旧疤；黑铁甲外披深褐披风，右手宽剑；发质：黑短发硬短，头顶束铁环，发茬粗硬。\n[C] 【present-constraint】草茅（see <Picture 1>） + 天荒（see <Picture 5>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～2.1秒：天荒冷笑，挥手下令，教众点燃茅屋草堆\n2.1～5.0秒：(S36) says: <d>[Chinese]没人～好！放火将草茅烧掉。</d> delivery: 下令\n\nsegment_handoff: 没人～好！放火将草茅烧掉；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\n【第9段｜5秒】\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色唐皇教众对应<Picture 6>：成年男性教众若干，深褐教服罩体束黑腰带，面容各异，站姿列队；发质：黑短发束黑布巾，巾下碎发干燥。\n[C] 【present-constraint】草茅（see <Picture 1>） + 唐皇教众（see <Picture 6>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～4.5秒：唐皇教众应声，迅速离去，大火吞噬草茅\n4.5～5.0秒：(S40) says: <d>[Chinese]是！</d> delivery: 应道\n\nsegment_handoff: 是！；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\n【第10段｜5秒】\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色天荒对应<Picture 5>：中年男性，魁梧宽肩，浓眉深目，左颊旧疤；黑铁甲外披深褐披风，右手宽剑；发质：黑短发硬短，头顶束铁环，发茬粗硬。\n[C] 【present-constraint】草茅（see <Picture 1>） + 天荒（see <Picture 5>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～3.0秒：天荒转身面向众人，大雨垂直落下浇熄草屋火\n3.0～5.0秒：(S36) says: <d>[Chinese]众人即刻支援教皇。</d> delivery: 令道\n\nsegment_handoff: 众人即刻支援教皇；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\n【第11段｜5秒】\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色病兰花对应<Picture 3>：年轻女性，瓜子脸，眉目清秀，唇色淡，神态柔弱带愁；淡紫襦裙外披白纱，腕系兰花香囊；发质：乌黑长发松挽低髻，髻边垂丝，风里轻摆。\n[C] 【present-constraint】草茅（see <Picture 1>） + 病兰花（see <Picture 3>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～5.0秒：病兰花在烈火中绝望挣扎，梁柱不断落下\n\nsegment_handoff: 病兰花在烈火中绝望挣扎，梁柱不断落下；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\n【第12段｜5秒】\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色病兰花对应<Picture 3>：年轻女性，瓜子脸，眉目清秀，唇色淡，神态柔弱带愁；淡紫襦裙外披白纱，腕系兰花香囊；发质：乌黑长发松挽低髻，髻边垂丝，风里轻摆。\n[C] 【present-constraint】草茅（see <Picture 1>） + 病兰花（see <Picture 3>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～5.0秒：闪电划破天际，病兰花微微挣扎脱出草堆\n\nsegment_handoff: 闪电划破天际，病兰花微微挣扎脱出草堆；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。",
+        "自动识别",
+        "",
+        false,
+        "跟随文本标注",
+        5,
+        false,
+        false,
+        12,
+        0
+      ],
+      "widgets_values_named": {
+        "global_prompt_visible": false,
+        "global_text": "",
+        "text": "【第1段｜5秒】\n[Shot 1] 全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色情海过客对应<Picture 2>：成年男性，眉目清朗，神态温和克制；月白长袍，手持折扇常遮半面，腰悬玉佩；发质：黑长发束儒冠，冠后直发垂背，干燥蓬松；角色病兰花对应<Picture 3>：年轻女性，瓜子脸，眉目清秀，唇色淡，神态柔弱带愁；淡紫襦裙外披白纱，腕系兰花香囊；发质：乌黑长发松挽低髻，髻边垂丝，风里轻摆。\n[C] 【present-constraint】草茅（see <Picture 1>） + 情海过客（see <Picture 2>） + 病兰花（see <Picture 3>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～5.0秒：(S26) says: <d>[Chinese]嘘！不要再说了，唐皇教的人已经在外面。</d> delivery: 轻声；情海过客用茅草覆盖病兰花，手指竖在唇边\n\nsegment_handoff: 情海过客用茅草覆盖病兰花，手指竖在唇边；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\n【第2段｜5秒】\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色情海过客对应<Picture 2>：成年男性，眉目清朗，神态温和克制；月白长袍，手持折扇常遮半面，腰悬玉佩；发质：黑长发束儒冠，冠后直发垂背，干燥蓬松；角色病兰花对应<Picture 3>：年轻女性，瓜子脸，眉目清秀，唇色淡，神态柔弱带愁；淡紫襦裙外披白纱，腕系兰花香囊；发质：乌黑长发松挽低髻，髻边垂丝，风里轻摆。\n[C] 【present-constraint】草茅（see <Picture 1>） + 情海过客（see <Picture 2>） + 病兰花（see <Picture 3>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～4.5秒：病兰花惊恐睁眼，情海过客按住她肩膀\n4.5～5.0秒：(S29) says: <d>[Chinese]啊！</d> delivery: 大惊\n\nsegment_handoff: 啊！；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\n【第3段｜5秒】\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色情海过客对应<Picture 2>：成年男性，眉目清朗，神态温和克制；月白长袍，手持折扇常遮半面，腰悬玉佩；发质：黑长发束儒冠，冠后直发垂背，干燥蓬松。\n[C] 【present-constraint】草茅（see <Picture 1>） + 情海过客（see <Picture 2>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～5.0秒：(S26) says: <d>[Chinese]你不要出声，我将他们引开，你自己要冷静。</d> delivery: 轻声；情海过客低声安抚，起身向草茅外闪身冲出\n\nsegment_handoff: 情海过客低声安抚，起身向草茅外闪身冲出；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\n【第4段｜5秒】\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色情海过客对应<Picture 2>：成年男性，眉目清朗，神态温和克制；月白长袍，手持折扇常遮半面，腰悬玉佩；发质：黑长发束儒冠，冠后直发垂背，干燥蓬松。\n[C] 【present-constraint】草茅（see <Picture 1>） + 情海过客（see <Picture 2>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～3.2秒：情海过客回头看了一眼，转身消失在夜色中\n3.2～5.0秒：(S26) says: <d>[Chinese]不要动，我去了。</d> delivery: 轻声\n\nsegment_handoff: 不要动，我去了；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\n【第5段｜5秒】\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色唐龙剑云对应<Picture 4>：青年男性，眉目英挺带傲气，薄唇微抿；金冠束发，玄底金纹华袍，肩披黑金大氅，背负宽刃大斧；发质：黑长发束金冠，冠后发束直垂，发梢微弯。\n[C] 【present-constraint】草茅（see <Picture 1>） + 唐龙剑云（see <Picture 4>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～5.0秒：(S25) says: <d>[Chinese]嗯！有人逃走，进入草房搜查，本皇追人。</d> delivery: 命令；唐龙剑云飞身掠入草茅，挥手指向内部\n\nsegment_handoff: 唐龙剑云飞身掠入草茅，挥手指向内部；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\n【第6段｜5秒】\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色天荒对应<Picture 5>：中年男性，魁梧宽肩，浓眉深目，左颊旧疤；黑铁甲外披深褐披风，右手宽剑；发质：黑短发硬短，头顶束铁环，发茬粗硬。\n[C] 【present-constraint】草茅（see <Picture 1>） + 天荒（see <Picture 5>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～3.0秒：天荒站在雨中，挥手向四周教众发令\n3.0～5.0秒：(S36) says: <d>[Chinese]来人啊！搜查草茅。</d> delivery: 发令\n\nsegment_handoff: 来人啊！搜查草茅；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\n【第7段｜5秒】\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色天荒对应<Picture 5>：中年男性，魁梧宽肩，浓眉深目，左颊旧疤；黑铁甲外披深褐披风，右手宽剑；发质：黑短发硬短，头顶束铁环，发茬粗硬；角色唐皇教众对应<Picture 6>：成年男性教众若干，深褐教服罩体束黑腰带，面容各异，站姿列队；发质：黑短发束黑布巾，巾下碎发干燥。\n[C] 【present-constraint】草茅（see <Picture 1>） + 天荒（see <Picture 5>） + 唐皇教众（see <Picture 6>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～1.8秒：唐皇教众用刀乱刺草堆，天荒上前查看\n1.8～5.0秒：(S40) says: <d>[Chinese]启禀天荒尊者，草茅之内没人。</d> delivery: 禀报\n\nsegment_handoff: 启禀天荒尊者，草茅之内没人；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\n【第8段｜5秒】\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色天荒对应<Picture 5>：中年男性，魁梧宽肩，浓眉深目，左颊旧疤；黑铁甲外披深褐披风，右手宽剑；发质：黑短发硬短，头顶束铁环，发茬粗硬。\n[C] 【present-constraint】草茅（see <Picture 1>） + 天荒（see <Picture 5>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～2.1秒：天荒冷笑，挥手下令，教众点燃茅屋草堆\n2.1～5.0秒：(S36) says: <d>[Chinese]没人～好！放火将草茅烧掉。</d> delivery: 下令\n\nsegment_handoff: 没人～好！放火将草茅烧掉；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\n【第9段｜5秒】\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色唐皇教众对应<Picture 6>：成年男性教众若干，深褐教服罩体束黑腰带，面容各异，站姿列队；发质：黑短发束黑布巾，巾下碎发干燥。\n[C] 【present-constraint】草茅（see <Picture 1>） + 唐皇教众（see <Picture 6>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～4.5秒：唐皇教众应声，迅速离去，大火吞噬草茅\n4.5～5.0秒：(S40) says: <d>[Chinese]是！</d> delivery: 应道\n\nsegment_handoff: 是！；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\n【第10段｜5秒】\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色天荒对应<Picture 5>：中年男性，魁梧宽肩，浓眉深目，左颊旧疤；黑铁甲外披深褐披风，右手宽剑；发质：黑短发硬短，头顶束铁环，发茬粗硬。\n[C] 【present-constraint】草茅（see <Picture 1>） + 天荒（see <Picture 5>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～3.0秒：天荒转身面向众人，大雨垂直落下浇熄草屋火\n3.0～5.0秒：(S36) says: <d>[Chinese]众人即刻支援教皇。</d> delivery: 令道\n\nsegment_handoff: 众人即刻支援教皇；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\n【第11段｜5秒】\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色病兰花对应<Picture 3>：年轻女性，瓜子脸，眉目清秀，唇色淡，神态柔弱带愁；淡紫襦裙外披白纱，腕系兰花香囊；发质：乌黑长发松挽低髻，髻边垂丝，风里轻摆。\n[C] 【present-constraint】草茅（see <Picture 1>） + 病兰花（see <Picture 3>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～5.0秒：病兰花在烈火中绝望挣扎，梁柱不断落下\n\nsegment_handoff: 病兰花在烈火中绝望挣扎，梁柱不断落下；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\n【第12段｜5秒】\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色病兰花对应<Picture 3>：年轻女性，瓜子脸，眉目清秀，唇色淡，神态柔弱带愁；淡紫襦裙外披白纱，腕系兰花香囊；发质：乌黑长发松挽低髻，髻边垂丝，风里轻摆。\n[C] 【present-constraint】草茅（see <Picture 1>） + 病兰花（see <Picture 3>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～5.0秒：闪电划破天际，病兰花微微挣扎脱出草堆\n\nsegment_handoff: 闪电划破天际，病兰花微微挣扎脱出草堆；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。",
+        "mode": "自动识别",
+        "custom_regex": "",
+        "keep_header": false,
+        "seconds_mode": "跟随文本标注",
+        "default_seconds": 5,
+        "auto_fill": false,
+        "randomize_seed": false,
+        "max_segments": 12,
+        "seed_start": 0
+      }
+    },
+    {
+      "id": 1125,
+      "type": "1ed6f447-3389-4f03-ad2f-6c6d99a69925",
+      "pos": [
+        -3480,
+        30
+      ],
+      "size": [
+        140,
+        30
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 649
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            650
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.45.0",
+        "previewExposures": []
+      }
+    },
+    {
+      "id": 1134,
+      "type": "AICG3D_H3SequenceSegment",
+      "pos": [
+        -1270,
+        -30
+      ],
+      "size": [
+        430,
+        800
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "全局设置",
+          "name": "sequence_config",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_CONFIG",
+          "link": null
+        },
+        {
+          "label": "上一分段",
+          "name": "previous_segment",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "link": 748
+        },
+        {
+          "name": "voice_cast",
+          "shape": 7,
+          "type": "AICG3D_CHARACTER_VOICE_CAST",
+          "link": null
+        },
+        {
+          "label": "AICG3D",
+          "name": "media",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "label": "引导图片",
+          "name": "guide_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "引导音频",
+          "name": "guide_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "视频段落",
+          "name": "segment",
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "links": [
+            750
+          ]
+        }
+      ],
+      "title": "视频段落 3",
+      "properties": {
+        "Node name for S&R": "AICG3D_H3SequenceSegment",
+        "minimax_h3_inline_media_state": "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "minimax_h3_inline_media_owned": false,
+        "minimax_h3_inline_media_inherited": true,
+        "minimax_h3_virtual_media_links": [],
+        "minimax_h3_prompt_reference_doc": "{\"mode\": \"ref_doc\", \"version\": \"minimax_h3_prompt_reference_v2\", \"text\": \"【第3段｜5秒】\\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\\n[C] 角色情海过客对应<Picture 2>：成年男性，眉目清朗，神态温和克制；月白长袍，手持折扇常遮半面，腰悬玉佩；发质：黑长发束儒冠，冠后直发垂背，干燥蓬松。\\n[C] 【present-constraint】草茅（see <Picture 1>） + 情海过客（see <Picture 2>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\\n\\n0.0～5.0秒：(S26) says: <d>[Chinese]你不要出声，我将他们引开，你自己要冷静。</d> delivery: 轻声；情海过客低声安抚，起身向草茅外闪身冲出\\n\\nsegment_handoff: 情海过客低声安抚，起身向草茅外闪身冲出；人物站位延续，光源方向与色调延续，机位固定不切镜。\\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\", \"segments\": [{\"seg\": 3, \"duration\": 5.0, \"seed\": 1247}], \"parts\": [{\"type\": \"text\", \"content\": \"【第3段｜5秒】\\n\"}, {\"type\": \"mention\", \"mediaIndex\": 0, \"sourceId\": \"290\", \"previewUrl\": \"/view?filename=image1.jpg&type=input\", \"text\": \"<Picture 1>\", \"slot\": \"slot:0\"}, {\"type\": \"text\", \"content\": \" \"}, {\"type\": \"mention\", \"mediaIndex\": 1, \"sourceId\": \"290\", \"previewUrl\": \"/view?filename=image2.jpg&type=input\", \"text\": \"<Picture 2>\", \"slot\": \"slot:1\"}, {\"type\": \"text\", \"content\": \" \"}, {\"type\": \"dialogue\", \"mediaIndex\": 1, \"sourceId\": \"285\", \"text\": \"[Chinese]你不要出声，我将他们引开，你自己要冷静。\", \"slot\": \"slot:1\"}]}"
+      },
+      "widgets_values": [
+        "[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色情海过客对应<Picture 2>：成年男性，眉目清朗，神态温和克制；月白长袍，手持折扇常遮半面，腰悬玉佩；发质：黑长发束儒冠，冠后直发垂背，干燥蓬松。\n[C] 【present-constraint】草茅（see <Picture 1>） + 情海过客（see <Picture 2>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～5.0秒：(S26) says: <d>[Chinese]你不要出声，我将他们引开，你自己要冷静。</d> delivery: 轻声；情海过客低声安抚，起身向草茅外闪身冲出\n\nsegment_handoff: 情海过客低声安抚，起身向草茅外闪身冲出；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。",
+        5,
+        1247,
+        "fixed",
+        0,
+        "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "",
+        false,
+        "",
+        "",
+        0,
+        0
+      ],
+      "widgets_values_named": {
+        "prompt": "[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色情海过客对应<Picture 2>：成年男性，眉目清朗，神态温和克制；月白长袍，手持折扇常遮半面，腰悬玉佩；发质：黑长发束儒冠，冠后直发垂背，干燥蓬松。\n[C] 【present-constraint】草茅（see <Picture 1>） + 情海过客（see <Picture 2>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～5.0秒：(S26) says: <d>[Chinese]你不要出声，我将他们引开，你自己要冷静。</d> delivery: 轻声；情海过客低声安抚，起身向草茅外闪身冲出\n\nsegment_handoff: 情海过客低声安抚，起身向草茅外闪身冲出；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。",
+        "seconds": 5,
+        "seed": 1247,
+        "control_after_generate": "fixed",
+        "guide_frame_idx": 0,
+        "inline_media_state": "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "sequence_scope": "",
+        "draw_previous_from_cache": false,
+        "draw_previous_scope": "",
+        "draw_previous_chain_key": "",
+        "draw_previous_node_id": 0,
+        "draw_previous_index": 0,
+        "subgraph": "1125"
+      }
+    },
+    {
+      "id": 1160,
+      "type": "SaveVideo",
+      "pos": [
+        980,
+        -30
+      ],
+      "size": [
+        1250,
+        830
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "视频",
+          "name": "video",
+          "type": "VIDEO",
+          "link": 711
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.45.0",
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "video/V10_草茅纵火与达观寺惊变",
+        "auto",
+        "auto",
+        "auto"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "video/V10_草茅纵火与达观寺惊变",
+        "format": "auto",
+        "format.codec": "auto",
+        "codec": "auto"
+      }
+    },
+    {
+      "id": 1175,
+      "type": "AICG3D_H3SequenceSegment",
+      "pos": [
+        -810,
+        -30
+      ],
+      "size": [
+        450,
+        800
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "全局设置",
+          "name": "sequence_config",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_CONFIG",
+          "link": null
+        },
+        {
+          "label": "上一分段",
+          "name": "previous_segment",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "link": 750
+        },
+        {
+          "name": "voice_cast",
+          "shape": 7,
+          "type": "AICG3D_CHARACTER_VOICE_CAST",
+          "link": null
+        },
+        {
+          "label": "AICG3D",
+          "name": "media",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "label": "引导图片",
+          "name": "guide_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "引导音频",
+          "name": "guide_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "视频段落",
+          "name": "segment",
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "links": [
+            752
+          ]
+        }
+      ],
+      "title": "视频段落 4",
+      "properties": {
+        "Node name for S&R": "AICG3D_H3SequenceSegment",
+        "minimax_h3_inline_media_state": "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "minimax_h3_inline_media_owned": false,
+        "minimax_h3_inline_media_inherited": true,
+        "minimax_h3_virtual_media_links": [],
+        "minimax_h3_prompt_reference_doc": "{\"mode\": \"ref_doc\", \"version\": \"minimax_h3_prompt_reference_v2\", \"text\": \"【第4段｜5秒】\\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\\n[C] 角色情海过客对应<Picture 2>：成年男性，眉目清朗，神态温和克制；月白长袍，手持折扇常遮半面，腰悬玉佩；发质：黑长发束儒冠，冠后直发垂背，干燥蓬松。\\n[C] 【present-constraint】草茅（see <Picture 1>） + 情海过客（see <Picture 2>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\\n\\n0.0～3.2秒：情海过客回头看了一眼，转身消失在夜色中\\n3.2～5.0秒：(S26) says: <d>[Chinese]不要动，我去了。</d> delivery: 轻声\\n\\nsegment_handoff: 不要动，我去了；人物站位延续，光源方向与色调延续，机位固定不切镜。\\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\", \"segments\": [{\"seg\": 4, \"duration\": 5.0, \"seed\": 1248}], \"parts\": [{\"type\": \"text\", \"content\": \"【第4段｜5秒】\\n\"}, {\"type\": \"mention\", \"mediaIndex\": 0, \"sourceId\": \"290\", \"previewUrl\": \"/view?filename=image1.jpg&type=input\", \"text\": \"<Picture 1>\", \"slot\": \"slot:0\"}, {\"type\": \"text\", \"content\": \" \"}, {\"type\": \"mention\", \"mediaIndex\": 1, \"sourceId\": \"290\", \"previewUrl\": \"/view?filename=image2.jpg&type=input\", \"text\": \"<Picture 2>\", \"slot\": \"slot:1\"}, {\"type\": \"text\", \"content\": \" \"}, {\"type\": \"dialogue\", \"mediaIndex\": 1, \"sourceId\": \"285\", \"text\": \"[Chinese]不要动，我去了。\", \"slot\": \"slot:1\"}]}"
+      },
+      "widgets_values": [
+        "[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色情海过客对应<Picture 2>：成年男性，眉目清朗，神态温和克制；月白长袍，手持折扇常遮半面，腰悬玉佩；发质：黑长发束儒冠，冠后直发垂背，干燥蓬松。\n[C] 【present-constraint】草茅（see <Picture 1>） + 情海过客（see <Picture 2>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～3.2秒：情海过客回头看了一眼，转身消失在夜色中\n3.2～5.0秒：(S26) says: <d>[Chinese]不要动，我去了。</d> delivery: 轻声\n\nsegment_handoff: 不要动，我去了；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。",
+        5,
+        1248,
+        "fixed",
+        0,
+        "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "",
+        false,
+        "",
+        "",
+        0,
+        0
+      ],
+      "widgets_values_named": {
+        "prompt": "[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色情海过客对应<Picture 2>：成年男性，眉目清朗，神态温和克制；月白长袍，手持折扇常遮半面，腰悬玉佩；发质：黑长发束儒冠，冠后直发垂背，干燥蓬松。\n[C] 【present-constraint】草茅（see <Picture 1>） + 情海过客（see <Picture 2>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～3.2秒：情海过客回头看了一眼，转身消失在夜色中\n3.2～5.0秒：(S26) says: <d>[Chinese]不要动，我去了。</d> delivery: 轻声\n\nsegment_handoff: 不要动，我去了；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。",
+        "seconds": 5,
+        "seed": 1248,
+        "control_after_generate": "fixed",
+        "guide_frame_idx": 0,
+        "inline_media_state": "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "sequence_scope": "",
+        "draw_previous_from_cache": false,
+        "draw_previous_scope": "",
+        "draw_previous_chain_key": "",
+        "draw_previous_node_id": 0,
+        "draw_previous_index": 0,
+        "subgraph": "1125"
+      }
+    },
+    {
+      "id": 1176,
+      "type": "AICG3D_H3SequenceSegment",
+      "pos": [
+        -330,
+        -10
+      ],
+      "size": [
+        430,
+        800
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "全局设置",
+          "name": "sequence_config",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_CONFIG",
+          "link": null
+        },
+        {
+          "label": "上一分段",
+          "name": "previous_segment",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "link": 752
+        },
+        {
+          "name": "voice_cast",
+          "shape": 7,
+          "type": "AICG3D_CHARACTER_VOICE_CAST",
+          "link": null
+        },
+        {
+          "label": "AICG3D",
+          "name": "media",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "label": "引导图片",
+          "name": "guide_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "引导音频",
+          "name": "guide_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "视频段落",
+          "name": "segment",
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "links": [
+            754
+          ]
+        }
+      ],
+      "title": "视频段落 5",
+      "properties": {
+        "Node name for S&R": "AICG3D_H3SequenceSegment",
+        "minimax_h3_inline_media_state": "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "minimax_h3_inline_media_owned": false,
+        "minimax_h3_inline_media_inherited": true,
+        "minimax_h3_virtual_media_links": [],
+        "minimax_h3_prompt_reference_doc": "{\"mode\": \"ref_doc\", \"version\": \"minimax_h3_prompt_reference_v2\", \"text\": \"【第5段｜5秒】\\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\\n[C] 角色唐龙剑云对应<Picture 4>：青年男性，眉目英挺带傲气，薄唇微抿；金冠束发，玄底金纹华袍，肩披黑金大氅，背负宽刃大斧；发质：黑长发束金冠，冠后发束直垂，发梢微弯。\\n[C] 【present-constraint】草茅（see <Picture 1>） + 唐龙剑云（see <Picture 4>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\\n\\n0.0～5.0秒：(S25) says: <d>[Chinese]嗯！有人逃走，进入草房搜查，本皇追人。</d> delivery: 命令；唐龙剑云飞身掠入草茅，挥手指向内部\\n\\nsegment_handoff: 唐龙剑云飞身掠入草茅，挥手指向内部；人物站位延续，光源方向与色调延续，机位固定不切镜。\\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\", \"segments\": [{\"seg\": 5, \"duration\": 5.0, \"seed\": 1249}], \"parts\": [{\"type\": \"text\", \"content\": \"【第5段｜5秒】\\n\"}, {\"type\": \"mention\", \"mediaIndex\": 0, \"sourceId\": \"290\", \"previewUrl\": \"/view?filename=image1.jpg&type=input\", \"text\": \"<Picture 1>\", \"slot\": \"slot:0\"}, {\"type\": \"text\", \"content\": \" \"}, {\"type\": \"mention\", \"mediaIndex\": 3, \"sourceId\": \"290\", \"previewUrl\": \"/view?filename=image4.jpg&type=input\", \"text\": \"<Picture 4>\", \"slot\": \"slot:3\"}, {\"type\": \"text\", \"content\": \" \"}, {\"type\": \"dialogue\", \"mediaIndex\": 3, \"sourceId\": \"285\", \"text\": \"[Chinese]嗯！有人逃走，进入草房搜查，本皇追人。\", \"slot\": \"slot:3\"}]}"
+      },
+      "widgets_values": [
+        "[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色唐龙剑云对应<Picture 4>：青年男性，眉目英挺带傲气，薄唇微抿；金冠束发，玄底金纹华袍，肩披黑金大氅，背负宽刃大斧；发质：黑长发束金冠，冠后发束直垂，发梢微弯。\n[C] 【present-constraint】草茅（see <Picture 1>） + 唐龙剑云（see <Picture 4>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～5.0秒：(S25) says: <d>[Chinese]嗯！有人逃走，进入草房搜查，本皇追人。</d> delivery: 命令；唐龙剑云飞身掠入草茅，挥手指向内部\n\nsegment_handoff: 唐龙剑云飞身掠入草茅，挥手指向内部；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。",
+        5,
+        1249,
+        "fixed",
+        0,
+        "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "",
+        false,
+        "",
+        "",
+        0,
+        0
+      ],
+      "widgets_values_named": {
+        "prompt": "[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色唐龙剑云对应<Picture 4>：青年男性，眉目英挺带傲气，薄唇微抿；金冠束发，玄底金纹华袍，肩披黑金大氅，背负宽刃大斧；发质：黑长发束金冠，冠后发束直垂，发梢微弯。\n[C] 【present-constraint】草茅（see <Picture 1>） + 唐龙剑云（see <Picture 4>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～5.0秒：(S25) says: <d>[Chinese]嗯！有人逃走，进入草房搜查，本皇追人。</d> delivery: 命令；唐龙剑云飞身掠入草茅，挥手指向内部\n\nsegment_handoff: 唐龙剑云飞身掠入草茅，挥手指向内部；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。",
+        "seconds": 5,
+        "seed": 1249,
+        "control_after_generate": "fixed",
+        "guide_frame_idx": 0,
+        "inline_media_state": "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "sequence_scope": "",
+        "draw_previous_from_cache": false,
+        "draw_previous_scope": "",
+        "draw_previous_chain_key": "",
+        "draw_previous_node_id": 0,
+        "draw_previous_index": 0,
+        "subgraph": "1125"
+      }
+    },
+    {
+      "id": 1177,
+      "type": "AICG3D_H3SequenceSegment",
+      "pos": [
+        120,
+        -30
+      ],
+      "size": [
+        430,
+        800
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "全局设置",
+          "name": "sequence_config",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_CONFIG",
+          "link": null
+        },
+        {
+          "label": "上一分段",
+          "name": "previous_segment",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "link": 754
+        },
+        {
+          "name": "voice_cast",
+          "shape": 7,
+          "type": "AICG3D_CHARACTER_VOICE_CAST",
+          "link": null
+        },
+        {
+          "label": "AICG3D",
+          "name": "media",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "label": "引导图片",
+          "name": "guide_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "引导音频",
+          "name": "guide_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "视频段落",
+          "name": "segment",
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "links": [
+            755
+          ]
+        }
+      ],
+      "title": "视频段落 6",
+      "properties": {
+        "Node name for S&R": "AICG3D_H3SequenceSegment",
+        "minimax_h3_inline_media_state": "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "minimax_h3_inline_media_owned": false,
+        "minimax_h3_inline_media_inherited": true,
+        "minimax_h3_virtual_media_links": [],
+        "minimax_h3_prompt_reference_doc": "{\"mode\": \"ref_doc\", \"version\": \"minimax_h3_prompt_reference_v2\", \"text\": \"【第6段｜5秒】\\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\\n[C] 角色天荒对应<Picture 5>：中年男性，魁梧宽肩，浓眉深目，左颊旧疤；黑铁甲外披深褐披风，右手宽剑；发质：黑短发硬短，头顶束铁环，发茬粗硬。\\n[C] 【present-constraint】草茅（see <Picture 1>） + 天荒（see <Picture 5>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\\n\\n0.0～3.0秒：天荒站在雨中，挥手向四周教众发令\\n3.0～5.0秒：(S36) says: <d>[Chinese]来人啊！搜查草茅。</d> delivery: 发令\\n\\nsegment_handoff: 来人啊！搜查草茅；人物站位延续，光源方向与色调延续，机位固定不切镜。\\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\", \"segments\": [{\"seg\": 6, \"duration\": 5.0, \"seed\": 1250}], \"parts\": [{\"type\": \"text\", \"content\": \"【第6段｜5秒】\\n\"}, {\"type\": \"mention\", \"mediaIndex\": 0, \"sourceId\": \"290\", \"previewUrl\": \"/view?filename=image1.jpg&type=input\", \"text\": \"<Picture 1>\", \"slot\": \"slot:0\"}, {\"type\": \"text\", \"content\": \" \"}, {\"type\": \"mention\", \"mediaIndex\": 4, \"sourceId\": \"290\", \"previewUrl\": \"/view?filename=image5.jpg&type=input\", \"text\": \"<Picture 5>\", \"slot\": \"slot:4\"}, {\"type\": \"text\", \"content\": \" \"}, {\"type\": \"dialogue\", \"mediaIndex\": 4, \"sourceId\": \"285\", \"text\": \"[Chinese]来人啊！搜查草茅。\", \"slot\": \"slot:4\"}]}"
+      },
+      "widgets_values": [
+        "[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色天荒对应<Picture 5>：中年男性，魁梧宽肩，浓眉深目，左颊旧疤；黑铁甲外披深褐披风，右手宽剑；发质：黑短发硬短，头顶束铁环，发茬粗硬。\n[C] 【present-constraint】草茅（see <Picture 1>） + 天荒（see <Picture 5>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～3.0秒：天荒站在雨中，挥手向四周教众发令\n3.0～5.0秒：(S36) says: <d>[Chinese]来人啊！搜查草茅。</d> delivery: 发令\n\nsegment_handoff: 来人啊！搜查草茅；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。",
+        5,
+        1250,
+        "fixed",
+        0,
+        "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "",
+        false,
+        "",
+        "",
+        0,
+        0
+      ],
+      "widgets_values_named": {
+        "prompt": "[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色天荒对应<Picture 5>：中年男性，魁梧宽肩，浓眉深目，左颊旧疤；黑铁甲外披深褐披风，右手宽剑；发质：黑短发硬短，头顶束铁环，发茬粗硬。\n[C] 【present-constraint】草茅（see <Picture 1>） + 天荒（see <Picture 5>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～3.0秒：天荒站在雨中，挥手向四周教众发令\n3.0～5.0秒：(S36) says: <d>[Chinese]来人啊！搜查草茅。</d> delivery: 发令\n\nsegment_handoff: 来人啊！搜查草茅；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。",
+        "seconds": 5,
+        "seed": 1250,
+        "control_after_generate": "fixed",
+        "guide_frame_idx": 0,
+        "inline_media_state": "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "sequence_scope": "",
+        "draw_previous_from_cache": false,
+        "draw_previous_scope": "",
+        "draw_previous_chain_key": "",
+        "draw_previous_node_id": 0,
+        "draw_previous_index": 0,
+        "subgraph": "1125"
+      }
+    },
+    {
+      "id": 1189,
+      "type": "CustomSigmas",
+      "pos": [
+        -3470,
+        190
+      ],
+      "size": [
+        230,
+        130
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "SIGMAS",
+          "type": "SIGMAS",
+          "links": [
+            762
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CustomSigmas"
+      },
+      "widgets_values": [
+        "1.0, 0.972973, 0.923077, 0.8, 0.571429, 0.333333, 0.0",
+        10
+      ],
+      "widgets_values_named": {
+        "sigmas_string": "1.0, 0.972973, 0.923077, 0.8, 0.571429, 0.333333, 0.0",
+        "interpolate_to_steps": 10
+      }
+    },
+    {
+      "id": 1194,
+      "type": "AICG3D_H3SequenceSegment",
+      "pos": [
+        -2170,
+        900
+      ],
+      "size": [
+        430,
+        800
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "全局设置",
+          "name": "sequence_config",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_CONFIG",
+          "link": null
+        },
+        {
+          "label": "上一分段",
+          "name": "previous_segment",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "link": 755
+        },
+        {
+          "name": "voice_cast",
+          "shape": 7,
+          "type": "AICG3D_CHARACTER_VOICE_CAST",
+          "link": null
+        },
+        {
+          "label": "AICG3D",
+          "name": "media",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "label": "引导图片",
+          "name": "guide_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "引导音频",
+          "name": "guide_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "视频段落",
+          "name": "segment",
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "links": [
+            763
+          ]
+        }
+      ],
+      "title": "视频段落 7",
+      "properties": {
+        "Node name for S&R": "AICG3D_H3SequenceSegment",
+        "minimax_h3_inline_media_state": "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "minimax_h3_inline_media_owned": false,
+        "minimax_h3_inline_media_inherited": true,
+        "minimax_h3_virtual_media_links": [],
+        "minimax_h3_prompt_reference_doc": "{\"mode\": \"ref_doc\", \"version\": \"minimax_h3_prompt_reference_v2\", \"text\": \"【第7段｜5秒】\\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\\n[C] 角色天荒对应<Picture 5>：中年男性，魁梧宽肩，浓眉深目，左颊旧疤；黑铁甲外披深褐披风，右手宽剑；发质：黑短发硬短，头顶束铁环，发茬粗硬；角色唐皇教众对应<Picture 6>：成年男性教众若干，深褐教服罩体束黑腰带，面容各异，站姿列队；发质：黑短发束黑布巾，巾下碎发干燥。\\n[C] 【present-constraint】草茅（see <Picture 1>） + 天荒（see <Picture 5>） + 唐皇教众（see <Picture 6>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\\n\\n0.0～1.8秒：唐皇教众用刀乱刺草堆，天荒上前查看\\n1.8～5.0秒：(S40) says: <d>[Chinese]启禀天荒尊者，草茅之内没人。</d> delivery: 禀报\\n\\nsegment_handoff: 启禀天荒尊者，草茅之内没人；人物站位延续，光源方向与色调延续，机位固定不切镜。\\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\", \"segments\": [{\"seg\": 7, \"duration\": 5.0, \"seed\": 1251}], \"parts\": [{\"type\": \"text\", \"content\": \"【第7段｜5秒】\\n\"}, {\"type\": \"mention\", \"mediaIndex\": 0, \"sourceId\": \"290\", \"previewUrl\": \"/view?filename=image1.jpg&type=input\", \"text\": \"<Picture 1>\", \"slot\": \"slot:0\"}, {\"type\": \"text\", \"content\": \" \"}, {\"type\": \"mention\", \"mediaIndex\": 4, \"sourceId\": \"290\", \"previewUrl\": \"/view?filename=image5.jpg&type=input\", \"text\": \"<Picture 5>\", \"slot\": \"slot:4\"}, {\"type\": \"text\", \"content\": \" \"}, {\"type\": \"mention\", \"mediaIndex\": 5, \"sourceId\": \"290\", \"previewUrl\": \"/view?filename=image6.jpg&type=input\", \"text\": \"<Picture 6>\", \"slot\": \"slot:5\"}, {\"type\": \"text\", \"content\": \" \"}, {\"type\": \"dialogue\", \"mediaIndex\": 5, \"sourceId\": \"285\", \"text\": \"[Chinese]启禀天荒尊者，草茅之内没人。\", \"slot\": \"slot:5\"}]}"
+      },
+      "widgets_values": [
+        "[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色天荒对应<Picture 5>：中年男性，魁梧宽肩，浓眉深目，左颊旧疤；黑铁甲外披深褐披风，右手宽剑；发质：黑短发硬短，头顶束铁环，发茬粗硬；角色唐皇教众对应<Picture 6>：成年男性教众若干，深褐教服罩体束黑腰带，面容各异，站姿列队；发质：黑短发束黑布巾，巾下碎发干燥。\n[C] 【present-constraint】草茅（see <Picture 1>） + 天荒（see <Picture 5>） + 唐皇教众（see <Picture 6>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～1.8秒：唐皇教众用刀乱刺草堆，天荒上前查看\n1.8～5.0秒：(S40) says: <d>[Chinese]启禀天荒尊者，草茅之内没人。</d> delivery: 禀报\n\nsegment_handoff: 启禀天荒尊者，草茅之内没人；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。",
+        5,
+        1251,
+        "fixed",
+        0,
+        "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "",
+        false,
+        "",
+        "",
+        0,
+        0
+      ],
+      "widgets_values_named": {
+        "prompt": "[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色天荒对应<Picture 5>：中年男性，魁梧宽肩，浓眉深目，左颊旧疤；黑铁甲外披深褐披风，右手宽剑；发质：黑短发硬短，头顶束铁环，发茬粗硬；角色唐皇教众对应<Picture 6>：成年男性教众若干，深褐教服罩体束黑腰带，面容各异，站姿列队；发质：黑短发束黑布巾，巾下碎发干燥。\n[C] 【present-constraint】草茅（see <Picture 1>） + 天荒（see <Picture 5>） + 唐皇教众（see <Picture 6>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～1.8秒：唐皇教众用刀乱刺草堆，天荒上前查看\n1.8～5.0秒：(S40) says: <d>[Chinese]启禀天荒尊者，草茅之内没人。</d> delivery: 禀报\n\nsegment_handoff: 启禀天荒尊者，草茅之内没人；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。",
+        "seconds": 5,
+        "seed": 1251,
+        "control_after_generate": "fixed",
+        "guide_frame_idx": 0,
+        "inline_media_state": "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "sequence_scope": "",
+        "draw_previous_from_cache": false,
+        "draw_previous_scope": "",
+        "draw_previous_chain_key": "",
+        "draw_previous_node_id": 0,
+        "draw_previous_index": 0,
+        "subgraph": "1125"
+      }
+    },
+    {
+      "id": 1195,
+      "type": "AICG3D_H3SequenceSegment",
+      "pos": [
+        -1710,
+        900
+      ],
+      "size": [
+        430,
+        800
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "全局设置",
+          "name": "sequence_config",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_CONFIG",
+          "link": null
+        },
+        {
+          "label": "上一分段",
+          "name": "previous_segment",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "link": 763
+        },
+        {
+          "name": "voice_cast",
+          "shape": 7,
+          "type": "AICG3D_CHARACTER_VOICE_CAST",
+          "link": null
+        },
+        {
+          "label": "AICG3D",
+          "name": "media",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "label": "引导图片",
+          "name": "guide_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "引导音频",
+          "name": "guide_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "视频段落",
+          "name": "segment",
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "links": [
+            764
+          ]
+        }
+      ],
+      "title": "视频段落 8",
+      "properties": {
+        "Node name for S&R": "AICG3D_H3SequenceSegment",
+        "minimax_h3_inline_media_state": "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "minimax_h3_inline_media_owned": false,
+        "minimax_h3_inline_media_inherited": true,
+        "minimax_h3_virtual_media_links": [],
+        "minimax_h3_prompt_reference_doc": "{\"mode\": \"ref_doc\", \"version\": \"minimax_h3_prompt_reference_v2\", \"text\": \"【第8段｜5秒】\\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\\n[C] 角色天荒对应<Picture 5>：中年男性，魁梧宽肩，浓眉深目，左颊旧疤；黑铁甲外披深褐披风，右手宽剑；发质：黑短发硬短，头顶束铁环，发茬粗硬。\\n[C] 【present-constraint】草茅（see <Picture 1>） + 天荒（see <Picture 5>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\\n\\n0.0～2.1秒：天荒冷笑，挥手下令，教众点燃茅屋草堆\\n2.1～5.0秒：(S36) says: <d>[Chinese]没人～好！放火将草茅烧掉。</d> delivery: 下令\\n\\nsegment_handoff: 没人～好！放火将草茅烧掉；人物站位延续，光源方向与色调延续，机位固定不切镜。\\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\", \"segments\": [{\"seg\": 8, \"duration\": 5.0, \"seed\": 1252}], \"parts\": [{\"type\": \"text\", \"content\": \"【第8段｜5秒】\\n\"}, {\"type\": \"mention\", \"mediaIndex\": 0, \"sourceId\": \"290\", \"previewUrl\": \"/view?filename=image1.jpg&type=input\", \"text\": \"<Picture 1>\", \"slot\": \"slot:0\"}, {\"type\": \"text\", \"content\": \" \"}, {\"type\": \"mention\", \"mediaIndex\": 4, \"sourceId\": \"290\", \"previewUrl\": \"/view?filename=image5.jpg&type=input\", \"text\": \"<Picture 5>\", \"slot\": \"slot:4\"}, {\"type\": \"text\", \"content\": \" \"}, {\"type\": \"dialogue\", \"mediaIndex\": 4, \"sourceId\": \"285\", \"text\": \"[Chinese]没人～好！放火将草茅烧掉。\", \"slot\": \"slot:4\"}]}"
+      },
+      "widgets_values": [
+        "[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色天荒对应<Picture 5>：中年男性，魁梧宽肩，浓眉深目，左颊旧疤；黑铁甲外披深褐披风，右手宽剑；发质：黑短发硬短，头顶束铁环，发茬粗硬。\n[C] 【present-constraint】草茅（see <Picture 1>） + 天荒（see <Picture 5>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～2.1秒：天荒冷笑，挥手下令，教众点燃茅屋草堆\n2.1～5.0秒：(S36) says: <d>[Chinese]没人～好！放火将草茅烧掉。</d> delivery: 下令\n\nsegment_handoff: 没人～好！放火将草茅烧掉；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。",
+        5,
+        1252,
+        "fixed",
+        0,
+        "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "",
+        false,
+        "",
+        "",
+        0,
+        0
+      ],
+      "widgets_values_named": {
+        "prompt": "[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色天荒对应<Picture 5>：中年男性，魁梧宽肩，浓眉深目，左颊旧疤；黑铁甲外披深褐披风，右手宽剑；发质：黑短发硬短，头顶束铁环，发茬粗硬。\n[C] 【present-constraint】草茅（see <Picture 1>） + 天荒（see <Picture 5>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～2.1秒：天荒冷笑，挥手下令，教众点燃茅屋草堆\n2.1～5.0秒：(S36) says: <d>[Chinese]没人～好！放火将草茅烧掉。</d> delivery: 下令\n\nsegment_handoff: 没人～好！放火将草茅烧掉；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。",
+        "seconds": 5,
+        "seed": 1252,
+        "control_after_generate": "fixed",
+        "guide_frame_idx": 0,
+        "inline_media_state": "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "sequence_scope": "",
+        "draw_previous_from_cache": false,
+        "draw_previous_scope": "",
+        "draw_previous_chain_key": "",
+        "draw_previous_node_id": 0,
+        "draw_previous_index": 0,
+        "subgraph": "1125"
+      }
+    },
+    {
+      "id": 1196,
+      "type": "AICG3D_H3SequenceSegment",
+      "pos": [
+        -1270,
+        900
+      ],
+      "size": [
+        430,
+        800
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "全局设置",
+          "name": "sequence_config",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_CONFIG",
+          "link": null
+        },
+        {
+          "label": "上一分段",
+          "name": "previous_segment",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "link": 764
+        },
+        {
+          "name": "voice_cast",
+          "shape": 7,
+          "type": "AICG3D_CHARACTER_VOICE_CAST",
+          "link": null
+        },
+        {
+          "label": "AICG3D",
+          "name": "media",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "label": "引导图片",
+          "name": "guide_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "引导音频",
+          "name": "guide_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "视频段落",
+          "name": "segment",
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "links": [
+            765
+          ]
+        }
+      ],
+      "title": "视频段落 9",
+      "properties": {
+        "Node name for S&R": "AICG3D_H3SequenceSegment",
+        "minimax_h3_inline_media_state": "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "minimax_h3_inline_media_owned": false,
+        "minimax_h3_inline_media_inherited": true,
+        "minimax_h3_virtual_media_links": [],
+        "minimax_h3_prompt_reference_doc": "{\"mode\": \"ref_doc\", \"version\": \"minimax_h3_prompt_reference_v2\", \"text\": \"【第9段｜5秒】\\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\\n[C] 角色唐皇教众对应<Picture 6>：成年男性教众若干，深褐教服罩体束黑腰带，面容各异，站姿列队；发质：黑短发束黑布巾，巾下碎发干燥。\\n[C] 【present-constraint】草茅（see <Picture 1>） + 唐皇教众（see <Picture 6>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\\n\\n0.0～4.5秒：唐皇教众应声，迅速离去，大火吞噬草茅\\n4.5～5.0秒：(S40) says: <d>[Chinese]是！</d> delivery: 应道\\n\\nsegment_handoff: 是！；人物站位延续，光源方向与色调延续，机位固定不切镜。\\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\", \"segments\": [{\"seg\": 9, \"duration\": 5.0, \"seed\": 1253}], \"parts\": [{\"type\": \"text\", \"content\": \"【第9段｜5秒】\\n\"}, {\"type\": \"mention\", \"mediaIndex\": 0, \"sourceId\": \"290\", \"previewUrl\": \"/view?filename=image1.jpg&type=input\", \"text\": \"<Picture 1>\", \"slot\": \"slot:0\"}, {\"type\": \"text\", \"content\": \" \"}, {\"type\": \"mention\", \"mediaIndex\": 5, \"sourceId\": \"290\", \"previewUrl\": \"/view?filename=image6.jpg&type=input\", \"text\": \"<Picture 6>\", \"slot\": \"slot:5\"}, {\"type\": \"text\", \"content\": \" \"}, {\"type\": \"dialogue\", \"mediaIndex\": 5, \"sourceId\": \"285\", \"text\": \"[Chinese]是！\", \"slot\": \"slot:5\"}]}"
+      },
+      "widgets_values": [
+        "[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色唐皇教众对应<Picture 6>：成年男性教众若干，深褐教服罩体束黑腰带，面容各异，站姿列队；发质：黑短发束黑布巾，巾下碎发干燥。\n[C] 【present-constraint】草茅（see <Picture 1>） + 唐皇教众（see <Picture 6>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～4.5秒：唐皇教众应声，迅速离去，大火吞噬草茅\n4.5～5.0秒：(S40) says: <d>[Chinese]是！</d> delivery: 应道\n\nsegment_handoff: 是！；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。",
+        5,
+        1253,
+        "fixed",
+        0,
+        "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "",
+        false,
+        "",
+        "",
+        0,
+        0
+      ],
+      "widgets_values_named": {
+        "prompt": "[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色唐皇教众对应<Picture 6>：成年男性教众若干，深褐教服罩体束黑腰带，面容各异，站姿列队；发质：黑短发束黑布巾，巾下碎发干燥。\n[C] 【present-constraint】草茅（see <Picture 1>） + 唐皇教众（see <Picture 6>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～4.5秒：唐皇教众应声，迅速离去，大火吞噬草茅\n4.5～5.0秒：(S40) says: <d>[Chinese]是！</d> delivery: 应道\n\nsegment_handoff: 是！；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。",
+        "seconds": 5,
+        "seed": 1253,
+        "control_after_generate": "fixed",
+        "guide_frame_idx": 0,
+        "inline_media_state": "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "sequence_scope": "",
+        "draw_previous_from_cache": false,
+        "draw_previous_scope": "",
+        "draw_previous_chain_key": "",
+        "draw_previous_node_id": 0,
+        "draw_previous_index": 0,
+        "subgraph": "1125"
+      }
+    },
+    {
+      "id": 1197,
+      "type": "AICG3D_H3SequenceSegment",
+      "pos": [
+        -810,
+        900
+      ],
+      "size": [
+        430,
+        800
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "全局设置",
+          "name": "sequence_config",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_CONFIG",
+          "link": null
+        },
+        {
+          "label": "上一分段",
+          "name": "previous_segment",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "link": 765
+        },
+        {
+          "name": "voice_cast",
+          "shape": 7,
+          "type": "AICG3D_CHARACTER_VOICE_CAST",
+          "link": null
+        },
+        {
+          "label": "AICG3D",
+          "name": "media",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "label": "引导图片",
+          "name": "guide_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "引导音频",
+          "name": "guide_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "视频段落",
+          "name": "segment",
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "links": [
+            766
+          ]
+        }
+      ],
+      "title": "视频段落 10",
+      "properties": {
+        "Node name for S&R": "AICG3D_H3SequenceSegment",
+        "minimax_h3_inline_media_state": "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "minimax_h3_inline_media_owned": false,
+        "minimax_h3_inline_media_inherited": true,
+        "minimax_h3_virtual_media_links": [],
+        "minimax_h3_prompt_reference_doc": "{\"mode\": \"ref_doc\", \"version\": \"minimax_h3_prompt_reference_v2\", \"text\": \"【第10段｜5秒】\\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\\n[C] 角色天荒对应<Picture 5>：中年男性，魁梧宽肩，浓眉深目，左颊旧疤；黑铁甲外披深褐披风，右手宽剑；发质：黑短发硬短，头顶束铁环，发茬粗硬。\\n[C] 【present-constraint】草茅（see <Picture 1>） + 天荒（see <Picture 5>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\\n\\n0.0～3.0秒：天荒转身面向众人，大雨垂直落下浇熄草屋火\\n3.0～5.0秒：(S36) says: <d>[Chinese]众人即刻支援教皇。</d> delivery: 令道\\n\\nsegment_handoff: 众人即刻支援教皇；人物站位延续，光源方向与色调延续，机位固定不切镜。\\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\", \"segments\": [{\"seg\": 10, \"duration\": 5.0, \"seed\": 1254}], \"parts\": [{\"type\": \"text\", \"content\": \"【第10段｜5秒】\\n\"}, {\"type\": \"mention\", \"mediaIndex\": 0, \"sourceId\": \"290\", \"previewUrl\": \"/view?filename=image1.jpg&type=input\", \"text\": \"<Picture 1>\", \"slot\": \"slot:0\"}, {\"type\": \"text\", \"content\": \" \"}, {\"type\": \"mention\", \"mediaIndex\": 4, \"sourceId\": \"290\", \"previewUrl\": \"/view?filename=image5.jpg&type=input\", \"text\": \"<Picture 5>\", \"slot\": \"slot:4\"}, {\"type\": \"text\", \"content\": \" \"}, {\"type\": \"dialogue\", \"mediaIndex\": 4, \"sourceId\": \"285\", \"text\": \"[Chinese]众人即刻支援教皇。\", \"slot\": \"slot:4\"}]}"
+      },
+      "widgets_values": [
+        "[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色天荒对应<Picture 5>：中年男性，魁梧宽肩，浓眉深目，左颊旧疤；黑铁甲外披深褐披风，右手宽剑；发质：黑短发硬短，头顶束铁环，发茬粗硬。\n[C] 【present-constraint】草茅（see <Picture 1>） + 天荒（see <Picture 5>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～3.0秒：天荒转身面向众人，大雨垂直落下浇熄草屋火\n3.0～5.0秒：(S36) says: <d>[Chinese]众人即刻支援教皇。</d> delivery: 令道\n\nsegment_handoff: 众人即刻支援教皇；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。",
+        5,
+        1254,
+        "fixed",
+        0,
+        "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "",
+        false,
+        "",
+        "",
+        0,
+        0
+      ],
+      "widgets_values_named": {
+        "prompt": "[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色天荒对应<Picture 5>：中年男性，魁梧宽肩，浓眉深目，左颊旧疤；黑铁甲外披深褐披风，右手宽剑；发质：黑短发硬短，头顶束铁环，发茬粗硬。\n[C] 【present-constraint】草茅（see <Picture 1>） + 天荒（see <Picture 5>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～3.0秒：天荒转身面向众人，大雨垂直落下浇熄草屋火\n3.0～5.0秒：(S36) says: <d>[Chinese]众人即刻支援教皇。</d> delivery: 令道\n\nsegment_handoff: 众人即刻支援教皇；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。",
+        "seconds": 5,
+        "seed": 1254,
+        "control_after_generate": "fixed",
+        "guide_frame_idx": 0,
+        "inline_media_state": "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "sequence_scope": "",
+        "draw_previous_from_cache": false,
+        "draw_previous_scope": "",
+        "draw_previous_chain_key": "",
+        "draw_previous_node_id": 0,
+        "draw_previous_index": 0,
+        "subgraph": "1125"
+      }
+    },
+    {
+      "id": 1198,
+      "type": "AICG3D_H3SequenceSegment",
+      "pos": [
+        -330,
+        900
+      ],
+      "size": [
+        430,
+        800
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "全局设置",
+          "name": "sequence_config",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_CONFIG",
+          "link": null
+        },
+        {
+          "label": "上一分段",
+          "name": "previous_segment",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "link": 766
+        },
+        {
+          "name": "voice_cast",
+          "shape": 7,
+          "type": "AICG3D_CHARACTER_VOICE_CAST",
+          "link": null
+        },
+        {
+          "label": "AICG3D",
+          "name": "media",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "label": "引导图片",
+          "name": "guide_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "引导音频",
+          "name": "guide_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "视频段落",
+          "name": "segment",
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "links": [
+            767
+          ]
+        }
+      ],
+      "title": "视频段落 11",
+      "properties": {
+        "Node name for S&R": "AICG3D_H3SequenceSegment",
+        "minimax_h3_inline_media_state": "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "minimax_h3_inline_media_owned": false,
+        "minimax_h3_inline_media_inherited": true,
+        "minimax_h3_virtual_media_links": [],
+        "minimax_h3_prompt_reference_doc": "{\"mode\": \"ref_doc\", \"version\": \"minimax_h3_prompt_reference_v2\", \"text\": \"【第11段｜5秒】\\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\\n[C] 角色病兰花对应<Picture 3>：年轻女性，瓜子脸，眉目清秀，唇色淡，神态柔弱带愁；淡紫襦裙外披白纱，腕系兰花香囊；发质：乌黑长发松挽低髻，髻边垂丝，风里轻摆。\\n[C] 【present-constraint】草茅（see <Picture 1>） + 病兰花（see <Picture 3>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\\n\\n0.0～5.0秒：病兰花在烈火中绝望挣扎，梁柱不断落下\\n\\nsegment_handoff: 病兰花在烈火中绝望挣扎，梁柱不断落下；人物站位延续，光源方向与色调延续，机位固定不切镜。\\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\", \"segments\": [{\"seg\": 11, \"duration\": 5.0, \"seed\": 1255}], \"parts\": [{\"type\": \"text\", \"content\": \"【第11段｜5秒】\\n\"}, {\"type\": \"mention\", \"mediaIndex\": 0, \"sourceId\": \"290\", \"previewUrl\": \"/view?filename=image1.jpg&type=input\", \"text\": \"<Picture 1>\", \"slot\": \"slot:0\"}, {\"type\": \"text\", \"content\": \" \"}, {\"type\": \"mention\", \"mediaIndex\": 2, \"sourceId\": \"290\", \"previewUrl\": \"/view?filename=image3.jpg&type=input\", \"text\": \"<Picture 3>\", \"slot\": \"slot:2\"}, {\"type\": \"text\", \"content\": \" \"}]}"
+      },
+      "widgets_values": [
+        "[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色病兰花对应<Picture 3>：年轻女性，瓜子脸，眉目清秀，唇色淡，神态柔弱带愁；淡紫襦裙外披白纱，腕系兰花香囊；发质：乌黑长发松挽低髻，髻边垂丝，风里轻摆。\n[C] 【present-constraint】草茅（see <Picture 1>） + 病兰花（see <Picture 3>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～5.0秒：病兰花在烈火中绝望挣扎，梁柱不断落下\n\nsegment_handoff: 病兰花在烈火中绝望挣扎，梁柱不断落下；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。",
+        5,
+        1255,
+        "fixed",
+        0,
+        "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "",
+        false,
+        "",
+        "",
+        0,
+        0
+      ],
+      "widgets_values_named": {
+        "prompt": "[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色病兰花对应<Picture 3>：年轻女性，瓜子脸，眉目清秀，唇色淡，神态柔弱带愁；淡紫襦裙外披白纱，腕系兰花香囊；发质：乌黑长发松挽低髻，髻边垂丝，风里轻摆。\n[C] 【present-constraint】草茅（see <Picture 1>） + 病兰花（see <Picture 3>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～5.0秒：病兰花在烈火中绝望挣扎，梁柱不断落下\n\nsegment_handoff: 病兰花在烈火中绝望挣扎，梁柱不断落下；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。",
+        "seconds": 5,
+        "seed": 1255,
+        "control_after_generate": "fixed",
+        "guide_frame_idx": 0,
+        "inline_media_state": "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "sequence_scope": "",
+        "draw_previous_from_cache": false,
+        "draw_previous_scope": "",
+        "draw_previous_chain_key": "",
+        "draw_previous_node_id": 0,
+        "draw_previous_index": 0,
+        "subgraph": "1125"
+      }
+    },
+    {
+      "id": 1199,
+      "type": "AICG3D_H3SequenceSegment",
+      "pos": [
+        120,
+        900
+      ],
+      "size": [
+        430,
+        800
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "全局设置",
+          "name": "sequence_config",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_CONFIG",
+          "link": null
+        },
+        {
+          "label": "上一分段",
+          "name": "previous_segment",
+          "shape": 7,
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "link": 767
+        },
+        {
+          "name": "voice_cast",
+          "shape": 7,
+          "type": "AICG3D_CHARACTER_VOICE_CAST",
+          "link": null
+        },
+        {
+          "label": "AICG3D",
+          "name": "media",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "label": "引导图片",
+          "name": "guide_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "引导音频",
+          "name": "guide_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "视频段落",
+          "name": "segment",
+          "type": "MINIMAX_H3_SEQUENCE_SEGMENT",
+          "links": [
+            768
+          ]
+        }
+      ],
+      "title": "视频段落 12",
+      "properties": {
+        "Node name for S&R": "AICG3D_H3SequenceSegment",
+        "minimax_h3_inline_media_state": "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "minimax_h3_inline_media_owned": false,
+        "minimax_h3_inline_media_inherited": true,
+        "minimax_h3_virtual_media_links": [],
+        "minimax_h3_prompt_reference_doc": "{\"mode\": \"ref_doc\", \"version\": \"minimax_h3_prompt_reference_v2\", \"text\": \"【第12段｜5秒】\\n[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\\n[C] 角色病兰花对应<Picture 3>：年轻女性，瓜子脸，眉目清秀，唇色淡，神态柔弱带愁；淡紫襦裙外披白纱，腕系兰花香囊；发质：乌黑长发松挽低髻，髻边垂丝，风里轻摆。\\n[C] 【present-constraint】草茅（see <Picture 1>） + 病兰花（see <Picture 3>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\\n\\n0.0～5.0秒：闪电划破天际，病兰花微微挣扎脱出草堆\\n\\nsegment_handoff: 闪电划破天际，病兰花微微挣扎脱出草堆；人物站位延续，光源方向与色调延续，机位固定不切镜。\\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。\", \"segments\": [{\"seg\": 12, \"duration\": 5.0, \"seed\": 1256}], \"parts\": [{\"type\": \"text\", \"content\": \"【第12段｜5秒】\\n\"}, {\"type\": \"mention\", \"mediaIndex\": 0, \"sourceId\": \"290\", \"previewUrl\": \"/view?filename=image1.jpg&type=input\", \"text\": \"<Picture 1>\", \"slot\": \"slot:0\"}, {\"type\": \"text\", \"content\": \" \"}, {\"type\": \"mention\", \"mediaIndex\": 2, \"sourceId\": \"290\", \"previewUrl\": \"/view?filename=image3.jpg&type=input\", \"text\": \"<Picture 3>\", \"slot\": \"slot:2\"}, {\"type\": \"text\", \"content\": \" \"}]}"
+      },
+      "widgets_values": [
+        "[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色病兰花对应<Picture 3>：年轻女性，瓜子脸，眉目清秀，唇色淡，神态柔弱带愁；淡紫襦裙外披白纱，腕系兰花香囊；发质：乌黑长发松挽低髻，髻边垂丝，风里轻摆。\n[C] 【present-constraint】草茅（see <Picture 1>） + 病兰花（see <Picture 3>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～5.0秒：闪电划破天际，病兰花微微挣扎脱出草堆\n\nsegment_handoff: 闪电划破天际，病兰花微微挣扎脱出草堆；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。",
+        5,
+        1256,
+        "fixed",
+        0,
+        "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "",
+        false,
+        "",
+        "",
+        0,
+        0
+      ],
+      "widgets_values_named": {
+        "prompt": "[Shot 1] 承接上一段第12秒，延续前段末帧的镜头视点、光源方向与色调，全片保持统一风格：16:9，东方古风武侠写实CG，次世代3D渲染，HDR光追，32K超清质感：皮肤毛孔、单根睫毛、唇纹与唇部湿润高光、织物经纬与针脚清晰可辨；头发是真实柔软的发质——不油亮、不结壳、没有发胶定型感，发根自然蓬松、发梢微弯并带细碎飞发，逆光处发丝边缘呈半透明暖光，不做锐利描边。浅景深，背景虚化成柔光斑。全员不油亮、不结壳、无定型感，发丝滞后于头部动作约零点二秒才跟随，随后轻摆，不做锐利描边。画面无字幕、无文字、无水印。（场景12段共用）\n[C] 构图：草茅（see <Picture 1>），主光为茅檐破洞漏下的斜光柱（约5000K），尘絮浮动，草壁吸光发暗，人脸半明半暗，曝光跨段锁定；构图采用中景加特写交替。\n[C] 角色病兰花对应<Picture 3>：年轻女性，瓜子脸，眉目清秀，唇色淡，神态柔弱带愁；淡紫襦裙外披白纱，腕系兰花香囊；发质：乌黑长发松挽低髻，髻边垂丝，风里轻摆。\n[C] 【present-constraint】草茅（see <Picture 1>） + 病兰花（see <Picture 3>） 只出现以上图片所代表的对象；所有人物、道具、服饰、武器必须严格遵循对应图片，不得自行新增。\n[C] 画面无字幕、无文字、无水印；无旁白、无画外音。\n\n0.0～5.0秒：闪电划破天际，病兰花微微挣扎脱出草堆\n\nsegment_handoff: 闪电划破天际，病兰花微微挣扎脱出草堆；人物站位延续，光源方向与色调延续，机位固定不切镜。\n朗读约束：仅 <d> 标签内的文本是角色对白，可被朗读；本提示词其余全部文字（含 delivery 标签、segment_handoff、构图、机位、语态、画面纪律）均为画面与控制描述，禁止朗读、禁止生成字幕、禁止添加旁白或画外音。",
+        "seconds": 5,
+        "seed": 1256,
+        "control_after_generate": "fixed",
+        "guide_frame_idx": 0,
+        "inline_media_state": "{\"version\": 1, \"mode\": \"media_list\", \"items\": [{\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image1.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image2.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image3.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image4.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image5.jpg\"}, {\"kind\": \"image\", \"source\": \"upload\", \"filename\": \"image6.jpg\"}]}",
+        "sequence_scope": "",
+        "draw_previous_from_cache": false,
+        "draw_previous_scope": "",
+        "draw_previous_chain_key": "",
+        "draw_previous_node_id": 0,
+        "draw_previous_index": 0,
+        "subgraph": "1125"
+      }
+    }
+  ],
+  "links": [
+    [
+      649,
+      106,
+      1,
+      1125,
+      0,
+      "MODEL"
+    ],
+    [
+      399,
+      106,
+      0,
+      212,
+      0,
+      "MINIMAX_H3_BUNDLE"
+    ],
+    [
+      650,
+      1125,
+      0,
+      212,
+      1,
+      "MODEL"
+    ],
+    [
+      762,
+      1189,
+      0,
+      212,
+      3,
+      "SIGMAS"
+    ],
+    [
+      768,
+      1199,
+      0,
+      60,
+      0,
+      "SEGMENT"
+    ],
+    [
+      455,
+      212,
+      0,
+      248,
+      0,
+      "MINIMAX_H3_SEQUENCE_CONFIG"
+    ],
+    [
+      596,
+      285,
+      0,
+      248,
+      2,
+      "AICG3D_CHARACTER_VOICE_CAST"
+    ],
+    [
+      581,
+      290,
+      0,
+      248,
+      3,
+      "MINIMAX_H3_MEDIA_BUNDLE"
+    ],
+    [
+      599,
+      248,
+      0,
+      674,
+      1,
+      "MINIMAX_H3_SEQUENCE_SEGMENT"
+    ],
+    [
+      748,
+      674,
+      0,
+      1134,
+      1,
+      "MINIMAX_H3_SEQUENCE_SEGMENT"
+    ],
+    [
+      711,
+      60,
+      0,
+      1160,
+      0,
+      "VIDEO"
+    ],
+    [
+      750,
+      1134,
+      0,
+      1175,
+      1,
+      "MINIMAX_H3_SEQUENCE_SEGMENT"
+    ],
+    [
+      752,
+      1175,
+      0,
+      1176,
+      1,
+      "MINIMAX_H3_SEQUENCE_SEGMENT"
+    ],
+    [
+      754,
+      1176,
+      0,
+      1177,
+      1,
+      "MINIMAX_H3_SEQUENCE_SEGMENT"
+    ],
+    [
+      755,
+      1177,
+      0,
+      1194,
+      1,
+      "MINIMAX_H3_SEQUENCE_SEGMENT"
+    ],
+    [
+      763,
+      1194,
+      0,
+      1195,
+      1,
+      "MINIMAX_H3_SEQUENCE_SEGMENT"
+    ],
+    [
+      764,
+      1195,
+      0,
+      1196,
+      1,
+      "MINIMAX_H3_SEQUENCE_SEGMENT"
+    ],
+    [
+      765,
+      1196,
+      0,
+      1197,
+      1,
+      "MINIMAX_H3_SEQUENCE_SEGMENT"
+    ],
+    [
+      766,
+      1197,
+      0,
+      1198,
+      1,
+      "MINIMAX_H3_SEQUENCE_SEGMENT"
+    ],
+    [
+      767,
+      1198,
+      0,
+      1199,
+      1,
+      "MINIMAX_H3_SEQUENCE_SEGMENT"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "视频段落链（第 7~12 段）",
+      "bounding": [
+        -2240,
+        820,
+        2860,
+        900
+      ],
+      "color": "#486264",
+      "flags": {}
+    }
+  ],
+  "definitions": {
+    "subgraphs": [
+      {
+        "id": "1ed6f447-3389-4f03-ad2f-6c6d99a69925",
+        "version": 1,
+        "state": {
+          "lastGroupId": 3,
+          "lastNodeId": 1199,
+          "lastLinkId": 768,
+          "lastRerouteId": 0
+        },
+        "revision": 5,
+        "config": {},
+        "name": "第三方加速",
+        "inputNode": {
+          "id": -10,
+          "bounding": [
+            150,
+            110,
+            128,
+            68
+          ]
+        },
+        "outputNode": {
+          "id": -20,
+          "bounding": [
+            2430,
+            110,
+            128,
+            68
+          ]
+        },
+        "inputs": [
+          {
+            "id": "4af5de4f-8c68-4b08-b97e-d0bab201c243",
+            "name": "model",
+            "type": "MODEL",
+            "linkIds": [
+              270
+            ],
+            "localized_name": "model",
+            "pos": [
+              254,
+              134
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "id": "23cd58c1-2b1b-49de-b15c-4f65b06fcc7f",
+            "name": "model",
+            "type": "MODEL",
+            "linkIds": [
+              274
+            ],
+            "localized_name": "model",
+            "pos": [
+              2454,
+              134
+            ]
+          }
+        ],
+        "widgets": [],
+        "nodes": [
+          {
+            "id": 1119,
+            "type": "MiniMaxH3SigmaShift",
+            "pos": [
+              1010,
+              120
+            ],
+            "size": [
+              330,
+              120
+            ],
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [
+              {
+                "label": "model",
+                "localized_name": "model",
+                "name": "model",
+                "type": "MODEL",
+                "link": 270
+              },
+              {
+                "label": "shift_video",
+                "localized_name": "视频偏移",
+                "name": "shift_video",
+                "type": "FLOAT",
+                "widget": {
+                  "name": "shift_video"
+                },
+                "link": null
+              },
+              {
+                "label": "shift_audio",
+                "localized_name": "音频偏移",
+                "name": "shift_audio",
+                "type": "FLOAT",
+                "widget": {
+                  "name": "shift_audio"
+                },
+                "link": null
+              }
+            ],
+            "outputs": [
+              {
+                "label": "MODEL",
+                "localized_name": "模型",
+                "name": "MODEL",
+                "type": "MODEL",
+                "links": [
+                  274
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "MiniMaxH3SigmaShift",
+              "cnr_id": "comfy-core",
+              "ver": "0.30.0",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "input_ue_unconnectable": {},
+                "version": "7.8"
+              },
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              12,
+              3
+            ],
+            "widgets_values_named": {
+              "shift_video": 12,
+              "shift_audio": 3
+            }
+          }
+        ],
+        "groups": [],
+        "links": [
+          {
+            "id": 270,
+            "origin_id": -10,
+            "origin_slot": 0,
+            "target_id": 1119,
+            "target_slot": 0,
+            "type": "MODEL"
+          },
+          {
+            "id": 274,
+            "origin_id": 1119,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 0,
+            "type": "MODEL"
+          }
+        ],
+        "extra": {}
+      }
+    ]
+  },
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.2593742460100021,
+      "offset": [
+        3083.208636099459,
+        1155.9280463750565
+      ]
+    },
+    "frontendVersion": "1.59.1",
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "aicg3d_h3_sequence_cache_scope": "aicg3d:wuxia-duobao-60s-12seg-v1"
+  },
+  "version": 0.4
+}

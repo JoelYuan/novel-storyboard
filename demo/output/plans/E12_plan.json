@@ -1,0 +1,127 @@
+{
+  "episode": "E12",
+  "episode_title": "霹雳外传第四集：扑朔迷离",
+  "videos": [
+    {
+      "title": "半部禅现形达观寺",
+      "src": "E12-S01–S03 / R0492–R0525",
+      "logline": "众人追查半部禅，达观寺内半部禅现身为黑衣人承认罪行。",
+      "scene": "达观寺",
+      "characters": [
+        "半部禅",
+        "宇文弓",
+        "宇文冰心",
+        "叶小钗",
+        "秦假仙"
+      ],
+      "props": [],
+      "segments": [
+        {
+          "i": 1,
+          "action": "宇文弓推门入房，翻看角落木笼",
+          "dialogue": {
+            "speaker": "宇文弓",
+            "delivery": "疑惑",
+            "text": "半部禅大师在吗？",
+            "line": "E12-L001"
+          }
+        },
+        {
+          "i": 2,
+          "action": "木笼空空如也，宇文弓四处张望",
+          "dialogue": {
+            "speaker": "宇文弓",
+            "delivery": "疑惑",
+            "text": "没人？奇怪！",
+            "line": "E12-L002"
+          }
+        },
+        {
+          "i": 3,
+          "action": "半部禅突然转身，阴险脸逼近",
+          "dialogue": {
+            "speaker": "半部禅",
+            "delivery": "悍然",
+            "text": "老伯！",
+            "line": "E12-L005"
+          }
+        },
+        {
+          "i": 4,
+          "action": "宇文弓后退，半部禅质问敌意",
+          "dialogue": {
+            "speaker": "半部禅",
+            "delivery": "询问",
+            "text": "为何对叶小钗无敌意，而对他有敌意",
+            "line": "E12-L011"
+          }
+        },
+        {
+          "i": 5,
+          "action": "宇文弓解释不想连累半部禅",
+          "dialogue": {
+            "speaker": "宇文弓",
+            "delivery": "解释",
+            "text": "是为了不想连累半部禅",
+            "line": "E12-L012"
+          }
+        },
+        {
+          "i": 6,
+          "action": "宇文弓展示盘悟手札给半部禅",
+          "dialogue": {
+            "speaker": "半部禅",
+            "delivery": "询问",
+            "text": "盘悟手札和他有何关系",
+            "line": ""
+          }
+        },
+        {
+          "i": 7,
+          "action": "宇文冰心示意半部禅闻香味",
+          "dialogue": {
+            "speaker": "宇文冰心",
+            "delivery": "急切",
+            "text": "闻手上的香味",
+            "line": "E12-L032"
+          }
+        },
+        {
+          "i": 8,
+          "action": "半部禅承认自己是黑衣人与慧明",
+          "dialogue": {
+            "speaker": "半部禅",
+            "delivery": "承认",
+            "text": "自己是黑衣人也是慧明",
+            "line": "E12-L035"
+          }
+        },
+        {
+          "i": 9,
+          "action": "邪刀血不沾出鞘，散发诡异光芒",
+          "dialogue": null
+        },
+        {
+          "i": 10,
+          "action": "宇文弓与冰心陷入生死边缘",
+          "dialogue": null
+        },
+        {
+          "i": 11,
+          "action": "叶小钗放出剑气，终止战斗",
+          "dialogue": null
+        },
+        {
+          "i": 12,
+          "action": "宇文弓向众人解释并道歉",
+          "dialogue": {
+            "speaker": "宇文弓",
+            "delivery": "解释",
+            "text": "这是为了要证明半部禅的野心",
+            "line": "E12-L037"
+          }
+        }
+      ]
+    }
+  ]
+}

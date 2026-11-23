@@ -1,0 +1,117 @@
+{
+  "episode": "E13",
+  "episode_title": "霹雳外传第五集：悲嚎！悲嚎！英雄泪",
+  "videos": [
+    {
+      "title": "惊虹拔剑拒招揽",
+      "src": "E13-S03 / R0559–R0579",
+      "logline": "惊虹留恨拔剑魔音伤人，蟠龙邪尊出面招揽被拒。",
+      "scene": "半月塘",
+      "characters": [
+        "惊虹留恨",
+        "蟠龙邪尊",
+        "金角战牛",
+        "花藏刀",
+        "竹藏剑"
+      ],
+      "props": [],
+      "segments": [
+        {
+          "i": 1,
+          "action": "惊虹留恨拔出悲嚎剑，四周魔音回荡。",
+          "dialogue": null
+        },
+        {
+          "i": 2,
+          "action": "巫石门手下倒在魔音刀气中，金角战牛直冲惊虹。",
+          "dialogue": null
+        },
+        {
+          "i": 3,
+          "action": "惊虹留恨高举悲嚎剑闪避，花藏刀竹藏剑呐喊助威。",
+          "dialogue": null
+        },
+        {
+          "i": 4,
+          "action": "花藏刀痛苦呻吟，双手抱头蹲伏。",
+          "dialogue": {
+            "speaker": "花藏刀",
+            "delivery": "呻吟",
+            "text": "快停手啊......拜托......",
+            "line": "E13-L005"
+          }
+        },
+        {
+          "i": 5,
+          "action": "蟠龙邪尊从暗处冲出，双手连摇大喊。",
+          "dialogue": {
+            "speaker": "蟠龙邪尊",
+            "delivery": "喊",
+            "text": "住手！住手！",
+            "line": "E13-L006"
+          }
+        },
+        {
+          "i": 6,
+          "action": "金角战牛停止攻击，惊虹留恨收起悲嚎剑。",
+          "dialogue": null
+        },
+        {
+          "i": 7,
+          "action": "蟠龙邪尊上前，双手连摇示意。",
+          "dialogue": {
+            "speaker": "蟠龙邪尊",
+            "delivery": "道",
+            "text": "你是个人才，加入我们巫石门吧。",
+            "line": "E13-L007"
+          }
+        },
+        {
+          "i": 8,
+          "action": "惊虹留恨摇头，目光冷冽。",
+          "dialogue": {
+            "speaker": "惊虹留恨",
+            "delivery": "道",
+            "text": "不要。",
+            "line": "E13-L008"
+          }
+        },
+        {
+          "i": 9,
+          "action": "蟠龙邪尊伸手索要，神情贪婪。",
+          "dialogue": {
+            "speaker": "蟠龙邪尊",
+            "delivery": "道",
+            "text": "那你身上那把剑给我吧。",
+            "line": "E13-L009"
+          }
+        },
+        {
+          "i": 10,
+          "action": "惊虹留恨再次摇头，手按剑柄。",
+          "dialogue": {
+            "speaker": "惊虹留恨",
+            "delivery": "道",
+            "text": "不要。",
+            "line": "E13-L010"
+          }
+        },
+        {
+          "i": 11,
+          "action": "蟠龙邪尊脸色一沉，转身挥手。",
+          "dialogue": {
+            "speaker": "蟠龙邪尊",
+            "delivery": "道",
+            "text": "有剑就无命，给你叁天考虑。",
+            "line": ""
+          }
+        },
+        {
+          "i": 12,
+          "action": "蟠龙邪尊带人离开，惊虹留恨继续喝酒。",
+          "dialogue": null
+        }
+      ]
+    }
+  ]
+}

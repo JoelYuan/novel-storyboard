@@ -1,0 +1,141 @@
+{
+  "episode": "E08",
+  "episode_title": "第08段",
+  "videos": [
+    {
+      "title": "达观寺血案疑云",
+      "src": "E08-S02",
+      "logline": "宇文弓打扫发现手札，半部禅归来揭示灭门惨案与宇文前辈之死疑点。",
+      "scene": "达观寺",
+      "characters": [
+        "宇文弓",
+        "半部禅"
+      ],
+      "props": [
+        "手札"
+      ],
+      "segments": [
+        {
+          "i": 1,
+          "action": "宇文弓持扫帚清扫地面杂草与废物。",
+          "dialogue": {
+            "speaker": "宇文弓",
+            "delivery": "感概",
+            "text": "住这破庙，真难为了小姐。",
+            "line": ""
+          }
+        },
+        {
+          "i": 2,
+          "action": "宇文弓伸手搬动高处布满灰尘的神像。",
+          "dialogue": {
+            "speaker": "宇文弓",
+            "delivery": "言道",
+            "text": "这尊神像也该擦一擦了。",
+            "line": ""
+          }
+        },
+        {
+          "i": 3,
+          "action": "宇文弓从神像座下抽出一本尘旧的书册。",
+          "dialogue": {
+            "speaker": "宇文弓",
+            "delivery": "疑问",
+            "text": "咦？这是什麽书？",
+            "line": "E08-L012"
+          }
+        },
+        {
+          "i": 4,
+          "action": "宇文弓翻开书页，目光扫视文字内容。",
+          "dialogue": {
+            "speaker": "宇文弓",
+            "delivery": "读",
+            "text": "血不沾...孽徒慧明毒害吾友。",
+            "line": "E08-L015"
+          }
+        },
+        {
+          "i": 5,
+          "action": "宇文弓听到身后脚步声，急忙合书藏入衣内。",
+          "dialogue": {
+            "speaker": "宇文弓",
+            "delivery": "惊讶",
+            "text": "啊！大师回来了。",
+            "line": "E08-L017"
+          }
+        },
+        {
+          "i": 6,
+          "action": "半部禅走入殿内，宇文弓注视其双手。",
+          "dialogue": {
+            "speaker": "宇文弓",
+            "delivery": "疑",
+            "text": "大师，你的双手怎麽沾满污泥？",
+            "line": "E08-L020"
+          }
+        },
+        {
+          "i": 7,
+          "action": "半部禅展示手中草药，宇文弓询问安全。",
+          "dialogue": {
+            "speaker": "半部禅",
+            "delivery": "答",
+            "text": "顺手摘下药草，此地人烟罕至。",
+            "line": ""
+          }
+        },
+        {
+          "i": 8,
+          "action": "宇文弓指向庙柱桌案上的刀痕，神情凝重。",
+          "dialogue": {
+            "speaker": "宇文弓",
+            "delivery": "问",
+            "text": "曾发生过血案，使我顾虑安全。",
+            "line": ""
+          }
+        },
+        {
+          "i": 9,
+          "action": "半部禅叹息，讲述师父师兄弟惨死寺中。",
+          "dialogue": {
+            "speaker": "半部禅",
+            "delivery": "答",
+            "text": "师父师兄弟已惨死，不愿惊动姑娘。",
+            "line": ""
+          }
+        },
+        {
+          "i": 10,
+          "action": "宇文弓推测凶手对寺内了若指掌。",
+          "dialogue": {
+            "speaker": "宇文弓",
+            "delivery": "道",
+            "text": "凶手对达观寺了若指掌，是熟人。",
+            "line": ""
+          }
+        },
+        {
+          "i": 11,
+          "action": "半部禅指出宇文前辈死因存疑，太大意。",
+          "dialogue": {
+            "speaker": "半部禅",
+            "delivery": "道",
+            "text": "宇文前辈太大意，令人扼腕。",
+            "line": ""
+          }
+        },
+        {
+          "i": 12,
+          "action": "宇文弓感叹家破人亡，转身准备去叫人。",
+          "dialogue": {
+            "speaker": "宇文弓",
+            "delivery": "道",
+            "text": "一时大意弄得家破人亡，我去叫小姐。",
+            "line": ""
+          }
+        }
+      ]
+    }
+  ]
+}
